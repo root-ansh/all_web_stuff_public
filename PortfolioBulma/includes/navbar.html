@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.0/css/bulma.css">
+
+
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script>
+            $(document).ready(function() {
+
+                // Check for click events on the navbar burger icon
+                $(".navbar-burger").click(function() {
+
+                    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                    $(".navbar-burger").toggleClass("is-active");
+                    $(".navbar-menu").toggleClass("is-active");
+                });
+            });
+
+        </script>
+
+
+</head>
+
+
+<body>
+
+
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+
+    <!-- Navigation bar menu brand name(first image/text entry)    and hamburger icon-->
+    <div class="navbar-brand">
+
+        <!-- Brand name -->
+        <a class="navbar-item has-text-weight-bold" href="index.html"> <img src="assets/img/home/logo.svg"> Curioustools</a>
+    
+        <!-- Hamburger.no idea why must follow this format only to show 3 lines. if added "is-active to its, class, 
+            it will convert to  a static 'X'(usually done via js/jquery client side script) "-->
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+
+    </div>
+
+    <!-- navbar menu: similar to navbar brandname as it also consists of menu items, but will be hidden for small screen -->
+    <!-- can have 2 parts: start and end which would have navbar items( or you can directly add navbar items) -->
+    <!-- if "is-active" is added to navbar-menu class, it will display all the menu items as vertical list in mobile mode
+        (including the one that use to display when hovered in desktop mode-->
+    <!-- keeping it active for now, read the js note id: #1441JS_FOR_FRONT_END at the bottom of screen -->
+    <div class="navbar-menu ">
+        <div class="navbar-start">
+            <div class="navbar-item has-dropdown is-hoverable ">
+                <a class="navbar-link has-text-weight-bold" href="education.html"> Education Details</a>
+
+                <div class="navbar-dropdown is-boxed">
+                    <a class="navbar-item" href="education.html#id_acad">Academic</a>
+                    <a class="navbar-item" href="education.html#id_n_acad">Non Academic </a>
+                    <a class="navbar-item" href="education.html#id_skills">SkillSet</a>
+                    
+                    <hr class="navbar-divider">
+                    
+                    <a class="navbar-item" href="education.html">Report an issue</a>
+                </div>
+
+            </div>
+
+            <a class="navbar-item has-text-weight-bold" href="#">Work Experiance</a>
+
+
+
+            <!-- ,,, -->
+        
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link has-text-weight-bold" href="education.html"> Projects</a>
+
+                <div class="navbar-dropdown is-boxed">
+                    <a class="navbar-item" href="education.html">Android</a>
+                    <!-- will have android projects for company/ self -->
+                    <a class="navbar-item" href="education.html">Others </a>
+                    <!-- will have all the non android projects, like the one in python/web/made for college,etc -->
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    <a class="navbar-item" href="education.html">Report an issue</a>
+                </div>
+
+            </div>
+
+            <a class="navbar-item has-text-weight-bold" href="#">Blogs</a> 
+            <a class="navbar-item has-text-weight-bold" href="#">Contact Details</a>
+
+        </div>
+
+        <div class="navbar-end">
+            <div class="navbar-item">
+
+                <a class="button is-info is-focused is-inverted">Admin Log in</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+</body>
+</html>
+
+
+  <!-- 
+
+    #1441JS_FOR_FRONT_END : TODO : inc
+    CSS is very incomplete on its own. it provides a lot of desktop solutions, but most of the time we need js to manupulate it
+    for something meaningful. there is a lot of stupidity going around. 
+    for eg, a site could work perfetly in fullscreen, showin all its navbar items, and a hovering menu when needed. but in smaller 
+    screens where all items cannot be shown and a navigation hamburger menu is needed, css would fail to provide a complete solution, 
+    as it does not have a :click{} solution by default(* there are some hacks to it checkout: https://stackoverflow.com/a/32721572/7500651)
+
+    in css, the interactivity is handled at a very lower level which is weird. either handle it full or leave it completely for the js.
+    not going into details, but here is a list of interaction that i know and weather it is or isn't handled by css:
+    
+    - interaction between the app/website and hand(touch): implemented weirdly. if the element clicked has a script attached to its action/onclick,
+        the script will run. exception : A tag/img, which has a default nature to open the link attached to it.
+    - mouse click: todo
+    - mouse hover..., keyboard input a probably hand hover(via soli chip technology))
+
+ -->

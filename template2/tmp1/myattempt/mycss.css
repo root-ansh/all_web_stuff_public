@@ -1,0 +1,166 @@
+/* why/why not use @import instead of <link hrf> : https://stackoverflow.com/q/10036977/7500651   */
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css");
+
+:root{
+    --nav-color: #f02f2f;
+    --hover-color : #970505;
+}
+
+*{
+    margin: 0;
+    font-family: 'Raleway', monospace;
+}
+
+
+.nav{
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    background-color: var(--nav-color);
+    transition: 0.3s;
+
+
+}
+.nav>*{
+    /* resetting some info for every tag in nav bar */
+    color: white;
+    font-weight: bolder;
+    background-color: inherit;
+    text-decoration: none;
+    padding: 8px;
+    vertical-align: middle;
+    cursor: default;
+
+    /* 
+       for making cool transitions. won't show affect the child until child has a 
+       hover-color change in its  css [but it IS getting applied on every subchild
+    */
+    border-radius: 4px;
+
+}
+
+.nav>.nav_links_btn::before{
+    /* hamburger icon using utf-8 code and fontawesome css.
+    basically fontawesome will somehow understand the utf
+    code as hamburger icon */
+   
+    content: "☰";
+    padding-right: 4px;
+    
+}
+.nav>.nav_links_btn:hover{
+    transition: 0.3s;
+    background-color: var(--hover-color);
+}
+
+.nav>.logo_txt:hover{
+    color: yellow;
+}
+.nav>.logo_txt:hover::before{
+    content: "[";
+    padding-right: 2px;
+    color: yellow;
+}
+.nav>.logo_txt:hover::after{
+    content: "]";
+    padding-left: 2px;
+    color: yellow;
+}
+
+.sidepanel{/* sidepanel rule: first item should be "close"*/
+    height: 100%;
+    width: 0px;/* changed via js  */
+    position: fixed;
+    z-index: 1;/* instead of sliding the screen, just come over the top of it, like an android menu  */
+    top: 0px;
+    left: 0px;
+    overflow-x: hidden; /* needs to be done otherwise causes an extra padding */
+    padding-top: 60px; /* Place content 60px from the top */
+    /* 
+    padding-left: 30px; don't add these otherwise causes otherwise causes an extra padding 
+    padding-right: 30px; 
+    */
+
+
+    
+    transition: 0.3s;
+    background-color: var(--nav-color);
+
+
+}
+
+.sidepanel>*{    /* resetting some info for every tag in nav bar */
+    cursor: default;
+    background-color: inherit;
+    color: white;
+    text-decoration: none;
+    display: block;/* making every item as block so as to show them in different lines*/
+
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 8px;
+    font-size: 2em;
+    transition: 0.3s;
+
+}
+.sidepanel>.close{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+
+    cursor: pointer;
+    
+}
+
+.sidepanel>.close:hover{
+    background-color: var(--hover-color);
+}
+.sidepanel>.close::before{
+    content: "\f00d";  /* this is your text. You can also use UTF-8 character codes as I do here */
+    font-family: "FontAwesome";
+    padding: 16px;
+}
+
+.sidepanel>a:hover{
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.space_full_80{
+    width: 100%;
+    height: 80px;
+}
+
+.main{
+    padding-left: 5%;
+    padding-right: 5%;
+
+    
+}

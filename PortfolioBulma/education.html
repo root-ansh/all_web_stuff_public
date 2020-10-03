@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <title>Curioustools</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.0/css/bulma.css">
+
+
+        <!-- Scripts to "load" another html file in here -->
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script> 
+            $(
+              function(){$("#nb").load("includes/navbar.html");}
+            );
+        </script> 
+
+
+</head>
+
+
+<body>
+
+    <!-- Navigation bar -->
+    <div id="nb"></div>
+
+    <!-- Title and summary of academics -->
+    <section class="hero is-primary ">
+      <div class="hero-body">
+
+        <article class="container">
+          <h1 class="title" id="id_acad">Academics</h1>
+          <em class="content is-medium">A list of my all formal trainings and educations.</em>
+        </article>
+      </div>
+    </section>
+
+    <!-- section of academic tables: shows 3 in 1 row for full screen, goint to 2 in 1 row to 1 in each row as the screen size decreases -->
+    <section class="section">  
+        <div class="columns is-mobile is-multiline is-centered">    
+            <!-- -------------------------------- -->
+            <div class="column">
+              <table class="table is-bordered is-striped  is-hoverable box is-fullwidth">
+                <thead>
+                    <tr>  <th class="is-dark" colspan="2">Class 10th</th>                                                              </tr>
+                    <tr>  <th>Key                 </th>                <th>Value                                          </th>           </tr>
+                </thead>
+      
+                <tbody>
+                    <tr>  <td>School              </td>                <td>Cambridge Foundation School, New Delhi, India. </td>            </tr>
+                    <tr>  <td>Year of Graduation  </td>                <td>2014.                                          </td>            </tr>
+                    <tr>  <td>Board               </td>                <td>Central Board Of Secondary Education(CBSE)     </td>            </tr>
+                    <tr>  <td>Marks               </td>                <td>CGPA 9.0                                       </td>            </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- ---------------------------------- -->
+            <div class="column">
+              <table class="table is-bordered is-striped  is-hoverable  box  is-fullwidth ">
+                <thead>
+                    <tr>  <th class="is-dark" colspan="2">Class 12th</th>                                                              </tr>
+                    <tr>  <th>Key                 </th>                <th>Value                                          </th>           </tr>
+                </thead>
+      
+                <tbody>
+                    <tr>  <td>School              </td>                <td>Cambridge Foundation School, New Delhi, India. </td>            </tr>
+                    <tr>  <td>Year of Graduation  </td>                <td>2016.                                          </td>            </tr>
+                    <tr>  <td>Board               </td>                <td>Central Board Of Secondary Education(CBSE)     </td>            </tr>
+                    <tr>  <td>Marks               </td>                <td>76.4%                                          </td>            </tr>
+                </tbody>
+              </table>
+        
+            </div>
+
+          <!-- ---------------------------------- -->
+            <div class="column">
+              <table class="table is-bordered is-striped  is-hoverable box  is-fullwidth">
+                <thead>
+                    <tr>  <th class="is-dark" colspan="2">Bachelors</th>                                                              </tr>
+                    <tr>  <th>Key                 </th>                <th>Value                                          </th>           </tr>
+                </thead>
+      
+                <tbody>
+                    <tr>  <td>College                       </td>           <td>JIMS Engineering Management Technical Campus                    </td>            </tr>
+                    <tr>  <td>University                    </td>           <td>GGSIP University, New Delhi,India                               </td>            </tr>
+                    <tr>  <td>Board                         </td>           <td>All India Council for Technical Education(AICTE)                </td>            </tr>
+                    <tr>  <td>Discipline                    </td>           <td>Bachelor of Technology degree in Computer Science & Engineering </td>            </tr>
+                    <tr>  <td>Year of Graduation(Expected)  </td>           <td>2020                                                            </td>            </tr>
+                    <tr>  <td>Current Marks                 </td>           <td>CGPA 7.1                                                        </td>            </tr>
+                </tbody>
+              </table>
+
+            </div>
+          <!-- ---------------------------------- -->
+        </div> 
+    </section>
+
+   <!-- Title and summary of non academics -->
+   <section class="hero is-info ">
+    <div class="hero-body">
+
+      <article class="container">
+        <h1 class="title" id="id_n_acad">Non Academics</h1>
+        <em class="content is-medium">A list of my all trainings, certifications and achievements outside the official curriculum</em>
+      </article>
+
+    </div>
+  </section>
+
+    <!-- 
+    Section of cards/tiles : tile is a class similar to grid, but makes our tasks a lot easier. we donot have to create multiple column groups.
+    By default tiles  work like both column groups and column itself, they can add another tile in them (if is-parent) or get added(if is-child)
+    they can also add new tiles to them vertically. by just having the property of  is-verticular, this element can almost mimick every power of
+    linear layout from android and even more
+
+    Another key difference is : it automatically spans. for eg if we have text boxes that would look like:
+    [-----] [-----]
+    [-----]
+    , it will automaticallly convert the smaller one to span whole width, like this:
+
+    [-----] |------|
+    [-----] |      |
+   
+    is-child is only for making things responsive during screen size change
+
+    -->
+
+    <!-- any tag present inside a <div class="content"> can use the ahtml styling as it is -->
+    <section class="section">
+        <div class="tile is-ancestor">
+            <div class="tile is-4 is-vertical is-parent">
+
+                <!-- trainings and workshop tag -->
+                <div class="tag is-medium is-danger is-light has-text-justified"> Trainings and Workshops.</div>
+                <div class="content"></div>    
+
+                <div class="box">
+                    <p class="title has-text-justified is-4">Algorithms,Programming & DS with Java. </p>
+                    <div class="content">
+                        <ul >
+                            <li><strong> About :</strong> Foundation course covering fundamentals of Java, OOPS , Competitive Programming and Data Structures.</li>
+                            <li><strong> Duration :</strong> 3 months (Jan-Mar, 2017) </li>
+                            <li><strong> From :</strong> Coding Blocks, Dwarka </li>
+                        </ul>
+                        <a class="has-text-danger" href="assets/img/education/java_cb.jpg" target="_blank"> View Certificate.</a>        
+
+                    </div>
+                </div>
+
+                <div class="box">
+                    <p class="title has-text-justified is-4">Android App Development. </p>
+                    <div class="content">
+                        <ul >
+                            <li><strong> About :</strong> Basics of Android App Development usig java</li>
+                            <li><strong> Duration :</strong> 4 months (Aug-November, 2017) </li>
+                            <li><strong> From :</strong> Coding Blocks, Dwarka </li>
+                        </ul>
+                        <a class="has-text-danger" href="assets/img/education/app_dev_cb.jpg" target="_blank"> View Certificate.</a>        
+                        
+                    </div>
+                </div>
+
+                
+
+                
+
+            </div>
+
+            <div class="tile is-parent is-8 is-vertical">
+
+                <!-- certifications tag -->
+                <div class="tag is-medium is-success is-light"> Certifications</div>
+                <div class="content"></div>
+
+                <!-- AAD Box : tried using columns alongside tile, but no use -->
+                <div class="box ">
+
+                    <p class="title is-3">Google Certified Associate Android Developer</p>
+
+                    <div class="tile is-parent columns" >
+                        <div class="column is-3"><img src="assets/img/education/aad.png" > </div>
+
+                        <div class="column is-vcentered">
+                            <p>
+                                I recently received Associate Android Developer Certification from Google. More details can be found at the credential's website.<br>
+                                <a class="has-text-success" href="https://www.credential.net/pju5aztf" target="_blank"> View Certificate.</a>        
+                            </p>
+                        </div>
+                    </div>
+        
+                </div>
+
+
+                
+                <!-- scholarships tag -->
+                <div class="tag is-medium is-info is-light"> Scholarships</div>
+                <div class="content"></div>
+
+
+                <div class="tile is-parent columns">
+
+                    <div class="column ">
+
+                        <div class="box">
+                            <img class="image" src="assets/img/education/scholarship_edugrad.png" alt="Edugrad Scholarship" ><br>
+                            <strong>Edugrad Data Analytics Scholarship</strong><br>
+                            <em>Winner</em>
+                        </div>
+                        
+                    </div>
+
+                    <div class="column ">
+
+                        <div class=" box">
+                            <img class="image" src="assets/img/education/scholarship_gis.png" alt="Edugrad Scholarship" ><br>
+                            <strong>Google India Challange Scholarship (Android Foundation)</strong><br>
+                            <em>Reciepent, First Round</em>
+                        </div>
+                        
+                    </div>
+
+                    <div class="column ">
+
+                        <div class=" box">
+                            <img class="image" src="assets/img/education/scholarship_pytorch.png" alt="Edugrad Scholarship" ><br>
+                            <strong>Facebook Pytorch Scholarship</strong><br>
+                            <em>Reciepent, First Round</em>
+                        </div>
+                        
+                    </div>
+
+
+                    
+
+                   
+
+
+                </div>
+              
+            </div>
+
+        </div>
+ 
+
+
+  </section>
+
+<!-- --------------------- -->
+
+   <!-- Title and summary of non academics -->
+   <section class="hero is-warning">
+    <div class="hero-body">
+
+      <article class="container">
+        <h1 class="title" id="id_skills">Skill Set</h1>
+
+        <p class="content is-medium">Here is a list of languages,OS, Technologies, Concepts, Frameworks/Libraries and Tools that i have previously worked before.</p>
+        <p class="content">
+            The color of the tag represents my personal rating for the skill:
+            <span class="tag is-white" style="padding: 16px;">
+                <span class="tag is-primary is-light" style="margin: 8px;">   5</span>,
+                <span class="tag is-info    is-light" style="margin: 8px;">   4</span>,
+                <span class="tag is-success is-light" style="margin: 8px;">   3</span>,
+                <span class="tag is-warning is-light" style="margin: 8px;">   2</span>, or
+                <span class="tag is-danger  is-light" style="margin: 8px;">   1</span>
+            </span>
+        </p>
+      
+    </article>
+    </div>
+  </section>
+
+  <!-- List of all the tables of info -->
+  <div class="columns is-mobile is-multiline is-centered" style="margin: 12px;">
+
+
+
+    <!--Languages -->
+    <div class="column ">
+        <div class="box">
+            <p class="subtile">Languages(Programming/Markup) </p><br>
+              
+            <span class="content">
+                <span class="tag is-primary is-light" style="margin-right: 8px;">Java</span>
+                <span class="tag is-primary is-light" style="margin-right: 8px;">python 3.7</span>
+                <span class="tag is-primary is-light" style="margin-right: 8px;">Markdown</span>
+                
+                <span class="tag is-info    is-light" style="margin-right: 8px;">Kotlin</span>
+                <span class="tag is-info    is-light" style="margin-right: 8px;">HTML 5</span>
+
+
+                <span class="tag is-success    is-light" style="margin-right: 8px;">PHP</span>
+                <span class="tag is-success    is-light" style="margin-right: 8px;">C++</span>
+                <span class="tag is-success    is-light" style="margin-right: 8px;">Dart</span>
+                <span class="tag is-success    is-light" style="margin-right: 8px;">Bulma Css</span>
+                
+                <span class="tag is-warning    is-light" style="margin-right: 8px;">CSS</span>
+                <span class="tag is-warning    is-light" style="margin-right: 8px;">JavaScript</span>
+                
+                <span class="tag is-danger    is-light" style="margin-right: 8px;">Assembly</span>
+                
+            </span>
+        </div>
+    </div>
+    <!-- p:5, i=4, s=3, w=2 lTECH-->
+    <div class="column ">
+        <div class="box">
+              <p class="subtile">Technologies And Streams</p><br>
+              <span class="content">
+                  <span class="tag is-primary is-light" style="margin-right: 8px;">Android App Development</span>
+                  <span class="tag is-primary is-light" style="margin-right: 8px;">Data Analysis</span>                 
+                  <span class="tag is-primary is-light" style="margin-right: 8px;">Testing</span>                 
+                  <span class="tag is-primary is-light" style="margin-right: 8px;">Programming</span>                 
+                  <span class="tag is-primary is-light" style="margin-right: 8px;">Data Structures</span>
+                  
+                  <span class="tag is-info    is-light" style="margin-right: 8px;">PC Software Dev</span>
+                  <span class="tag is-info    is-light" style="margin-right: 8px;">IOS/Hybrid App Development(Flutter)</span>
+
+                  <span class="tag is-success    is-light" style="margin-right: 8px;">IOT</span>
+                  <span class="tag is-success    is-light" style="margin-right: 8px;">Designing</span>
+                  <span class="tag is-success    is-light" style="margin-right: 8px;">Research</span>
+                  
+                  <span class="tag is-warning    is-light" style="margin-right: 8px;">Web Development</span>
+                  <span class="tag is-warning    is-light" style="margin-right: 8px;">ML/AI/Data Sciences</span>
+                  <span class="tag is-warning    is-light" style="margin-right: 8px;">Cloud computing,</span>
+                                    
+             </span>
+        </div>
+    </div>
+
+
+
+
+
+      <!-- Android-->
+      <div class="column ">
+        <div class="box">
+            <p class="subtile">Terminologies: <b class="has-text-success">Android</b>  </p>   <br>
+            <span class="content">
+                    <span class="tag is-primary is-light" style="margin-right: 8px;">Networking(Retrofit/Okhttp/Volley/Glide)</span>
+                    <span class="tag is-primary is-light" style="margin-right: 8px;">MVVM</span>                 
+                    <span class="tag is-primary is-light" style="margin-right: 8px;">JetPack Components</span>                   
+                    <span class="tag is-primary is-light" style="margin-right: 8px;">Espresso Testing</span>                 
+                    
+                    <span class="tag is-light is-info" style="margin-right: 8px;">Firebase</span>
+                    <span class="tag is-light is-info" style="margin-right: 8px;">Fragments</span>
+                    <span class="tag is-light is-info" style="margin-right: 8px;">Background Processing</span>        
+                    <span class="tag is-light is-info" style="margin-right: 8px;">Material Design</span>                 
+                    
+                    <span class="tag is-light is-success" style="margin-right: 8px;">Dependency Injection</span>
+                    <span class="tag is-light is-success" style="margin-right: 8px;">Design Patterns/span>                  
+            </span>
+        </div>
+
+    </div>
+   
+
+
+
+
+
+    <!-- p:5, i=4, s=3, w=2 Programming-->
+    <div class="column ">
+        <div class="box">
+              <p class="subtile"> Programming Paradigms  </p>   <br>
+              <span class="content">
+                  <span class="tag is-primary is-light" style="margin-right: 8px;">OOP</span>
+                  <span class="tag is-primary is-light" style="margin-right: 8px;">Async</span>                 
+                  <span class="tag is-primary is-light" style="margin-right: 8px;">DBMS</span>                 
+                  <span class="tag is-primary is-light" style="margin-right: 8px;">Data Structures</span>
+                  
+                  <span class="tag is-info    is-light" style="margin-right: 8px;">Complexity</span>                 
+                  <span class="tag is-info    is-light" style="margin-right: 8px;">Recursion</span>
+
+                  <span class="tag is-success    is-light" style="margin-right: 8px;">Functional Programming</span>
+                  <span class="tag is-success    is-light" style="margin-right: 8px;">DP</span>
+                  <span class="tag is-success    is-light" style="margin-right: 8px;">Mathemetics</span>
+                  <span class="tag is-success    is-light" style="margin-right: 8px;">Statistics</span>
+                                    
+             </span>
+        </div>
+    </div>
+
+
+  
+    <!-- Softwarers -->
+
+    <div class="column ">
+        <div class="box">
+                <p class="subtile">Softwares  </p>   <br>
+                <span class="content">
+                    <span class="tag is-primary is-light" style="margin-right: 8px;">Android Studio</span>
+                    <span class="tag is-primary is-light" style="margin-right: 8px;">Jetbrains(Webstorm/Pycharm/IntelliJ)</span>                 
+                    <span class="tag is-primary is-light" style="margin-right: 8px;">Eclipse</span>    
+                    <span class="tag is-primary is-light" style="margin-right: 8px;">VS code</span>    
+                    <span class="tag is-primary is-light" style="margin-right: 8px;">CodeBlocks</span>              
+                </span>
+        </div>
+    </div>
+
+
+       <!-- OS -->
+       <div class="column ">
+        <div class="box">
+            <p class="subtile">Operating System</p>
+            <span class="content">
+                    <span class="tag is-primary is-light" style="margin-right: 8px;">Windows</span>
+                    <span class="tag is-info    is-light" style="margin-right: 8px;">Linux(Ubuntu 18.04 Lts)</span>
+            </span>
+        </div>
+    </div>
+
+    
+</div>
+
+
+</body>
+</html>

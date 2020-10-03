@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backend Based Projects by Curioustools</title>
+
+    <style>
+        @font-face {
+            font-family: 'archiaregular';
+            src: url('../static/fonts/archia-regular-webfont.eot');
+            src: url('../static/fonts/archia-regular-webfont.eot?#iefix') format('embedded-opentype'),
+                url('../static/fonts/archia-regular-webfont.woff2') format('woff2'),
+                url('../static/fonts/archia-regular-webfont.woff') format('woff'),
+                url('../static/fonts/archia-regular-webfont.ttf') format('truetype');
+
+        }
+
+        * {
+            font-family: archiaregular;
+            font-weight: bold;
+            font-style: normal;
+        }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+
+    <!-- goto top button -->
+    <a style="
+        position:fixed;
+        bottom:40px;
+        right:40px;
+        
+        background-color:#cdf8e6;
+        color:rgb(0, 0, 0);
+        font-weight: bold;
+        padding: 16px;
+        border-width: 2px;
+        border-radius:8px;" href="#">
+        TOP
+    </a>
+
+    <!-- Bootstrap nav bar -->
+
+    <section>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark ">
+            <a class="navbar-brand " href="#">
+                <img class="align-middle" src="../static/img/logo.svg" width="40px" height="40px">
+                <h2 class="d-inline align-middle"><b>Projects</b></h2>
+
+            </a>
+            <ul class="navbar-nav">
+                <li class="nav-item"> <a class="nav-link active" href="#">ToolBox</a></li>
+                <li class="nav-item"> <a class="nav-link" href="#">Other Web Projects</a></li>
+            </ul>
+
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="#" class="btn btn-warning" role="button"><b>Visit Curioustool</b></a>
+                </li>
+            </ul>
+        </nav>
+
+    </section>
+
+
+
+    <!-- Section for toolbox items -->
+    <section class="container-fluid">
+        <div class="row ">
+
+
+            <!-- ALL PROJECTS HERE -->
+
+            <div class="col-sm-8">
+
+                <div class="m-4 p-4 shadow  bg-white rounded-lg">
+
+                    <!-- Toast -->
+                    <div class="alert bg-light text-dark alert-dismissible fade show" role="alert">
+                        <p>
+                            Hello! Your Recently generated shortlinks are as follows:
+                        </p>
+                        <hr>
+
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+
+                        <div>
+
+                            <a href="#" class="mb-2 p-2 badge badge-pill badge-light bg-white text-info ">/Light</a>
+                            <a href="#" class="mb-2 p-2 badge badge-pill badge-light bg-white text-info ">/Light</a>
+                            <a href="#" class="mb-2 p-2 badge badge-pill badge-light bg-white text-info ">/Light</a>
+                            <a href="#" class="mb-2 p-2 badge badge-pill badge-light bg-white text-info ">/Light</a>
+                            <a href="#" class="mb-2 p-2 badge badge-pill badge-light bg-white text-info ">/Light</a>
+                            <a href="#" class="mb-2 p-2 badge badge-pill badge-light bg-white text-info ">/Light</a>
+                            <a href="#" class="mb-2 p-2 badge badge-pill badge-light bg-white text-info ">/Light</a>
+                            <a href="#" class="mb-2 p-2 badge badge-pill badge-light bg-white text-info ">/Light</a>
+                            <a href="#" class="mb-2 p-2 badge badge-pill badge-light bg-white text-info ">/Light</a>
+                            <a href="#" class="mb-2 p-2 badge badge-pill badge-light bg-white text-info ">/Light</a>
+                            <a href="#" class="mb-2 p-2 badge badge-pill badge-light bg-white text-info ">/Light</a>
+                            <a href="#" class="mb-2 p-2 badge badge-pill badge-light bg-white text-info ">/Light</a>
+                            <a href="#" class="mb-2 p-2 badge badge-pill badge-light bg-white text-info ">/Light</a>
+                            <a href="#" class="mb-2 p-2 badge badge-pill badge-light bg-white text-info ">/Light</a>
+                            <a href="#" class="mb-2 p-2 badge badge-pill badge-light bg-white text-info ">/Light</a>
+                            <a href="#" class="mb-2 p-2 badge badge-pill badge-light bg-white text-info ">/Light</a>
+                            <a href="#" class="mb-2 p-2 badge badge-pill badge-light bg-white text-info ">/Light</a>
+                            <a href="#" class="mb-2 p-2 badge badge-pill badge-light bg-white text-info ">/Light</a>
+
+
+
+                        </div>
+                        <p>
+                            <small>Note: Your last generated shortlinks are only visible to users of your PC for 1
+                                week</small>
+                        </p>
+                    </div>
+
+
+                    <h3 class="border-bottom">
+                        Url Shortner
+                    </h3>
+                    <p>
+                        Add your url and alias to get a shortened url from our superfast servers! You will also recieve
+                        a secret key which you can write down to edit or delete the url later. <br>
+                        URLS are valid forever!
+                    </p>
+                    <hr>
+
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="p-3 border rounded-lg">
+                                    <h3>Shorten Url!</h3>
+                                    <hr>
+
+                                    <form method="POST" action="#" class="needs-validation" novalidate>
+                                        <div class="form-group">
+                                            <label for="id_url">Enter Url:</label>
+                                            <input type="text" type="url" class="form-control"
+                                                placeholder="eg https://www.mylongurl.com/" id="id_url" name="id_url"
+                                                required>
+
+                                            <div class="valid-feedback">Valid.</div>
+                                            <div class="invalid-feedback">Please fill out this field.</div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="id_code">Enter Short Code:</label>
+
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" id="id_code" name="id_code"
+                                                    placeholder="Try 'tiny-bunny'" required>
+                                                <div class="input-group-append">
+                                                    <button type="submit" class="btn btn-success">Submit</button>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+                                    </form>
+
+
+
+
+
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="p-3 border rounded-lg">
+                                    <h3>Manage Your Url!</h3>
+                                    <hr>
+
+
+                                    <form method="POST" action="#" class="needs-validation" novalidate>
+
+                                        <div class="form-group">
+                                            <label for="id_code">Enter SECRET_CODE </label>
+
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" id="id_code" name="id_code"
+                                                    placeholder="beep bop" required>
+                                                <div class="input-group-append">
+                                                    <button type="submit" class="btn btn-danger">Submit</button>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </form>
+
+                                    <hr>
+                                    <form method="POST" action="#" class="needs-validation" novalidate>
+
+                                        <div class="form-group">
+
+                                            <label for="id_url">Your Url:</label>
+                                            <input type="text" type="url" class="form-control"
+                                                placeholder="eg https://www.mylongurl.com/" id="id_url" name="id_url"
+                                                required>
+
+                                            <div class="valid-feedback">Valid.</div>
+                                            <div class="invalid-feedback">Please fill out this field.</div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="id_code">Your Short code </label>
+
+                                            <input type="text" class="form-control" id="id_code" name="id_code"
+                                                    placeholder="beep bop" required>
+
+
+                                        </div>
+
+                                        <label >Take an Action:</label><br>
+
+
+                                        <button type="submit" class="btn btn-info">Update Info</button>
+                                        <button type="submit" class="btn btn-danger">Delete Short Url</button>
+
+
+                                    </form>
+
+
+
+                                </div>
+
+                            </div>
+
+
+
+                        </div>
+
+                        <div class="m-2 alert alert-warning" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+
+                            Template alert dialog
+
+                        </div>
+
+                        <!-- toast failure -->
+                        <div class="m-2 alert  alert-danger fade show" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+
+                            <p>
+                                Sorry, but "hello bunny" is already being used by another user for their
+                                url.
+                            </p>
+                            <p>
+                                Use a different shortcode or if you are the creater, add the "secret_id" in
+                                the right to manage your url.
+                            </p>
+                        </div>
+                        <!-- toast Sucess -->
+                        <div class="m-2 alert alert-success" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+
+                            Success! Yorur new shortlink is live at:
+                            <a class="m-2 p-2 badge badge-light bg-white text-success " href="https://www.abc.xyz/"
+                                target="_blank">
+                                https://www.abc.xyz/hello
+
+                            </a>
+
+                            <br>
+
+                            This will be available forever! use the SECRET CODE :
+                            <span class="p-2 badge badge-pill badge-light bg-white text-success ">
+                                abcXYZ
+                            </span>
+                            (Double tap to copy) in the right side form to edit or delete the short url.
+
+                        </div>
+
+
+                    </div>
+
+
+
+
+
+
+
+
+                </div>
+
+                <script>
+                    // Disable form submissions if there are invalid fields
+                    (function () {
+                        'use strict';
+                        window.addEventListener('load', function () {
+                            // Get the forms we want to add validation styles to
+                            var forms = document.getElementsByClassName('needs-validation');
+                            // Loop over them and prevent submission
+                            var validation = Array.prototype.filter.call(forms, function (form) {
+                                form.addEventListener('submit', function (event) {
+                                    if (form.checkValidity() === false) {
+                                        event.preventDefault();
+                                        event.stopPropagation();
+                                    }
+                                    form.classList.add('was-validated');
+                                }, false);
+                            });
+                        }, false);
+                    })();
+                </script>
+
+
+
+            </div>
+        </div>
+
+
+
+
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+
+
+
+
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <title>Curioustools: Welcome to my Website!</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.0/css/bulma.css">
+
+
+        <!-- Scripts to "load" another html file in here -->
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script> 
+            $(
+              function(){$("#nb").load("includes/navbar.html");}
+            );
+        </script> 
+</head>
+
+
+<body>
+  <!-- Navigation bar -->
+  <div id="nb"></div>
+  <!-- section: About me -->
+  <section class="section ">
+    
+
+    <h1 class="title is-1 has-text-centered">Hello.</h1>
+
+    <div class="columns is-desktop is-vcentered">
+      <div class="column box "><img src="assets/img/home/logo.svg" width="100%"> </div>
+      
+      <div class="column is-9">
+      
+          <p class="content">
+            Second column Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse incidunt saepe libero eveniet 
+            quidem ullam unde nisi alias, quos, hic facilis facere totam molestiae aliquam voluptate ipsam! Fugiat, 
+            sequi optio? Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae nemo quidem eius inventore 
+            fuga iusto pariatur, earum repudiandae, cum necessitatibus culpa aliquam est laudantium quae temporibus          
+          </p>
+
+          <article class="message is-dark ">
+
+              <h3 class="message-header ">Dark</h3>
+              
+              <p class="message-body ">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis 
+                placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, 
+                et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. 
+                Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a 
+              </p>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+
+  </section>
+
+  <!-- Section Contact details -->
+
+  <!-- 
+    hero is nothing but a big box of color.in theoritical terms it is supposed to be "a page inside a page": a section so big or important, that it 
+    would feel like its another page of information(But it can also be small if it has useful info). it must have a  <div class="hero-body"> class 
+    as its child at minimum, though it could also have <div class="hero-head"> <div class="hero-body"> and <div class="hero-foot">.
+
+    The header children and footer children would be displayed at top and bottom repectively, but the body children would be awkwardly displayed
+    at the centeral height(not both central height/width, just the height), no matter how large the hero is( which could be anywhere between 
+    default<i.e nothing> is-medium is-large and is-fullheight) 
+  -->
+  <section class="hero is-light">
+    <div class="hero-body">
+      
+        <h3 class="title is-h3">Important links.</h3>
+
+
+        <div class="columns is-mobile is-multiline is-centered">
+            <a href="mailto:anshsachdeva.w.5798@gmail.com" class="column is-narrow" target="_blank">                <img src="assets/img/home/email.png"     class="image is-1by1"  height="64" width="64" alt="gmail">     </a>            
+            <a href="https://www.linkedin.com/in/anshsachdevaprofessional" class="column is-narrow"target="_blank"> <img src="assets/img/home/linkedin.png"  class="image is-1by1"  height="64" width="64" alt="linkedin">  </a>
+            <a href="https://github.com/root-ansh" class="column is-narrow"target="_blank">                         <img src="assets/img/home/github.png"    class="image is-1by1"  height="64" width="64" alt="github">    </a>   
+            <a href="https://medium.com/@anshsachdevaprofessional" class="column is-narrow"target="_blank">         <img src="assets/img/home/medium.png"    class="image is-1by1"  height="64" width="64" alt="medium">    </a>
+            <a href="https://twitter.com/root_ansh" class="column is-narrow"target="_blank">                        <img src="assets/img/home/twitter.png"   class="image is-1by1"  height="64" width="64" alt="gmail">     </a>   
+        </div>  
+
+
+        <div class="columns"><a href="" class="column" > </a></div><!-- empty column group for space -->
+        
+        <div class="columns is-mobile is-multiline is-centered">
+        <a href="https://twitter.com/root_ansh" class="button is-primary is-large box"> Download My Resume . </a>   
+        </div>
+
+         
+
+        
+    </div>
+  </section>
+
+
+
+
+        
+</body>
+</html>
+
