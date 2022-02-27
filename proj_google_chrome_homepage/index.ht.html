@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>hello world</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+        <style>
+            * {font-family: 'Open Sans', sans-serif;}
+
+            .nav_container{
+                display: flex;
+                justify-content: right;
+                align-items: center;
+            }
+            .nav_container a{
+                color: #2a2a2a;
+                text-decoration: none;
+                margin-right: 8px;
+                text-transform: capitalize;
+            }
+            .nav_container a:hover{
+                text-decoration: underline;
+            }
+            .nav_container img{
+                height: 36px;
+                width: 36px;
+                margin-right: 8px;
+                padding: 2px;
+                border-radius: 50%;
+            }
+            .nav_container img:hover{
+                background-color: #eeeeee;
+            }
+
+            .search{
+                margin-top: 80px;
+                text-align: center;
+            }
+
+            .search_bar{
+                display: inline-block;
+                padding: 16px 32px;
+                background-color: #ffffff;
+                border-radius: 75px;
+                box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+            .search_bar>*{
+                color: #343434;
+            }
+            /*.search_bar>span{*/
+            /*    padding: 8px;*/
+            /*    color: transparent;*/
+            /*    text-shadow: 0 0 0 black;*/
+            /*}*/
+            .search_bar>input{
+                width: 400px;
+                outline: none;
+                background-color: transparent;
+                border: none;
+
+            }
+
+            #ivAllApps{
+                height: 20px;
+                width: 20px;
+                padding: 8px;
+            }
+            #ivLogo{
+                width: 400px;
+                height: 200px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <section class="nav_container">
+            <a href="#">gmail</a>
+            <a href="#">images</a>
+            <img src="dots.svg" alt="all apps" id="ivAllApps">
+            <img src="user.jpeg" alt="user" id="ivUser">
+        </section>
+
+        <section class="search">
+            <div>
+                <img src="logo_google.svg" alt="google" id="ivLogo">
+            </div>
+            <div class="search_bar">
+                <span>🔍</span>
+                <input type="text" name="search" id="ip_search">
+                <span>🎙️</span>
+            </div>
+
+
+        </section>
+
+
+    </body>
+</html>

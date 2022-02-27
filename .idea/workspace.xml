@@ -19,7 +19,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/template1" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1iMThe4UoYBAksRMsf0qLmj5Xp4" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -30,8 +30,10 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/simple-html-site" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.DirectoryMappings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -51,6 +53,7 @@
       <option name="presentableId" value="Default" />
       <updated>1601716581389</updated>
       <workItem from="1601716582535" duration="1705000" />
+      <workItem from="1645957755843" duration="41000" />
     </task>
     <servers />
   </component>
@@ -67,5 +70,12 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/AboutMe" />
+      <path value="$PROJECT_DIR$/simple_html_website_clg" />
+      <path value="$PROJECT_DIR$/template1" />
+    </ignored-roots>
   </component>
 </project>
