@@ -5,7 +5,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e238e0fc-a757-422e-8ac5-b610ede78f38" name="Default Changelist" comment="" />
+    <list default="true" id="e238e0fc-a757-422e-8ac5-b610ede78f38" name="Default Changelist" comment="google chrome homepage">
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proj_google_chrome_homepage/index.ht.html" beforeDir="false" afterPath="$PROJECT_DIR$/proj_google_chrome_homepage/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,8 +24,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="1iMThe4UoYBAksRMsf0qLmj5Xp4" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -33,6 +41,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/simple-html-site" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.DirectoryMappings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -41,6 +50,7 @@
       <recent name="H:\HDD_WORKSPACE\others\05 Web dev\000_projects\simple-html-site" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="H:\HDD_WORKSPACE\others\05 Web dev\000_projects\simple html website 2" />
     </key>
   </component>
@@ -53,8 +63,16 @@
       <option name="presentableId" value="Default" />
       <updated>1601716581389</updated>
       <workItem from="1601716582535" duration="1705000" />
-      <workItem from="1645957755843" duration="41000" />
+      <workItem from="1645957755843" duration="346000" />
     </task>
+    <task id="LOCAL-00001" summary="google chrome homepage">
+      <created>1645957934202</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1645957934202</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -77,5 +95,7 @@
       <path value="$PROJECT_DIR$/simple_html_website_clg" />
       <path value="$PROJECT_DIR$/template1" />
     </ignored-roots>
+    <MESSAGE value="google chrome homepage" />
+    <option name="LAST_COMMIT_MESSAGE" value="google chrome homepage" />
   </component>
 </project>
