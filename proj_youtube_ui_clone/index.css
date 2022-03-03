@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+img {
+    height: 8px;
+}
+
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.nav_home {
+    display: flex;
+    align-items: center;
+}
+
+.nav_icon {
+    height: 18px;
+    width: 18px;
+    padding: 12px;
+    border: thin gray dotted;
+    border-radius: 50%;
+}
+
+.nav_icon:hover {
+    background: #f3f3f3;
+}
+
+.nav_logo {
+    height: 20px;
+}
+
+.nav_search {
+    display: flex;
+    width: 50%;
+}
+
+.search_input {
+    width: 100%;
+}
+
+.section_content {
+    display: flex;
+}
+
+.content_subscriptions {
+    padding: 8px;
+    background: white;
+    width: 800px;
+
+}
+
+.content_subscriptions > * {
+    margin-top: 12px;
+}
+
+.subs_item {
+    display: flex;
+    align-items: center;
+}
+
+.subs_item > img {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    margin-right: 16px;
+}
+
+.subs_item > span {
+    text-transform: capitalize;
+    color: #3d3d3d;
+}
+
+.subs_divider {
+    height: 1px;
+    background: darkblue;
+    border: none;
+}
+.subs_heading{
+    text-transform: uppercase;
+    letter-spacing: 0.244em;
+}
+
+.content_cards{
+    background: whitesmoke;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 8px;
+}
+
+.card{
+    width: 21%;
+    border-radius: 8px;
+}
+card:hover{
+    background: white;
+}
+.card_img{
+    width: 100%;
+    height: 150px;
+    border-radius: 4px;
+}
+
+.card_title_box{
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+}
+.card_icon{
+    height: 30px;
+    border-radius: 50%;
+}
+.card_title{
+    padding-left: 4px;
+    text-align: left;
+    text-overflow: ellipsis;
+    color: #343434;
+}
+
+.card_info{
+    color: #706f6f;
+    margin-top: 4px;
+
+}
