@@ -59,12 +59,18 @@ img {
 }
 
 .content_subscriptions > * {
-    margin-top: 12px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 6px;
 }
 
 .subs_item {
     display: flex;
     align-items: center;
+    border-radius: 8px;
+}
+.subs_item:hover{
+    background: whitesmoke;
 }
 
 .subs_item > img {
@@ -83,6 +89,7 @@ img {
     height: 1px;
     background: darkblue;
     border: none;
+    padding: 0;
 }
 .subs_heading{
     text-transform: uppercase;
