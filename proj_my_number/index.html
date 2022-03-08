@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My number</title>
+    <style>
+        input {
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+<h1>Guess My number</h1>
+<p>I am the computer, thinking of a number between 1 and 100( both included)</p>
+<p>Guess My number in 10 tries. i will let you know if your number is too small or too large than my guess</p>
+
+<div class="guess">
+    <input type="number" name="user_guess" id="inp_guess" placeholder="Guess my number" min="1" max="100">
+    <button type="submit" id="bt">submit</button>
+</div>
+<p id="pHint"></p>
+
+
+<script>
+    function getRandom() {
+        return Math.floor(Math.random() * 100) + 1;
+    }
+    const MAX_TRIES_AVAILABLE = 10
+
+    let currentGuess = getRandom()
+    let triesAvailable = MAX_TRIES_AVAILABLE
+    console.log("current guess", currentGuess)
+    const btSubmit = document.getElementById("bt")
+    btSubmit.addEventListener("click", () => {
+            let guess = document.getElementById("inp_guess").value;
+            //document.getElementById("inp_guess").innerText = "";
+            console.log(guess);
+            triesAvailable--;
+            if(triesAvailable<=0){
+                document.getElementById("pHint").innerHTML = `you failed. the actual guess was ${currentGuess}. restarting the game <br>`
+                currentGuess = getRandom()
+                triesAvailable = MAX_TRIES_AVAILABLE
+                return
+            }
+            if (guess == currentGuess) {
+                console.log("correct")
+                document.getElementById("pHint").innerHTML = `your guess ${guess} is CORRECT! congratulations.  restarting game <br>`
+                currentGuess = getRandom()
+                triesAvailable = MAX_TRIES_AVAILABLE
+            }
+            else if (guess > currentGuess) {
+                console.log("bigger")
+                document.getElementById("pHint").innerHTML += `your guess ${guess} is greater than current guess <br> `
+            }
+            else if (guess < currentGuess) {
+                console.log("smaller")
+                document.getElementById("pHint").innerHTML += `your guess ${guess} is smaller than current guess <br>`
+            }
+            else {
+                document.getElementById("pHint").innerHTML = ` Something went wrong. restarting the game <br>`
+                currentGuess = getRandom()
+                triesAvailable = 5
+                return
+            }
+        }
+    )
+</script>
+</body>
+</html>
