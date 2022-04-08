@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Fasting Calender</title>
+        <style>
+
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: "Open Sans", "Arial";
+
+            }
+            .calender{
+                background-image: url("ice.jpeg");
+                background-size: cover;
+                width: 50%;
+                border: 1px solid black;
+                padding: 8px;
+            }
+            .calender>h1 {
+                text-align: center;
+                font-weight: normal;
+                font-size: 60px;
+                margin: 8px;
+                padding: 5px;
+                background: #FFFFFF96;
+                border-radius: 48px;
+            }
+
+            .calender>h3 {
+                text-align: center;
+                font-weight: normal;
+                font-size: 30px;
+                margin: 8px;
+                padding: 5px;
+                background: #ffffff;
+                border-radius: 48px;
+            }
+            .calender>h3>span{
+                color: blue;
+                text-decoration: underline;
+            }
+
+            .c-row{
+                display: grid;
+                grid-template-columns: 1fr 3fr;
+                border-bottom-width: 1.5px;
+                border-bottom-style: solid;
+                border-bottom-color: rgba(190, 230, 255, 0.73);
+                padding-bottom: 0.5em;
+                margin-bottom: 0.5em;
+
+            }
+            .c-month{
+                text-align: justify;
+                align-self: center;
+                text-transform: uppercase;
+                font-size: xx-large;
+                letter-spacing: 2px;
+                margin-left: 8px;
+                color: #2a2a2a;
+                background: rgba(255, 255, 255, 0.85);
+                border-radius: 50px;
+                padding-left: 12px;
+                margin-right: 8px;
+
+            }
+
+            .c-dates > span {
+                display: inline-block;
+                padding: 10px 10px 10px 10px;
+                border: 1px solid transparent;
+                border-radius: 24px;
+                margin-right: 8px;
+                font-weight: bold;
+            }
+            .ama::after{
+                content: " Amavasyá";
+            }
+            .ama{
+                background: rgba(190, 230, 255, 1);
+                color: #2a2a2a;
+            }
+
+            .eke::after{
+                content: " Ekádashii";
+            }
+            .eke{
+                background: rgb(255, 255, 255);
+                color: #2a2a2a;
+            }
+
+
+            .pur::after{
+                content: " Purnimá";
+            }
+            .pur{
+                background: #FFF4E9FF;
+                color: #2a2a2a;
+            }
+
+
+
+        </style>
+    </head>
+    <body>
+
+        <div class="content">
+            <div class="calender">
+                <h1>Ananda Marga</h1>
+
+
+                <div class="c-row">
+                    <div class="c-month">January</div>
+                    <div class="c-dates">
+                        <span class="ama">2</span>
+                        <span class="eke">13</span>
+                        <span class="pur">17</span>
+                        <span class="eke">28</span>
+                        <span class="ama">31</span>
+                    </div>
+                </div>
+
+                <div class="c-row">
+                    <div class="c-month">February</div>
+                    <div class="c-dates">
+                        <span class="eke">11</span>
+                        <span class="pur">16</span>
+                        <span class="eke">26</span>
+                    </div>
+                </div>
+
+                <div class="c-row">
+                    <div class="c-month">March</div>
+                    <div class="c-dates">
+                        <span class="ama">2</span>
+                        <span class="eke">13</span>
+                        <span class="pur">17</span>
+                        <span class="eke">27</span>
+                        <span class="ama">31</span>
+                    </div>
+                </div>
+
+                <div class="c-row">
+                    <div class="c-month">April</div>
+                    <div class="c-dates">
+                        <span class="eke">12</span>
+                        <span class="pur">16</span>
+                        <span class="eke">26</span>
+                        <span class="ama">30</span>
+                    </div>
+                </div>
+
+                <div class="c-row">
+                    <div class="c-month">May</div>
+                    <div class="c-dates">
+                        <span class="eke">12</span>
+                        <span class="pur">15</span>
+                        <span class="eke">25</span>
+                        <span class="ama">29</span>
+                    </div>
+                </div>
+
+                <div class="c-row">
+                    <div class="c-month">June</div>
+                    <div class="c-dates">
+                        <span class="eke">10</span>
+                        <span class="pur">14</span>
+                        <span class="eke">24</span>
+                        <span class="ama">28</span>
+                    </div>
+                </div>
+
+                <div class="c-row">
+                    <div class="c-month">July</div>
+                    <div class="c-dates">
+                        <span class="eke">9</span>
+                        <span class="pur">13</span>
+                        <span class="eke">23</span>
+                        <span class="ama">28</span>
+                    </div>
+                </div>
+
+                <div class="c-row">
+                    <div class="c-month">August</div>
+                    <div class="c-dates">
+                        <span class="eke">8</span>
+                        <span class="pur">11</span>
+                        <span class="eke">22</span>
+                        <span class="ama">26</span>
+                    </div>
+                </div>
+
+
+                <div class="c-row">
+                    <div class="c-month">September</div>
+                    <div class="c-dates">
+                        <span class="eke">6</span>
+                        <span class="pur">10</span>
+                        <span class="eke">21</span>
+                        <span class="ama">25</span>
+                    </div>
+                </div>
+
+                <div class="c-row">
+                    <div class="c-month">October</div>
+                    <div class="c-dates">
+                        <span class="eke">5</span>
+                        <span class="pur">9</span>
+                        <span class="eke">20</span>
+                        <span class="ama">24</span>
+                    </div>
+                </div>
+
+                <div class="c-row">
+                    <div class="c-month">November</div>
+                    <div class="c-dates">
+                        <span class="eke">3</span>
+                        <span class="pur">7</span>
+                        <span class="eke">19</span>
+                        <span class="ama">23</span>
+                    </div>
+                </div>
+
+                <div class="c-row">
+                    <div class="c-month">December</div>
+                    <div class="c-dates">
+                        <span class="eke">3</span>
+                        <span class="pur">7</span>
+                        <span class="eke">19</span>
+                        <span class="ama">22</span>
+                    </div>
+                </div>
+
+
+                <h3>visit : <span>https://india.anandamarga.org/<span> </h3>
+
+
+
+            </div>
+
+        </div>
+
+
+    </body>
+</html>

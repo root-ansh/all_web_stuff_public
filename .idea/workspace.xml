@@ -8,9 +8,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e238e0fc-a757-422e-8ac5-b610ede78f38" name="Default Changelist" comment="youtube homepage">
+    <list default="true" id="e238e0fc-a757-422e-8ac5-b610ede78f38" name="Default Changelist" comment="mini js game">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +21,7 @@
       <list>
         <option value="CSS File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -52,18 +52,19 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/proj_youtube_ui_clone" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/fasting_calender" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.HTML" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/fasting_calender" />
       <recent name="$PROJECT_DIR$/proj_youtube_ui_clone" />
       <recent name="$PROJECT_DIR$/proj_dev_site" />
       <recent name="H:\HDD_WORKSPACE\others\05 Web dev\000_projects\simple-html-site" />
@@ -73,6 +74,11 @@
       <recent name="$PROJECT_DIR$" />
       <recent name="H:\HDD_WORKSPACE\others\05 Web dev\000_projects\simple html website 2" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="file.js" type="NodeJSConfigurationType" nameIsGenerated="true" path-to-js-file="fasting_calender/file.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -89,6 +95,7 @@
       <workItem from="1646323685703" duration="257000" />
       <workItem from="1646495282800" duration="162000" />
       <workItem from="1646739360958" duration="2227000" />
+      <workItem from="1647949754462" duration="1432000" />
     </task>
     <task id="LOCAL-00001" summary="google chrome homepage">
       <created>1645957934202</created>
@@ -160,5 +167,9 @@
     <MESSAGE value="google chrome homepage" />
     <MESSAGE value="youtube homepage" />
     <option name="LAST_COMMIT_MESSAGE" value="youtube homepage" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
