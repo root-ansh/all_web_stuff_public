@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Hello Jira</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="nav_outer">
+            <h1>Todos</h1>
+            <button id="bt_add" class="bt bt_curved4 bg_blue_dark "><i class="fa fa-plus"></i><span>New Task</span></button>
+            <button id="bt_delete" class="bt bt_curved4 bg_red hide"><i class="fa fa-trash"></i><span>Delete Selected</span></button>
+            <button id="bt_mode" class="bt bt_curved4 bg_blue">Sequential Mode</button>
+            <button id="bt_filter" class="bt bt_rounded bg_lightgrey hover_blue"><i class="fa fa-filter"></i></button>
+            <div class="filters hide" id="sec_filters">
+                <button id="bt_fail" class="bt bt_curved4 bg_red"><i class="fa fa-exclamation-triangle"></i><span>FAILED</span></button>
+                <button id="bt_done" class="bt bt_curved4 bg_green"><i class="fa fa-check-circle"></i><span>DONE</span></button>
+                <button id="bt_progress" class="bt bt_curved4 bg_blue"><i class="fa fa-clock"></i><span>IN PROGRESS</span></button>
+                <button id="bt_todo" class="bt bt_curved4 bg_grey"><i class="fa fa-bell"></i><span>TO DO</span></button>
+            </div>
+        </div>
+
+        <section class="popup hide">
+            <span class="popup_id hide">popup_id</span>
+            <div class="popup_title_group">
+                <div class="popup_title" contenteditable="true" placeholder="Enter title..." autofocus></div>
+                <div class="popup_actions">
+                    <button id="bt_popup_save" class="bt_save bt bt_curved4 bg_green_dark "><i class="fa fa-check"></i><span>Save</span></button>
+                    <button id="bt_popup_closes" class="bt_cancel bt bt_curved4  bg_grey hover_red"><i class="fa fa-multiply"></i></button>
+
+                </div>
+            </div>
+
+
+            <div class="popup_detail" contenteditable="true" placeholder="Enter details..."></div>
+            <hr>
+            <div class="popup_priorities">
+                <p>Choose initial priority <span style="color: red">*</span></p>
+                <button id="bt_popup_todo" class="bt bt_curved4 bg_grey "><i class="fa fa-bell"></i><span>TO DO</span></button>
+                <button id="bt_popup_progress" class="bt bt_curved4 bg_grey "><i class="fa fa-clock"></i><span>IN PROGRESS</span></button>
+                <button id="bt_popup_done" class="bt bt_curved4 bg_grey "><i class="fa fa-check-circle"></i><span>DONE</span></button>
+                <button id="bt_popup_fail" class="bt bt_curved4 bg_grey "><i class="fa fa-exclamation-triangle"></i><span>FAILED</span></button>
+            </div>
+        </section>
+
+
+
+        <section class="sec_notes_container">
+            <section class="sec_filtered hide">
+                <div class="col-3">
+                    <span class="sp_coltitle bt bt_pill bg_grey_dark">TODO</span>
+                    <div class="sec_single sec_todo "></div>
+                </div>
+
+                <div class="col-3">
+                    <span class="sp_coltitle bt bt_pill bg_blue_dark">IN PROGRESS</span>
+
+                    <div class=" sec_single sec_progress "></div>
+                </div>
+                <div class="col-3">
+                    <span class="sp_coltitle bt bt_pill bg_green_dark">DONE</span>
+
+                    <div class=" sec_single sec_done "></div>
+                </div>
+                <div class="col-3">
+                    <span class="sp_coltitle bt bt_pill bg_red_dark">FAILED</span>
+
+                    <div class="sec_single sec_fail "></div>
+                </div>
+
+            </section>
+
+            <section class="sec_random"></section>
+        </section>
+
+        <script src="app.js"></script>
+    </body>
+</html>

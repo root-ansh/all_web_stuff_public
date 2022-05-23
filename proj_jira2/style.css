@@ -1,0 +1,343 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    resize: none;
+    font-family: 'Comfortaa', sans-serif;
+}
+
+html {
+    font-size: 8px;
+}
+
+
+.nav_outer {
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: rgba(0, 0, 0, 0.15) 2px 2px 3px;
+    gap: 2rem;
+    padding: 1rem;
+    min-height: 8rem;
+    align-items: center;
+    justify-content: flex-end; /* puts all items in row and puts the row at end */
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 1rem;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: 0.25rem;
+    border: 1px dashed lightgray;
+
+}
+
+.nav_outer > h1 {
+    font-size: 4rem;
+    margin-right: auto; /* puts first item in the start */
+
+}
+
+.bt {
+    padding: 0.7rem 1rem;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.15) 2px 2px 3px;
+}
+
+.bt_pill {
+    border-radius: 3rem;
+}
+
+.bt_flat {
+    padding: 0.7rem 1rem;
+    text-align: center;
+    box-shadow: none;
+}
+
+.bt:active {
+    box-shadow: none;
+}
+
+button > span {
+    margin-left: 1rem;
+}
+
+button > .fa {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.bt_curved4 {
+    border-radius: 0.25rem;
+}
+
+.bt_rounded {
+    border-radius: 4rem;
+    padding: 0.85rem 1rem;
+}
+
+.bg_blue {
+    background: #e1f2ff;
+    color: #2151c5;
+}
+
+.bg_blue_dark {
+    background: #2151c5;
+    color: white;
+}
+
+.bg_red {
+    background: #faecec;
+    color: red;
+}
+
+.bg_red_dark {
+    background: red;
+    color: white;
+}
+
+.bg_grey {
+    background: #f1f0f0;
+    color: black;
+}
+
+.bg_grey_dark {
+    background: black;
+    color: white;
+}
+
+.bg_green {
+    background: #e0ffe5;
+    color: green;
+}
+
+.bg_green_dark {
+    background: green;
+    color: white;
+}
+
+.hover_blue:hover {
+    background: #e1f2ff;
+    color: #2151c5;
+}
+
+.hover_red:hover {
+    background: #faecec;
+    color: red;
+}
+
+.hover_dark_blue:hover {
+    background: #2151c5;
+    color: white;
+}
+.hide {
+    display: none !important;
+}
+
+.sec_filtered {
+    padding: 1rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-around;
+}
+
+.sec_single {
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    flex-direction: column;
+}
+.sec_single>*{
+    width: 100%;
+}
+
+.sec_filtered .bt_priority {
+    display: none;
+}
+
+.sec_todo {
+    background: #ececec;
+}
+
+.sec_done {
+    background: #e0ffe5;
+}
+
+.sec_progress {
+    background: #e1f2ff;
+}
+
+.sec_fail {
+    background: #faecec;
+}
+
+.note {
+    background: white;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    font-size: 1.4rem;
+}
+
+.note > h1 {
+    font-size: 2.5rem;
+    min-height: 5rem;
+}
+.note>p{
+    min-height: 4rem;
+}
+
+hr {
+    height: 1px;
+    background: lightgray;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.note_options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+.note_options > * {
+    font-size: 1.5rem;
+}
+.note_selected{
+    background: #2151c5 !important;
+    color: #fff !important;
+}
+.note_selected>*{
+    background: #2151c5 !important;
+    color: #fff !important;
+}
+
+.sec_random {
+    padding: 1rem 2rem;
+    margin: 0 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: flex-start;
+    border-radius: 1rem;
+    background: #ececec;
+}
+
+.sec_random .note {
+    width: 100%;
+}
+
+
+.sec_notes_container {
+    margin-top: 2rem;
+}
+
+.popup {
+    background: white;
+    padding: 1rem;
+    box-shadow: #e1f2ff 0 16px 24px -4px, #e1f2ff 0 8px 16px -4px;
+    border-radius: 0.25rem;
+    border: 1px solid #2151c5;
+    width: 85vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top:  -1rem;
+    position: absolute;
+    max-height: 60vh;
+    overflow: scroll;
+}
+
+.popup .popup_title {
+    font-size: 3rem;
+    min-height: 4rem;
+    overflow: scroll;
+    width: 70%;
+}
+
+.popup .popup_title_group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.popup > .popup_title_group > .popup_actions > .bt {
+    font-size: 1.2rem ;
+    margin-right: 0.5rem;
+}
+
+
+.popup > .popup_detail {
+    font-size: 2rem;
+    min-height: 12rem;
+    margin-top: 1rem;
+    margin-left: 4px;
+    overflow: scroll;
+}
+
+.popup [contenteditable][placeholder]:empty:before {
+    content: attr(placeholder);
+    position: absolute;
+    color: black;
+    background-color: transparent;
+}
+
+
+.popup .popup_priorities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 2rem;
+
+}
+
+.popup .popup_priorities p {
+    color: #2151c5;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.popup .popup_priorities .bt{
+    font-size: 1.5rem ;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop and tablets: */
+    /* note these are flexible and don't take exact
+       size . for eg in desktop mode, col3 will mean
+       4 columns coming taking 24% space per column ,
+       and not 25% */
+    .col-1 {width: 8%;}
+    .col-2 {width: 16%;}
+    .col-3 {width: 24%;}
+    .col-4 {width: 33%;}
+    .col-5 {width: 41%;}
+    .col-6 {width: 49%;}
+    .col-7 {width: 58%;}
+    .col-8 {width: 66%;}
+    .col-9 {width: 74%;}
+    .col-10 {width: 83%;}
+    .col-11 {width: 91%;}
+    .col-12 {width: 100%;}
+
+    /*since note takes 100% width, and for random mode we don't use cols inside note element, therefore we instead use this little css for sec random only*/
+    .sec_random .note {
+        width: 24%;
+    }
+
+    .popup {
+        width: 40vw;
+        margin-left: 58vw;
+    }
+}

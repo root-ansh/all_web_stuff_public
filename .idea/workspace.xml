@@ -8,7 +8,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e238e0fc-a757-422e-8ac5-b610ede78f38" name="Default Changelist" comment="mini js game">
+    <list default="true" id="e238e0fc-a757-422e-8ac5-b610ede78f38" name="Default Changelist" comment="fasting calender">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,9 +19,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -96,6 +96,7 @@
       <workItem from="1646495282800" duration="162000" />
       <workItem from="1646739360958" duration="2227000" />
       <workItem from="1647949754462" duration="1432000" />
+      <workItem from="1649398049849" duration="2492000" />
     </task>
     <task id="LOCAL-00001" summary="google chrome homepage">
       <created>1645957934202</created>
@@ -139,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646495436743</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fasting calender">
+      <created>1649398150621</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1649398150621</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,7 +174,8 @@
     </ignored-roots>
     <MESSAGE value="google chrome homepage" />
     <MESSAGE value="youtube homepage" />
-    <option name="LAST_COMMIT_MESSAGE" value="youtube homepage" />
+    <MESSAGE value="fasting calender" />
+    <option name="LAST_COMMIT_MESSAGE" value="fasting calender" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Chaos Slack</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <section class="sec_nav">
+        </section>
+
+
+        <div class="p-top_nav">
+<!--
+
+top_nav
+   -d_sidebar
+        - button
+   -d_searchbox
+        - button
+        - text
+   -d_right
+        -d_zzz
+            -button
+        -button
+            -dxxx
+                -text,text
+
+
+-->
+
+            <div class="p-top_nav__sidebar">
+                <button class="c-button-unstyled p-top_nav__button p-top_nav__history_menu"  delay="150"  type="button">
+                    <i class="c-icon c-icon--clock-o" type="clock-o"></i>
+                </button>
+            </div>
+
+            <div class="p-top_nav__search__container">
+                <button class="c-button-unstyled p-top_nav__search p-top_nav__search--mac p-top_nav__search--toggle-larger-top-nav-bar"  type="button">
+                    <i class="c-icon p-top_nav__search__icon c-icon--search-medium c-icon--inherit" type="search-medium" ></i>
+                    <span class="p-top_nav__search__text">Search CleverTap</span>
+                </button>
+            </div>
+
+            <div class="p-top_nav__right">
+                <div class="p-top_nav__windows_controls_container margin_right_75" data-qa="top-nav-help-button" delay="150" data-sk="tooltip_parent">
+                    <button class="c-button-unstyled p-top_nav__button p-top_nav__help"  type="button">
+                        <i class="c-icon c-icon--question-circle" type="question-circle"></i>
+                    </button>
+                </div>
+
+                <button class="c-button-unstyled p-ia__nav__user__button p-top_nav__button p-top_nav__windows_controls_container" data-qa="user-button"delay="150"  data-sk="tooltip_parent" type="button">
+                    <div class="p-ia__nav__user p-ia__nav__user__button--toggle-larger-top-nav-bar">
+                        <span class="p-ia__nav__user__avatar c-avatar" style="height: 26px; width: 26px;">
+                            <img src="https://ca.slack-edge.com/T02HPQ6N3-U02NRAFJTE1-f13befd5f5b7-32" srcset="https://ca.slack-edge.com/T02HPQ6N3-U02NRAFJTE1-f13befd5f5b7-72 2x" class="c-base_icon c-base_icon--image" aria-hidden="true" role="img" alt="" style="height: 26px; width: 26px;">
+                        </span>
+                        <i class="c-icon p-ia__nav__user__presence--stroke c-presence c-presence--active c-icon--presence-online" type="presence-online" title="Active" aria-label="Active" aria-hidden="false" data-qa="presence_indicator" data-qa-presence-self="true" data-qa-presence-active="true" data-qa-presence-dnd="false"></i>
+                        <i class="c-icon p-ia__nav__user__presence c-presence c-presence--active c-icon--presence-online" type="presence-online" title="Active" aria-label="Active" aria-hidden="false" data-qa="presence_indicator" data-qa-presence-self="true" data-qa-presence-active="true" data-qa-presence-dnd="false"></i>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </body>
+</html>
