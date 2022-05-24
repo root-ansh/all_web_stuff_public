@@ -17,6 +17,7 @@
             <button id="bt_add" class="bt bt_curved4 bg_blue_dark "><i class="fa fa-plus"></i><span>New Task</span></button>
             <button id="bt_delete" class="bt bt_curved4 bg_red hide"><i class="fa fa-trash"></i><span>Delete Selected</span></button>
             <button id="bt_mode" class="bt bt_curved4 bg_blue">Sequential Mode</button>
+            <button id="bt_help" class="bt bt_curved4 bg_blue"><i class="fa fa-question-circle"></i></button>
             <button id="bt_filter" class="bt bt_rounded bg_lightgrey hover_blue"><i class="fa fa-filter"></i></button>
             <div class="filters hide" id="sec_filters">
                 <button id="bt_fail" class="bt bt_curved4 bg_red"><i class="fa fa-exclamation-triangle"></i><span>FAILED</span></button>
@@ -52,6 +53,18 @@
 
 
         <section class="sec_notes_container">
+            <div class="sec_instructions">
+                <ul class="instructions hide">
+                    <li>Todos is a simple note taking app with priority management.</li>
+                    <li>Press new note to create a note</li>
+                    <li>You can add a title , details and a priority to each note.</li>
+                    <li>in sequential mode, the note's priority will be visible, you can simple change its priority from there.</li>
+                    <li>in sequential mode, there is also an option to filter by presing the <i class="fa fa-filter bg_blue"></i> icon </li>
+                    <li>in slotted mode, the note's will be sorted based on priority in different sections.</li>
+                    <li>you can edit a note's content by pressing the <i class="fa fa-edit bg_blue"></i> icon on each note</li>
+                    <li>you can delete one or multiple notes by pressing <i class="fa fa-check bg_blue "></i>  icon on the note and then deleting the note from the top</li>
+                </ul>
+            </div>
             <section class="sec_filtered hide">
                 <div class="col-3">
                     <span class="sp_coltitle bt bt_pill bg_grey_dark">TODO</span>

@@ -159,7 +159,7 @@ button > .fa {
 }
 
 .sec_filtered .bt_priority {
-    display: none;
+    /*display: none;*/
 }
 
 .sec_todo {
@@ -237,6 +237,15 @@ hr {
 
 .sec_notes_container {
     margin-top: 2rem;
+}
+
+.sec_instructions{
+    margin: 1rem;
+}
+.instructions{
+    margin-left: 2.5rem;
+    margin-top: 2rem;
+    font-size: 2rem;
 }
 
 .popup {

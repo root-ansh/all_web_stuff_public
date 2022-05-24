@@ -1,14 +1,14 @@
 function getDataFromStorage() {
-    // let data = localStorage.getItem("hello_jira")
-    // let js = data == null ? [] : data
-    // console.log("data", js)
-    // return js
-    return []
+    let data = localStorage.getItem("hello_jira")
+    let js = data == null ? [] : JSON.parse(data)
+    console.log("data", js)
+    return js
 }
 function setDataToStorage(){
-    //localStorage.setItem("hello_jira",JSON.stringify(ALL_NOTES))
+    localStorage.setItem("hello_jira",JSON.stringify(ALL_NOTES))
 }
 
+let btHelp =document.querySelector('#bt_help')
 let btFilter = document.querySelector('#bt_filter')
 let secFilters = document.querySelector('#sec_filters')
 let btMode = document.querySelector('#bt_mode')
@@ -231,6 +231,13 @@ function runFilterOnData(){
 
 }
 
+btHelp.addEventListener('click', () => {
+    let instructions = document.querySelector('.instructions')
+    if (instructions.classList.contains('hide')){
+        instructions.classList.remove('hide')
+    }
+    else {instructions.classList.add('hide')}
+})
 btFilter.addEventListener('click', () => {
     if (secFilters.classList.contains('hide')) {
         secFilters.classList.remove('hide')
