@@ -12,6 +12,14 @@ html {
     font-size: 8px;
 }
 
+.no_scrollbars {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+.no_scrollbars::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+}
+
 
 .nav_outer {
     display: flex;
@@ -36,10 +44,15 @@ html {
 
 }
 
-.nav_outer > h1 {
-    font-size: 4rem;
+.nav_outer > .header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-size: 2rem;
     margin-right: auto; /* puts first item in the start */
-
+}
+.nav_outer h1{
+    font-size: 2rem;
 }
 
 .bt {
@@ -142,6 +155,7 @@ button > .fa {
     padding: 1rem 2rem;
     display: flex;
     flex-wrap: wrap;
+    min-height: 100%;
     gap: 1rem;
     justify-content: space-around;
 }
@@ -151,6 +165,7 @@ button > .fa {
     border-radius: 1rem;
     display: flex;
     flex-wrap: wrap;
+    min-height: 20vh;
     gap: 2rem;
     flex-direction: column;
 }
@@ -190,6 +205,7 @@ button > .fa {
     min-height: 5rem;
 }
 .note>p{
+    font-size: 2rem;
     min-height: 4rem;
 }
 
@@ -228,6 +244,7 @@ hr {
     justify-content: flex-start;
     border-radius: 1rem;
     background: #ececec;
+    min-height: 80vh;
 }
 
 .sec_random .note {
@@ -344,9 +361,15 @@ hr {
     .sec_random .note {
         width: 24%;
     }
+    .sec_single{
+        min-height: 80vh;
+    }
 
     .popup {
         width: 40vw;
         margin-left: 58vw;
+    }
+    .nav_outer h1{
+        font-size: 4rem;
     }
 }

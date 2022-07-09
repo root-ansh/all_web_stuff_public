@@ -21,6 +21,7 @@ let secFail = document.querySelector(".sec_fail")
 let btDone = document.querySelector('#bt_done')
 let btFail = document.querySelector('#bt_fail')
 let btTodo = document.querySelector('#bt_todo')
+let btSamples = document.querySelector('#bt_sample')
 let btProgress = document.querySelector('#bt_progress')
 let btAdd = document.querySelector('#bt_add')
 let popup = document.querySelector(".popup")
@@ -33,7 +34,9 @@ let popupBtFail = document.querySelector('#bt_popup_fail')
 let popupBtDone = document.querySelector('#bt_popup_done')
 let popupBtProgress = document.querySelector('#bt_popup_progress')
 let popupBtTodo = document.querySelector('#bt_popup_todo')
-let CURRENT_MODE = btMode.textContent//Sequential Mode//Slotted Mode
+let CURRENT_MODE = btMode.textContent//All notes//Jira
+let MODE_JIRA = "Jira Mode"
+let MODE_ALL_NOTES = "All Notes Mode"
 let ALL_NOTES = getDataFromStorage()
 let CURRENT_FILTERS = []
 
@@ -171,7 +174,7 @@ function updateDataOnUi(allNotes=ALL_NOTES){
         console.log(obj.html)
         console.log("================================")
     })
-    if(CURRENT_MODE ==="Sequential Mode") {
+    if(CURRENT_MODE ===MODE_ALL_NOTES) {
         secRandom.replaceChildren(...notesAndPriority.map(it=>it.html))
     }else {
         let todos = notesAndPriority.filter(it=>it.priority==='#'+popupBtTodo.id).map(it=>it.html)
@@ -321,8 +324,8 @@ btProgress.addEventListener('click', () => {
 
 })
 btMode.addEventListener('click', () => {
-    if (btMode.textContent === "Sequential Mode") {
-        CURRENT_MODE = "Slotted Mode"
+    if (btMode.textContent === MODE_ALL_NOTES) {
+        CURRENT_MODE = MODE_JIRA
         btMode.textContent = CURRENT_MODE
         btMode.classList.remove("bg_blue")
         btMode.classList.add("bg_blue_dark")
@@ -334,7 +337,7 @@ btMode.addEventListener('click', () => {
         secRandom.classList.add('hide')
         secFiltered.classList.remove('hide')
     } else {
-        CURRENT_MODE = "Sequential Mode"
+        CURRENT_MODE = MODE_ALL_NOTES
         btMode.textContent = CURRENT_MODE
         btMode.classList.add("bg_blue")
         btMode.classList.remove("bg_blue_dark")
@@ -371,6 +374,44 @@ btSave.addEventListener('click',()=>{
     console.log(ALL_NOTES)
 
     showHidePopup()
+    updateDataOnUi()
+})
+btSamples.addEventListener('click',()=>{
+    ALL_NOTES = [
+        {
+            id: "id1",
+            title: "This is Your Task",
+            detail: "You can add all kinds of details here. Select new task to create a new note",
+            priority: '#'+popupBtTodo.id
+        },
+        {
+            id: "id2",
+            title: "Jira Mode!",
+            detail: "In jira mode, your notes gets automatically sorted. But what happens when you press the Jira mode button?",
+            priority: '#'+popupBtProgress.id
+        },
+        {
+            id: "id3",
+            title: "Error while typing?",
+            detail: "Select the edit icon on a note, edit and save again!",
+            priority: '#'+popupBtFail.id
+        },
+
+
+        {
+            id: "id4",
+            title: "Lets not see each other again :(",
+            detail: "If you don't wanna see a note again, press the select icon and then delete from the top!",
+            priority: '#'+popupBtFail.id
+        },
+
+        {
+            id: "id5",
+            title: "Auto Save!!",
+            detail: "Refresh this page and magically find all your notes still intact. you can even close your browser/ this tab :D",
+            priority: '#'+popupBtDone.id
+        }
+    ]
     updateDataOnUi()
 })
 
