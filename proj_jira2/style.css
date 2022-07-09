@@ -143,12 +143,22 @@ button > .fa {
     color: red;
 }
 
+.hover_red_dark:hover{
+    background: red;
+    color: white;
+}
 .hover_dark_blue:hover {
     background: #2151c5;
     color: white;
 }
 .hide {
     display: none !important;
+}
+.expand_on_hover{
+    display: none;
+}
+.expand_onhover_parent:hover > .expand_on_hover{
+    display: inline;
 }
 
 .sec_filtered {

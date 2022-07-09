@@ -92,11 +92,11 @@ function initClicksForAllGeneratedNotes(){
                 let note = element.parentElement.parentElement
                 if(note.classList.contains('note_selected')){
                     note.classList.remove('note_selected')
-                    element.classList.replace('bg_blue', 'bg_grey')
+                    element.classList.replace('bg_red_dark', 'bg_grey')
                 }
                 else {
                     note.classList.add('note_selected')
-                    element.classList.replace( 'bg_grey','bg_blue')
+                    element.classList.replace( 'bg_grey','bg_red_dark')
                 }
 
                let selectedNotes = document.querySelectorAll('.note_selected')
@@ -160,8 +160,8 @@ function updateDataOnUi(allNotes=ALL_NOTES){
                     <hr>
                     <div class="note_options">
                         <span class="note_id hide">${note.id}</span>
-                        <button class="bt bt_note_edit bt_rounded bg_grey hover_blue"><i class="fa fa-edit"></i></button>
-                        <button class="bt bt_note_select bt_rounded bg_grey hover_blue"><i class="fa fa-check"></i></button>
+                        <button class="bt bt_note_edit bt_rounded bg_grey hover_blue expand_onhover_parent"><i class="fa fa-edit"></i> <span class="expand_on_hover">Edit note</span></button>
+                        <button class="bt bt_note_select bt_rounded bg_grey hover_blue expand_onhover_parent"><i class="fa fa-trash"></i><span class="expand_on_hover">Select for deletion</span></button>
                         ${button(btID)}
                     </div>
                 </div>`
@@ -327,8 +327,7 @@ btMode.addEventListener('click', () => {
     if (btMode.textContent === MODE_ALL_NOTES) {
         CURRENT_MODE = MODE_JIRA
         btMode.textContent = CURRENT_MODE
-        btMode.classList.remove("bg_blue")
-        btMode.classList.add("bg_blue_dark")
+
         btFilter.classList.add('hide')
         if (!secFilters.classList.contains('hide')) {
             secFilters.classList.add('hide')
@@ -340,7 +339,6 @@ btMode.addEventListener('click', () => {
         CURRENT_MODE = MODE_ALL_NOTES
         btMode.textContent = CURRENT_MODE
         btMode.classList.add("bg_blue")
-        btMode.classList.remove("bg_blue_dark")
         btFilter.classList.remove('hide')
         secRandom.classList.remove('hide')
         secFiltered.classList.add('hide')

@@ -8,7 +8,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e238e0fc-a757-422e-8ac5-b610ede78f38" name="Default Changelist" comment="final changes">
+    <list default="true" id="e238e0fc-a757-422e-8ac5-b610ede78f38" name="Default Changelist" comment="updated jira">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/proj_jira2/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/proj_jira2/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/proj_jira2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/proj_jira2/index.html" afterDir="false" />
@@ -57,6 +57,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -97,7 +98,7 @@
       <workItem from="1647949754462" duration="1432000" />
       <workItem from="1649398049849" duration="2492000" />
       <workItem from="1653308724687" duration="4018000" />
-      <workItem from="1657391442344" duration="3146000" />
+      <workItem from="1657391442344" duration="4698000" />
     </task>
     <task id="LOCAL-00001" summary="google chrome homepage">
       <created>1645957934202</created>
@@ -162,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653404000482</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="updated jira">
+      <created>1657394639362</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1657394639362</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,7 +199,8 @@
     <MESSAGE value="youtube homepage" />
     <MESSAGE value="fasting calender" />
     <MESSAGE value="final changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="final changes" />
+    <MESSAGE value="updated jira" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated jira" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
