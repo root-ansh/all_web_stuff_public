@@ -8,12 +8,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e238e0fc-a757-422e-8ac5-b610ede78f38" name="Default Changelist" comment="updated jira">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proj_jira2/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/proj_jira2/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proj_jira2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/proj_jira2/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proj_jira2/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/proj_jira2/style.css" afterDir="false" />
-    </list>
+    <list default="true" id="e238e0fc-a757-422e-8ac5-b610ede78f38" name="Default Changelist" comment="updated jira" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -98,7 +93,7 @@
       <workItem from="1647949754462" duration="1432000" />
       <workItem from="1649398049849" duration="2492000" />
       <workItem from="1653308724687" duration="4018000" />
-      <workItem from="1657391442344" duration="4698000" />
+      <workItem from="1657391442344" duration="5040000" />
     </task>
     <task id="LOCAL-00001" summary="google chrome homepage">
       <created>1645957934202</created>
@@ -170,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657394639362</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="updated jira">
+      <created>1657396354310</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1657396354310</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
