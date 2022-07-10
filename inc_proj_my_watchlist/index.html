@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>My watchlist</title>
+        <link rel="icon" type="image/x-icon" href="movies.ico">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+            :root {
+                --white: #ffffff;
+                --gray_1:#f1f0f0;
+                --gray_2: #e5e5e5;
+                --gray_14: #343434;
+                --black: #000000;
+                --red:#faecec;
+                --green:#e0ffe5;
+                --blue:#e1f2ff;
+                --red_d:red;
+                --blue_d:#2151c5;
+                --green_d:green;
+                --transparent:#00000000
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                outline: none;
+                border: none;
+                resize: none;
+                font-family: 'Poppins', sans-serif;
+            }
+
+            html {
+                font-size: 10px;
+            }
+
+            hr {
+                height: 1px;
+                background: var(--gray_2);
+                margin-top: 0.5rem;
+                margin-bottom: 0.5rem;
+            }
+            .hide{display: none}
+
+            .expand_on_hover{
+                display: none !important;
+            }
+            .expand_onhover_parent:hover > .expand_on_hover{
+                display: inline !important;
+            }
+
+            .no_scrollbars {
+                -ms-overflow-style: none;  /* Internet Explorer 10+ */
+                scrollbar-width: none;  /* Firefox */
+            }
+            .no_scrollbars::-webkit-scrollbar {display: none;  /* Safari and Chrome */}
+
+            .h1{font-size: 4.2rem;}
+            .h2{font-size: 3.5rem;}
+            .h3{font-size: 2.8rem;}
+            .h4{font-size: 2.1rem;}
+            .h5{font-size: 1.4rem;}
+            .h6{font-size: 0.7rem;}
+
+
+            .sec_nav{
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+                flex-wrap: wrap;
+                padding: 1rem 2rem;
+                box-shadow: var(--gray_2) 2px 2px 3px;
+                margin-bottom: 2rem;
+
+            }
+            .nav_header{
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                flex-wrap: wrap;
+            }
+            .nav_header>img{
+                height: 3.5rem;
+                width: 3.5rem;
+            }
+
+            .bt {
+                padding: 0.7rem 1rem;
+                text-align: center;
+                color: var(--black);
+                background: var(--white);
+                box-shadow: var(--gray_2) 2px 2px 3px;
+            }
+            .bt > span{
+                margin-left: 1rem;
+            }
+            .bt:active{
+                box-shadow: var(--gray_2) 1px 1px 2px;
+
+            }
+            .bt_flat {
+                box-shadow: none;
+            }
+            .bt_pill {
+                border-radius: 3rem;
+            }
+            .bt_selected{
+                background: var(--black);
+                color: var(--white);
+            }
+
+            .sec_carousal{
+                background: #dfe9ff;
+
+            }
+            .csl_item{
+                display: flex;
+                height: 40vh;
+                flex-wrap: wrap;
+                width: 60vw;
+                margin-left: auto;
+                margin-right: auto;
+                align-items: flex-end;
+                gap: 1rem;
+
+
+                background:linear-gradient(to bottom right, var(--gray_2),var(--black), var(--black));
+
+            }
+            .csl_item>img{
+                display: inline-block;
+                height: 80%;
+                margin-top: auto;
+                margin-bottom: 2rem;
+                box-shadow: yellow 0 16px 24px -4px, var(--blue) 0 8px 16px -4px;
+                border-radius: 0.25rem;
+                margin-left: 2rem;
+            }
+            .csl_item>h2{
+                color: white;
+                margin-top: auto;
+                margin-bottom: 2rem;
+                margin-left: 2rem;
+                margin-right: 2rem;
+                text-align: left;
+
+            }
+
+            .sec_t_list{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1.5rem;
+                padding: 2rem;
+                justify-content: center;
+            }
+            .card_4{
+                max-width: 25rem;
+                box-shadow: var(--gray_2) 4px 4px 6px;
+                border: 1px solid var(--gray_2);
+                border-radius: 1rem;
+                background: black;
+            }
+            .card_4>img{
+                display: block;
+                width: 24rem;
+                min-height: 35rem;
+                border-radius: 1rem 1rem 1rem 1rem;
+            }
+            .card_details{
+                display: flex;
+                align-items: flex-end;
+                justify-content: flex-end;
+                background: black;
+                color: white;
+                padding-top: 1rem;
+                border-radius: 1rem;
+
+            }
+            .card_details>p{
+                padding-left: 0.5rem ;
+            }
+            .bt_like{
+                display: inline-block;
+                color: var(--white);
+                margin: 0 0 0 auto;
+                background: black;
+                padding-right: 1rem;
+                padding-left: 1rem;
+                height: 100%;
+                border-top-right-radius: 0;
+                border-top-left-radius: 1rem;
+                border-bottom-right-radius: 1rem;
+                border-bottom-left-radius: 0;
+
+            }
+            .bt_like_selected{
+                color: var(--red_d);
+                background: var(--white);
+            }
+            .bt_like_unselected{
+                color: var(--white);
+                background: var(--black);
+            }
+
+            .t_center{text-align: center;}
+
+            .sec_cms{
+                padding: 1rem 2rem;
+            }
+            .sec_cms>h3{
+                padding:  1rem 0;
+            }
+            .sec_cms>p{
+                padding:  1rem 0;
+            }
+            .genre_group{
+                border: 1px solid var(--gray_2);
+                border-radius: 1rem;
+                padding: 1rem;
+                margin-top: 2rem;
+            }
+
+            .filter_group{
+                display: flex;
+                flex-wrap: wrap;
+                border: 1px solid var(--gray_2);
+                border-radius: 1rem;
+                padding: 1rem;
+                margin-top: 2rem;
+                gap: 1rem;
+            }
+            .filter_rating{
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                border: 1px solid var(--gray_2);
+                border-radius: 1rem;
+                padding: 1rem;
+                gap: 1rem;
+                justify-content: center;
+            }
+            .rating{
+                color: goldenrod;
+                background: white;
+                border: 1px solid var(--gray_1);
+            }
+            .rating_selected{
+                background: gold;
+                color: white;
+            }
+            .filter_rating>*{
+                display: inline-block;
+            }
+
+            .filter_text{
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                border: 1px solid var(--gray_2);
+                border-radius: 1rem;
+                padding: 1rem;
+                gap: 1rem;
+                justify-content: center;
+            }
+            .filter_text>input{
+                width: 40rem;
+                border-bottom-color: var(--gray_2);
+                border-bottom-width: 1px;
+                border-bottom-style: solid;
+                padding-bottom: 1rem;
+            }
+
+            .list_genres{
+                display: flex;
+                list-style: none;
+                flex-wrap: wrap;
+                gap: 1rem;
+                font-size: 1.5rem;
+                cursor: pointer;
+            }
+            .listitem_genre{
+                padding-left: 2rem;
+                padding-right: 2rem;
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
+                border: 1px solid var(--red);
+                border-radius: 3rem;
+                box-shadow: var(--gray_2) 2px 2px 3px;
+            }
+            .listitem_genre:active{
+                box-shadow: none;
+            }
+            .listitem_selected{
+                background: var(--red_d);
+                color: var(--white);
+            }
+
+            .search_results{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1.5rem;
+                justify-content: center;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+            }
+
+            .s_card_4{
+                box-shadow: var(--gray_2) 4px 4px 6px;
+                max-width: 30rem;
+                border: 1px solid var(--gray_2);
+                border-radius: 1rem;
+
+            }
+
+            .s_card_title{
+                display: flex;
+                gap: 1rem;
+                padding-left: 1rem;
+                background: var(--black);
+                color: var(--white);
+                border-top-right-radius: 1rem;
+                border-top-left-radius: 1rem;
+                align-items: flex-start;
+                justify-content: flex-start;
+            }
+            .bt_trash{
+                display: inline-block;
+                color: var(--red_d);
+                margin: 0 0 0 auto;
+                background: var(--white);
+                padding-right: 1rem;
+                padding-left: 1rem;
+                height: 100%;
+                border-radius: 0 1rem 0 1rem;
+                margin-bottom: 2px;
+            }
+            .scd_img_group{
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+            }
+            .scd_img_group>img{
+                width: 5rem;
+                height: 8rem;
+                border-radius: 0.5rem;
+                margin: 1rem;
+            }
+            .s_card_details b{
+                font-weight: 900;
+                border-bottom-width: 1px;
+                border-bottom-style: solid;
+                border-bottom-color: black;
+                margin-right: 1rem;
+            }
+            .no_bullet{
+                list-style: none;
+            }
+            .s_card_details>p{
+                padding-left: 1rem;
+            }
+
+
+
+
+
+
+
+        </style>
+    </head>
+    <body>
+
+        <section class="sec_nav">
+            <div class="nav_header">
+                <img src="movies.png" alt="homepage icon">
+                <h1 class="h1">Trendy Hub</h1>
+            </div>
+
+            <button id="bt_trending" class="h4 bt bt_flat bt_pill bt_selected"><i class="fa fa-fire"></i><span>Trending Movies</span></button>
+            <button id="bt_cms" class="h4 bt bt_flat bt_pill"><i class="fa-regular fa-heart"></i><span>My Favorites</span></button>
+        </section>
+
+        <section class="sec_trending_movies">
+            <div class="sec_carousal hide">
+                <div class="csl_item">
+                    <img  src="pic_carousal.jpeg">
+                    <h2 class=" h2">Brahmastra</h2>
+                </div>
+            </div>
+
+            <div class="sec_t_list">
+
+
+
+                <article class="card_4">
+                    <img src="pic_card.jpeg">
+                    <div class="card_details">
+                        <p class="h5">Brahmastra</p>
+                        <button class="h5 bt_like bt_like_selected"><i class="fa fa-heart"></i></button>
+                    </div>
+                </article>
+
+                <article class="card_4">
+                    <img src="pic_card.jpeg">
+                    <div class="card_details">
+                        <p class="h5">Brahmastra</p>
+                        <button class="h5 bt_like bt_like_unselected"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                </article>
+
+
+
+            </div>
+            <div class="sec_pagination">
+                <br>
+                <p class="h5 t_center">
+                    You are currently viewing page
+                    <span id="sp_page_current">1 </span>
+                    of
+                    <span id="sp_page_total">1 </span>
+                    ( <span id="sp_page_resultcount">1 </span>  results)
+                </p>
+                <br>
+                <p class="t_center">
+                    <button id="bt_pageprevious" class="bt bt_pill"><i class="fa fa-arrow-left"></i><span>Previous</span></button>
+                    <button id="bt_page1"  class="bt bt_pill bt_selected"><i class="fa fa-home"></i><span>Home</span></button>
+                    <button id="bt_pagenext" class="bt bt_pill "><span>Next</span><i class="fa fa-arrow-right"></i></button>
+
+                </p>
+            </div>
+
+
+        </section>
+
+        <section class="sec_cms hide">
+            <div class="genre_group">
+                <p class="h5">By Genre:</p>
+                <ul class="list_genres">
+                    <li class="listitem_genre listitem_selected">All</li>
+                    <li class="listitem_genre">Genre 1</li>
+                    <li class="listitem_genre">Genre 2</li>
+                </ul>
+            </div>
+            <div class="filter_group">
+                <div class="filter_rating">
+                    <p class="h5">By rating:</p>
+                    <button class="bt bt_flat bt_pill rating rating_all rating_selected"><i class="fa fa-star "></i><span>All</span></button>
+
+
+                    <button class=" bt bt_flat bt_pill rating_s1 rating"><i class="fa-regular fa-star "></i></button>
+                    <button class=" bt bt_flat bt_pill rating_s2 rating"><i class="fa-regular fa-star"></i></button>
+                    <button class=" bt bt_flat bt_pill rating_s3 rating"><i class="fa-regular fa-star "></i></button>
+
+                    <button class=" bt bt_flat bt_pill rating_s4 rating" ><i class="fa-regular fa-star "></i></button>
+                    <button class=" bt bt_flat bt_pill rating_s5 rating"><i class="fa-regular fa-star "></i></button>
+                    <button class=" bt bt_flat bt_pill rating_s6 rating"><i class="fa-regular fa-star "></i></button>
+
+                    <button class=" bt bt_flat bt_pill rating_s7 rating"><i class="fa-regular fa-star "></i></button>
+                    <button class=" bt bt_flat bt_pill rating_s8 rating"><i class="fa-regular fa-star "></i></button>
+                    <button class=" bt bt_flat bt_pill rating_s9 rating"><i class="fa-regular fa-star "></i></button>
+                    <button class=" bt bt_flat bt_pill rating_s10 rating"><i class="fa-regular fa-star "></i></button>
+                </div>
+
+                <div class="filter_text">
+                    <input type="text" name="search_text" id="search_text" aria-label="search_text" placeholder="By Name or Description(Enter some text to Start searching)">
+                </div>
+
+            </div>
+            <div class="search_results">
+
+
+                <article class="s_card_4">
+                    <div class="s_card_title">
+                        <p class="h4">Brahmastra</p>
+                        <button class="h4 bt_trash"><i class="fa fa-trash"></i></button>
+                    </div>
+
+                    <div class="s_card_details">
+                        <div class="scd_img_group">
+                            <img src="pic_card.jpeg">
+                            <div class="h5">
+                                <p><b>Genre:</b><span class="sc_genre">Thriller</span></p>
+                                <p><b>Rating:</b><span class="sc_rating">⭐ ⭐ ⭐ ⭐ ⭐(8.5) </span></p>
+                            </div>
+                        </div>
+                        <p class="h5"><b>Description:</b></p>
+                        <p class="h5"><span class="sc_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid animi aut consectetur dolor ex inventore libero perferendis quam, quas tenetur.</span></p>
+
+                        </ul>
+                    </div>
+
+
+
+                </article>
+
+
+
+
+
+            </div>
+        </section>
+
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <script src="index.js" type="module"></script>
+
+    </body>
+</html>

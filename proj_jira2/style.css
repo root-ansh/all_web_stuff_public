@@ -12,6 +12,21 @@ html {
     font-size: 8px;
 }
 
+hr {
+    height: 1px;
+    background: lightgray;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.expand_on_hover{
+    display: none;
+}
+.expand_onhover_parent:hover > .expand_on_hover{
+    display: inline;
+}
+
+
 .no_scrollbars {
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
     scrollbar-width: none;  /* Firefox */
@@ -61,14 +76,15 @@ html {
     box-shadow: rgba(0, 0, 0, 0.15) 2px 2px 3px;
 }
 
-.bt_pill {
-    border-radius: 3rem;
-}
+
 
 .bt_flat {
     padding: 0.7rem 1rem;
     text-align: center;
     box-shadow: none;
+}
+.bt_pill {
+    border-radius: 3rem;
 }
 
 .bt:active {
@@ -154,12 +170,6 @@ button > .fa {
 .hide {
     display: none !important;
 }
-.expand_on_hover{
-    display: none;
-}
-.expand_onhover_parent:hover > .expand_on_hover{
-    display: inline;
-}
 
 .sec_filtered {
     padding: 1rem 2rem;
@@ -217,13 +227,6 @@ button > .fa {
 .note>p{
     font-size: 2rem;
     min-height: 4rem;
-}
-
-hr {
-    height: 1px;
-    background: lightgray;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
 }
 
 .note_options {

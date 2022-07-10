@@ -8,7 +8,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e238e0fc-a757-422e-8ac5-b610ede78f38" name="Default Changelist" comment="updated jira" />
+    <list default="true" id="e238e0fc-a757-422e-8ac5-b610ede78f38" name="Default Changelist" comment="updated inc projects">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proj_jira2/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/proj_jira2/style.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,8 +22,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -47,7 +51,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/anshsachdeva/Downloads/f1_self/f4_web/f4_web_public_projects/inc_proj_my_watchlist",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -58,11 +64,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/inc_proj_my_watchlist" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/fasting_calender" />
       <recent name="$PROJECT_DIR$/proj_youtube_ui_clone" />
       <recent name="$PROJECT_DIR$/proj_dev_site" />
-      <recent name="H:\HDD_WORKSPACE\others\05 Web dev\000_projects\simple-html-site" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/proj_youtube_ui_clone" />
@@ -93,7 +99,7 @@
       <workItem from="1647949754462" duration="1432000" />
       <workItem from="1649398049849" duration="2492000" />
       <workItem from="1653308724687" duration="4018000" />
-      <workItem from="1657391442344" duration="5040000" />
+      <workItem from="1657391442344" duration="47977000" />
     </task>
     <task id="LOCAL-00001" summary="google chrome homepage">
       <created>1645957934202</created>
@@ -172,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657396354310</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="updated inc projects">
+      <created>1657396618648</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1657396618648</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,7 +215,8 @@
     <MESSAGE value="fasting calender" />
     <MESSAGE value="final changes" />
     <MESSAGE value="updated jira" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated jira" />
+    <MESSAGE value="updated inc projects" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated inc projects" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
