@@ -71,7 +71,26 @@ async function getPopularMovies(page = 1) {
     }
     return data
 }
-let BOOKMARKS=[]
+
+function truncate(input) {
+    if (input.length > 300) {
+        return input.substring(0, 300) + '...';
+    }
+    return input;
+}
+
+function updateBookMarksInStorage(){
+    localStorage.setItem("BOOKMARKS",JSON.stringify(BOOKMARKS))
+
+}
+function getBookMarksFromStorage(){
+    let data = localStorage.getItem("BOOKMARKS")
+    let js = data == null ? [] : JSON.parse(data)
+    console.log("data", js)
+    return js
+}
+
+let BOOKMARKS=getBookMarksFromStorage()
 let CURR_PAGE=1
 
 function containsBookMark(movieJS){
@@ -83,18 +102,20 @@ function addToBookMarks(movieJS){
         console.log("adding movie to bookmarks ",movieJS.name)
         BOOKMARKS.push(movieJS)
         console.log("new bookmarks=",BOOKMARKS.map(it=>it.name))
+        updateBookMarksInStorage()
     }
     else{
         console.log(",movie already present ",movieJS.name)
     }
 
 }
-function  removeFromBookMarks(movieJS){
+function removeFromBookMarks(movieJS){
     console.log("removing movie from bookmarks ", movieJS.name)
 
     let remaininbBookMarks = BOOKMARKS.filter(note => note.name !== movieJS.name)
     console.log("remainingNotes", remaininbBookMarks)
     BOOKMARKS = remaininbBookMarks
+    updateBookMarksInStorage()
     console.log("new bookmarks=", BOOKMARKS.map(it => it.name))
 
 }
@@ -140,9 +161,6 @@ async function updateUpcomingMoviesOnUi(page=1){
     document.querySelector('#sp_page_current').textContent = data.page
     document.querySelector('#sp_page_total').textContent = data.totalPages
     document.querySelector('#sp_page_resultcount').textContent = data.totalEntries
-    const btPrev = document.querySelector('#bt_pageprevious')
-    const btLast = document.querySelector('#bt_pagenext')
-    const btHome = document.querySelector('#bt_page1')
 
     if(CURR_PAGE <=1 && !btPrev.classList.contains('hide')){
         btPrev.classList.add('hide')
@@ -183,53 +201,71 @@ async function updateUpcomingMoviesOnUi(page=1){
             )
         )
 
-
-    const onNextClick = () => {
-        console.log("onNextClick:requesting page:", CURR_PAGE + 1)
-        updateUpcomingMoviesOnUi(CURR_PAGE + 1)
-        window.scrollTo(0,0)
-    }
-    const onPreviousClick =  ()=>{
-        console.log("onPreviousClick: requesting page:",CURR_PAGE-1)
-        updateUpcomingMoviesOnUi(CURR_PAGE-1)
-        window.scrollTo(0,0)
-
-    }
-    const onHomeClick =() => {
-        console.log("onHomeClick : requesting page:", 1)
-        updateUpcomingMoviesOnUi(1)
-        window.scrollTo(0,0)
-
-    }
-    //todo getting clicked 2^x times !!!
-    btLast.addEventListener('click', onNextClick)
-    btPrev.addEventListener('click',onPreviousClick)
-    btHome.addEventListener('click',onHomeClick)
-
 }
 updateUpcomingMoviesOnUi(1)
+const btPrev = document.querySelector('#bt_pageprevious')
+const btLast = document.querySelector('#bt_pagenext')
+const btHome = document.querySelector('#bt_page1')
+
+const onNextClick = () => {
+    console.log("onNextClick:requesting page:", CURR_PAGE + 1)
+    updateUpcomingMoviesOnUi(CURR_PAGE + 1)
+    window.scrollTo(0,0)
+}
+const onPreviousClick =  ()=>{
+    console.log("onPreviousClick: requesting page:",CURR_PAGE-1)
+    updateUpcomingMoviesOnUi(CURR_PAGE-1)
+    window.scrollTo(0,0)
+
+}
+const onHomeClick =() => {
+    console.log("onHomeClick : requesting page:", 1)
+    updateUpcomingMoviesOnUi(1)
+    window.scrollTo(0,0)
+
+}
+btLast.addEventListener('click', onNextClick)
+btPrev.addEventListener('click',onPreviousClick)
+btHome.addEventListener('click',onHomeClick)
+
 
 let searchedGenre="all";
-let searchedMinRating=0;
+let searchedMaxRating=-1;
 let searchedText=""//todo takout bookmarks
 
-function updateBookmarksListing(){
-    console.log("called with values:",searchedGenre,searchedMinRating,searchedText)
+function updateBookmarksListingOnUI(){
+    function getAll(){
+        let all = BOOKMARKS
+        all = all.sort((a,b)=>b.ratingMain-a.ratingMain)
+        return  all
+    }
+
+    console.log(`called with values:'${searchedGenre}' , '${searchedMaxRating}' , '${searchedText}'`)
 
 
-    let filtered1 = []
-    if(searchedGenre!=='all'){
-        filtered1 = BOOKMARKS.filter(it=>it.genre.contains(searchedGenre))
+    let filtered1 = getAll()
+    if(searchedGenre.toLowerCase()!=='all'){
+        filtered1 = filtered1.filter(it=>it.genre.indexOf(searchedGenre)>-1)
     }
     else{
-        filtered1 = BOOKMARKS
+        filtered1 = getAll()
     }
-    if(searchedMinRating>=0){
-        filtered1 = filtered1.filter(it => it.ratingMain>=searchedMinRating)
+    if(searchedMaxRating!==-1){
+        filtered1 = filtered1.filter(it =>{
+            let ceil = (Math.ceil( it.ratingMain))
+            let floor = Math.floor( it.ratingMain)
+            console.log("rating main=",it.ratingMain)
+            console.log("rating main floor =",floor)
+            console.log("rating main ceil =",ceil)
+            return ceil<=searchedMaxRating
+        })
+    }
+    else{
+        filtered1 = filtered1.filter(it=>it.ratingMain<=10)
     }
 
     if(searchedText!==""){
-        filtered1 = filtered1.filter(it => it.name.contains(searchedText))
+        filtered1 = filtered1.filter(it => it.name.includes(searchedText)||it.description.includes(searchedText))
     }
     console.log(filtered1)
 
@@ -240,6 +276,7 @@ function updateBookmarksListing(){
                     <div class="s_card_title">
                         <p class="h4">${movie.name}</p>
                         <button class="h4 bt_trash"><i class="fa fa-trash"></i></button>
+                        <span class="card_data_bk hide">${JSON.stringify(movie)}</span>
                     </div>
 
                     <div class="s_card_details">
@@ -251,7 +288,7 @@ function updateBookmarksListing(){
                             </div>
                         </div>
                         <p class="h5"><b>Description:</b></p>
-                        <p class="h5"><span class="sc_desc">${movie.description}</span></p>
+                        <p class="h5"><span class="sc_desc">${truncate(movie.description)}</span></p>
                         </ul>
                     </div>
                 </article>
@@ -261,6 +298,15 @@ function updateBookmarksListing(){
 
     let entriesAndUi=filtered1.map(it=>searchedCard(it))
     document.querySelector('.search_results').replaceChildren(...entriesAndUi)
+    document.querySelectorAll('.bt_trash').forEach(
+        btn=>btn.addEventListener('click',()=>{
+            let movie = btn.parentElement.querySelector('.card_data_bk').textContent
+            console.log("movie json=",movie)
+            let movieJS = JSON.parse(movie)
+            removeFromBookMarks(movieJS)
+            updateBookmarksListingOnUI()
+        })
+    )
 
 
 }
@@ -285,7 +331,7 @@ function addGenres(){
             document.querySelectorAll('.listitem_genre').forEach(it=>it.classList.remove('listitem_selected'))
             btn.classList.add('listitem_selected')
             searchedGenre = btn.textContent
-            updateBookmarksListing()
+            updateBookmarksListingOnUI()
         })
     })
 
@@ -310,76 +356,76 @@ function addListenersOnStars(){
     starAll.addEventListener('click',()=>{
         removeAllSelections()
         starAll.classList.add('rating_selected')
-        searchedMinRating = 0
-        updateBookmarksListing()
+        searchedMaxRating = -1
+        updateBookmarksListingOnUI()
     })
     star1.addEventListener('click',()=>{
         removeAllSelections()
-        searchedMinRating = 1
+        searchedMaxRating = 1
         stars.slice(0,1).forEach(it=>it.classList.add('rating_selected'))
 
-        updateBookmarksListing()//'1'
+        updateBookmarksListingOnUI()//'1'
     })
     star2.addEventListener('click',()=>{
         removeAllSelections()
-        searchedMinRating = 2
+        searchedMaxRating = 2
         stars.slice(0,2).forEach(it=>it.classList.add('rating_selected'))
-        updateBookmarksListing()//'2'
+        updateBookmarksListingOnUI()//'2'
     })
 
     star3.addEventListener('click',()=>{
         removeAllSelections()
-        searchedMinRating = 3
+        searchedMaxRating = 3
         stars.slice(0,3).forEach(it=>it.classList.add('rating_selected'))
-        updateBookmarksListing()//3
+        updateBookmarksListingOnUI()//3
     })
 
     star4.addEventListener('click',()=>{
         removeAllSelections()
-        searchedMinRating = 4
+        searchedMaxRating = 4
         stars.slice(0,4).forEach(it=>it.classList.add('rating_selected'))
-        updateBookmarksListing()//3
+        updateBookmarksListingOnUI()//3
     })
     star5.addEventListener('click',()=>{
         removeAllSelections()
-        searchedMinRating = 5
+        searchedMaxRating = 5
         stars.slice(0,5).forEach(it=>it.classList.add('rating_selected'))
-        updateBookmarksListing()//3
+        updateBookmarksListingOnUI()//3
     })
 
     star6.addEventListener('click',()=>{
         removeAllSelections()
-        searchedMinRating = 6
+        searchedMaxRating = 6
         stars.slice(0,6).forEach(it=>it.classList.add('rating_selected'))
-        updateBookmarksListing()//3
+        updateBookmarksListingOnUI()//3
     })
 
     star7.addEventListener('click',()=>{
         removeAllSelections()
-        searchedMinRating = 7
+        searchedMaxRating = 7
         stars.slice(0,7).forEach(it=>it.classList.add('rating_selected'))
-        updateBookmarksListing()//3
+        updateBookmarksListingOnUI()//3
     })
 
     star8.addEventListener('click',()=>{
         removeAllSelections()
-        searchedMinRating = 8
+        searchedMaxRating = 8
         stars.slice(0,8).forEach(it=>it.classList.add('rating_selected'))
-        updateBookmarksListing()//3
+        updateBookmarksListingOnUI()//3
     })
 
 
     star9.addEventListener('click',()=>{
         removeAllSelections()
         stars.slice(0,9).forEach(it=>it.classList.add('rating_selected'))
-        searchedMinRating = 9
-        updateBookmarksListing()//3
+        searchedMaxRating = 9
+        updateBookmarksListingOnUI()//3
     })
     star10.addEventListener('click',()=>{
         removeAllSelections()
         stars.forEach(it=>it.classList.add('rating_selected'))
-        updateBookmarksListing()//3
-        searchedMinRating = 10
+        updateBookmarksListingOnUI()//3
+        searchedMaxRating = 10
     })
 
 }
@@ -387,7 +433,7 @@ function addListenersOnStars(){
 function addListenerOnTextFilter(){
     document.querySelector("#search_text").addEventListener('input',(e)=>{
         searchedText = e.target.value
-        updateBookmarksListing()
+        updateBookmarksListingOnUI()
     })
 
 }
@@ -411,11 +457,11 @@ cms.addEventListener('click',
         document.querySelector('.sec_trending_movies').classList.add('hide')
         searchedText = ''
         searchedGenre = 'all'
-        searchedMinRating = 0
+        searchedMaxRating = -1
         addGenres()
         addListenersOnStars()
         addListenerOnTextFilter()
-        updateBookmarksListing()
+        updateBookmarksListingOnUI()
 
     }
 )
