@@ -136,7 +136,7 @@ function createMovie(movie = {name:"", rating:"", genre:["",""], description: ""
     let heart = (isSelected)? "fa" :  "fa-regular"
     let ui = `
               <article class="card_4">
-                    <img src="${movie.image}">
+                    <img src="${movie.image}" loading="lazy" placeholder="">
                     <div class="card_details">
                         <p class="h5">${movie.name}</p>
                         <p class="card_data hide">${JSON.stringify(movie)}</p>

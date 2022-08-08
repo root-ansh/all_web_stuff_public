@@ -8,7 +8,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e238e0fc-a757-422e-8ac5-b610ede78f38" name="Default Changelist" comment="Trending Movies part 2" />
+    <list default="true" id="e238e0fc-a757-422e-8ac5-b610ede78f38" name="Default Changelist" comment="misc">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proj_my_watchlist/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/proj_my_watchlist/index.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,19 +48,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/anshsachdeva/Downloads/f1_self/f4_web/f4_web_public_projects/inc_proj_my_watchlist&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/anshsachdeva/Downloads/f1_self/f4_web/f4_web_public_projects",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/inc_proj_my_watchlist" />
@@ -97,7 +100,10 @@
       <workItem from="1653308724687" duration="4018000" />
       <workItem from="1657391442344" duration="48158000" />
       <workItem from="1657521157982" duration="2238000" />
-      <workItem from="1657880718841" duration="4621000" />
+      <workItem from="1657880718841" duration="5291000" />
+      <workItem from="1657987385935" duration="666000" />
+      <workItem from="1658572703401" duration="17000" />
+      <workItem from="1659702752282" duration="2230000" />
     </task>
     <task id="LOCAL-00001" summary="google chrome homepage">
       <created>1645957934202</created>
@@ -197,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657889265124</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="misc">
+      <created>1657889342597</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1657889342597</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,7 +243,8 @@
     <MESSAGE value="updated inc projects" />
     <MESSAGE value="Trending Movies part 1" />
     <MESSAGE value="Trending Movies part 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Trending Movies part 2" />
+    <MESSAGE value="misc" />
+    <option name="LAST_COMMIT_MESSAGE" value="misc" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
