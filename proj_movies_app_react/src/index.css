@@ -103,9 +103,9 @@ hr {
 .bt_pill {
   border-radius: 3rem;
 }
-.bt_selected{
-  background: var(--black);
-  color: var(--white);
+.bt_selected, .bt_selected:hover, .bt_selected:focus, .bt_selected:active {
+  background: var(--black) !important;
+  color: var(--white) !important;
 }
 
 .sec_carousal{

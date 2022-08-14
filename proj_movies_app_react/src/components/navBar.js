@@ -23,12 +23,18 @@ function NavBar() {
     }
     return (
         <section className="sec_nav">
-           <Link to={NavBarLinks.home.routerLink}>
+            <Link to={NavBarLinks.home.routerLink}>
                <div className="nav_header">
                    <img src={movies} alt="homepage icon"/>
                    <h1 className="h1">Trendy Hub</h1>
                </div>
            </Link>
+
+            <a href="https://github.com/root-ansh/all_web_stuff_public/tree/main/proj_movies_app_react"
+               target="_blank"
+               className={selectedCss}>
+                <i className="fa-brands fa-github"/>
+            </a>
 
             <Link to={NavBarLinks.trending.routerLink}>
                 <button className={getNavLinkSelectedUi(NavBarLinks.trending.routerLink)}>
@@ -54,6 +60,7 @@ function NavBar() {
                     <i className="fa-regular fa-heart"/><span>My Favorites</span>
                 </button>
             </Link>
+
 
         </section>
     )
