@@ -28,7 +28,7 @@ function getSortedAndFilteredBookMarks(currentSortBy,currentGenre,currentRating,
         finalBookMarks = finalBookMarks.filter(it=>it.genre.indexOf(currentGenre.name)>-1)
     }
     else{
-        finalBookMarks = originalSortedBookMarks()
+        finalBookMarks = originalSortedBookMarks(currentSortBy)
     }
 
     finalBookMarks = finalBookMarks.filter(it=>it.ratingMain<=currentRating)
@@ -56,7 +56,8 @@ export function BookmarksSection() {
         if(from==="sort") console.log(`currentSortBy changed! value= ${currentSortBy}`)
         if(from==="gen") console.log(`currentGenre changed! value= ${currentGenre}`)
         if(from==="del")console.log(`triggering from delete!`)
-        updateStorageBookMarks(getSortedAndFilteredBookMarks(currentSortBy,currentGenre,currentRating,currentSearchText))
+        let newValue = getSortedAndFilteredBookMarks(currentSortBy,currentGenre,currentRating,currentSearchText)
+        updateStorageBookMarks(newValue)
     }
 
     useEffect(()=>stateChangerEffect("rti"),[currentRating])
