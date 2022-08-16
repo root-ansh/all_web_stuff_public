@@ -1,0 +1,84 @@
+body {
+    margin: 1rem
+}
+
+h1 {
+    margin: 1rem;
+    font-size: 4rem;
+}
+
+h2 {
+    margin: 1rem;
+    font-size: 2.5rem;
+}
+h3 {
+    margin: 1rem;
+    font-size: 2rem;
+}
+
+p {
+    margin: 1rem;
+    font-size: 1.5rem;
+}
+
+hr {
+    margin: 1rem
+}
+
+li {
+    margin: 1rem
+}
+
+ul {
+    margin: 1rem;
+    font-size: 1.5rem;
+
+}
+
+ol {
+    margin: 1rem;
+    font-size: 1.5rem;
+
+}
+.imageGroup{
+    margin: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.imageGroup > img{
+    display: inline-block;
+    max-width: 60rem;
+    border: 1px solid black;
+    padding: 1rem;
+}
+
+.hr_dark{
+    background-color: var(--gray_14);
+}
+
+.challanges{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    border: 1px solid black;
+}
+
+.challange_detail{
+    width: 60%;
+    padding: 1rem;
+    border-bottom: 2px solid black;
+}
+.challange_pic{
+    width: 38%;
+    text-align: center;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+}
+.challange_pic >img{
+    display: inline-block;
+    max-width: 60rem;
+    border: 1px solid black;
+    padding: 1rem;
+}
+

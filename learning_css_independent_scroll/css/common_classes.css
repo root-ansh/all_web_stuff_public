@@ -1,0 +1,55 @@
+/* common utility css classes*/
+
+.hide {display: none !important;}
+.h1{font-size: 4.2rem;}
+.h2{font-size: 3.5rem;}
+.h3{font-size: 2.8rem;}
+.h4{font-size: 2.1rem;}
+.h5{font-size: 1.4rem;}
+.h6{font-size: 0.7rem;}
+
+.mt1{margin-top: 0.7rem}
+.mt2{margin-top: 1.4rem}
+.mt3{margin-top: 2.1rem}
+.mt4{margin-top: 2.8rem}
+.mt5{margin-top: 3.5rem}
+.mt6{margin-top: 4.2rem}
+
+
+
+
+
+
+
+.bt {
+    padding: 0.5rem 2rem;
+    text-align: center;
+    color: var(--black);
+    background: var(--white);
+    box-shadow: var(--gray_2) 2px 2px 3px;
+    text-transform: uppercase;
+}
+.bt:active {box-shadow: var(--gray_2) 1px 1px 1.2px;}
+.bt_flat {box-shadow: none;}
+.bt_pill {border-radius: 4rem;}
+.bt_curved4 {border-radius: 0.25rem;}
+
+.expand_on_hover{display: none;}
+.expand_onhover_parent:hover > .expand_on_hover{display: inline;}
+
+.no_scrollbars {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+.no_scrollbars::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+}
+/*========================================================================*/
+
+
+
+
+
+
+
+

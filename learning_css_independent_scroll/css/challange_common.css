@@ -1,0 +1,23 @@
+.box{
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    width: 25rem;
+    height: 15rem;
+}
+
+.blackOnLightRed{
+    background-color: var(--gray_2);
+    color: var(--black);
+}
+
+
+.internal_layout{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding:1rem;
+    flex-direction: row;
+    height: inherit;
+}
+

@@ -1,0 +1,47 @@
+
+
+.freeflow_parent{
+    /*height: 80vh;*/
+    background-color: black
+}
+.w-20{
+    height: 200px;
+    background-color: var(--red);
+    width: 20%;
+    float: left;
+    overflow: auto;
+}
+.w-50{
+    height: 500px;
+
+    background-color: var(--green);
+    width: 50%;
+    float: left;
+    overflow: auto;
+
+}
+.w-30{
+    height: 300px;
+
+    background-color: var(--blue);
+    width: 30%;
+    float: left;
+    overflow: auto;
+
+}
+
+@media only screen and (max-width: 650px) {
+    /* For mobile phones: */
+   .w-20{
+       height: 18rem;
+       width: 100%;
+       flex-direction: column;
+   }
+    .w-50{
+        width: 100%;
+    }
+
+    .w-30{display: none}
+}
+
+

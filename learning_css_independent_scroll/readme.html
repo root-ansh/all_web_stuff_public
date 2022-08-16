@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/all_global_elements.css">
+        <link rel="stylesheet" href="css/common_classes.css">
+        <link rel="stylesheet" href="css/readme.css">
+    </head>
+    <body style="padding: 1rem">
+
+        <h1>Independent Scrolling Columns.</h1>
+        <hr>
+        <p>Independent scrolling columns are essential for any major content serving website. For eg, youtube
+        and gmail have independent scorlling sections</p>
+
+        <div class="imageGroup">
+            <img src="images/gif1.gif">
+            <img src="images/gif2.gif">
+        </div>
+
+        <p>But if you look closely, you will notice that not all portions of the page are freely scrollable for eg, the
+        top bar in youtube remains static throughout the app</p>
+
+        <p>There is also this thing about responsiveness.  youtube is technically responsive as it hides the </p>
+
+        <hr class="hr_dark">
+        <h2>Challanges</h2>
+
+
+        <div class="challanges">
+            <div class="challange_detail">
+                <h3>Challange 1</h3>
+
+                <ol>
+                    <li> the page consists 3 columns (20%,50% and 30% width) and nothing else,each column indepenedently scrollable</li>
+                    <li>
+                        <div>
+                            column content:
+                            <ol>
+                                <li> 1 small box of title text and button</li>
+                                <li> box should be small enough to fit 2-3 boxes in one row(therefore, flexbox)</li>
+                            </ol>
+                        </div>
+                    </li>
+                    <li>Responsiveness: On changing to mobile width:
+                        <ol>
+                            <li>column 3 should hide, col 1 and 2 should take full width</li>
+                            <li>the column 1 should convert to scrollable row ,  </li>
+                            <li>(Hard): col 1 should come below col 2</li>
+                        </ol>
+                    </li>
+
+
+                </ol>
+                <hr class="hr_dark">
+                <p><b><a href="challange1.html">Challenge Result</a></b></p>
+                <h3><b>Solution:</b></h3>
+                <p>1. about parent and childrent</p>
+                <ol>
+                    <li>Parent 'freeflow-parent'  and children('w-20','w-50' and 'w-30') are all plain divs</li>
+                    <li>the w-x columns have limited width</li>
+                    <li>We want each of these limited width columns in the same row, so we apply float:left. this way they take wahtever space id left of the previous column</li>
+                    <li><b style="color: red">(why not use flexbox?)</b></li>
+                    <li>the height part is important here since height needs to be a constant number somehow to get the internal scroll to work.
+                        <ul><b style="color: blue">IMPORTANT:</b> <b>height can't be 100% or auto or any other % since it will end up taking the complete space for content and therefore not showing the scroll</b></ul>
+                    </li>
+                    <li>For responsivenes we use mobile media queries to convert the flex direction to column, and decreseas the height of first column while keeping width to 100%</li>
+
+                </ol>
+            </div>
+            <div class="challange_pic">
+                <img src="images/gif3.gif" alt="">
+            </div>
+
+        </div>
+
+
+    </body>
+</html>
