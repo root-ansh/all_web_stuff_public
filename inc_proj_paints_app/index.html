@@ -1,0 +1,50 @@
+<!doctype html>
+<!--suppress CheckEmptyScriptTag -->
+<!-- FebBatch_DEV_Lecture of 9th July 2022  -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>PaintsApp</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../a0_commons_css/all_global_elements.css">
+        <link rel="stylesheet" href="../a0_commons_css/common_classes.css">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <nav class="my_nav">
+            <div class="mn_link mn_home"><img src="images/logo.png" alt="logo"><p><a href="index.html">MyPaint</a></p></div>
+            <div class="mn_link"><button>Load image ❌</button></div>
+            <div class="mn_link"><button>Save as image ❌</button></div>
+        </nav>
+        <section class="sec_playground">
+            <div class="sec_actions">
+                <button id="bt_clear"><i class=" fa  fa-trash-o"></i><span>Clear All</span> </button>
+                <button id="bt_square">    <i class=" fa fa-square-o"></i>       <span>Add square ❌</span>         </button>
+                <button id="bt_circle">    <i class=" fa fa-circle-o"></i>       <span>Add circle ❌</span>         </button>
+                <button id="bt_trian">    <i class=" fa fa-caret-up"></i>     <span>Add triangle ❌</span>       </button>
+                <button id="bt_line">    <i class=" fa fa-minus"></i>         <span>Add line </span>           </button>
+                <button id="bt_erazer">    <i class=" fa fa-eraser"></i>         <span>Eraser </span>           </button>
+                <button id="bt_free" class="bl_wh">    <i class=" fa fa-pencil"></i>         <span>Freehand draw </span>        </button>
+                <button>    <i class=" fa fa-expand"></i>         <input id="bt_size" type="number" value="8" aria-label="" >       </button>
+                <button id="bt_text">    <i class=" fa fa-font"></i>         <span>Add text ❌</span>           </button>
+                <button>    <input id="bt_fg" type="color"   value="#000000" aria-label=""> <span>Foreground color </span>   </button>
+                <button>    <input id="bt_bg" type="color" value="#ffffff" aria-label="" > <span>Background color </span>   </button>
+                <button id="bt_undo">    <i class=" fa fa-reply"></i>         <span>undo ❌</span>    </button>
+                <button id="bt_redo">    <i class=" fa fa-share"></i>         <span>redo ❌</span>    </button>
+
+
+            </div>
+
+            <div class="sec_white_board">
+                <canvas id="canvas_white_board"></canvas>
+            </div>
+
+        </section>
+
+        <script src="index.js"/>
+
+
+    </body>
+</html>

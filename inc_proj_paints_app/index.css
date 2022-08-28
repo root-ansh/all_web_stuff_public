@@ -1,0 +1,139 @@
+.my_nav{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+
+    border-bottom: 1px solid var(--gray_2);
+}
+.my_nav a{
+    text-decoration: none;
+    color: inherit;
+}
+.mn_link>button{
+    border-radius: 4rem;
+    padding: 0.5rem 1.5rem;
+    background-color: var(--white);
+    color:  var(--black);
+    border: 1px solid var(--gray_1);
+    cursor: pointer;
+}
+.mn_link>button:active{
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.mn_home{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+.mn_home> p{
+    font-size: 3.5rem;
+}
+.mn_home > img{
+    height: 3.5rem;
+    width: 3.5rem;
+}
+
+
+.sec_actions{
+    padding: 2rem 0;
+    width:15%;
+    overflow: scroll;
+    float: left;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    align-items: flex-start;
+}
+.sec_white_board{
+    float: left;
+    width:80%;
+    height: 80vh;
+    margin: 1rem;
+    border: 4px solid var(--gray_2);
+
+}
+
+.sec_actions > button{
+    display: flex;
+    align-items: center;
+    word-break: break-word;
+    min-height: 5rem;
+    width: 20rem;
+    border-radius: 3rem;
+    background-color: var(--white);
+    border: 1px solid var(--gray_1);
+    box-shadow: 2px 4px 4px var(--gray_2) ;
+}
+
+.sec_actions > button > i{
+    font-size: 2.5rem;
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+.sec_actions > button > span{
+    font-size: 1rem;
+    display: inline-block;
+    margin-left: 1rem;
+}
+.sec_actions > button > input{
+    font-size: 1.2rem;
+    display: inline-block;
+    margin-left: 1rem;
+    max-width: 8rem;
+    background: var(--white);
+    border: 1px solid var(--gray_2);
+    border-radius: 4rem;
+    padding: 0 1rem;
+}
+.sec_actions >  button:hover{
+    border: 1px solid var(--gray_14);
+}
+
+.sec_actions > button:active {
+    box-shadow: none;
+    border: none;
+}
+.sec_actions *{
+    margin: 0;
+}
+
+.bl_wh{
+    background-color: var(--black) !important;
+    color: var(--white) !important;
+}
+
+
+
+@media only screen and (max-width: 650px) {
+    .sec_actions {
+        width: 100%;
+        overflow: scroll;
+        height: 8rem;
+        float: none;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .sec_white_board {
+        width: 90%;
+
+        float: none;
+        height: 50vh;
+
+    }
+
+    .sec_actions> button{
+        width: 16rem;
+    }
+
+
+}
