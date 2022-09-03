@@ -21,17 +21,16 @@ let CURRENT_SELECTED = btFreeHand.id
 let CURRENT_LINE_COLOR = btForegroundColor.value
 let CURRENT_FILL_COLOR = btBackgroundColor.value
 let CURRENT_MOUSE_SIZE = btLineWidth.value
-let MAX_ST_DRAW_DEVIATION =0
 
 
 let IS_DRAWING = false
 let CV_OFFSET_X = 0
 let  CV_OFFSET_Y = 0
-let DRAWING_START_X = 0
-let DRAWING_START_Y = 0
 let ctx = cvMain.getContext('2d')
 let LAST_DRAWN_X = 0
 let LAST_DRAWN_Y =0
+let lastCirclePointsUp = []
+let lastCirclePointsDown = []
 
 function updateMouseProperties(obj) {
     CURRENT_SELECTED = obj.selected != null ? obj.selected : CURRENT_SELECTED
@@ -45,6 +44,190 @@ function toggleSelection(bt){
     [btSquare,btCircle,btTriangle,btLine,btFreeHand,btErazer,btLineWidth, btDrawText,btBackgroundColor,btForegroundColor,btUndo,btRedo].forEach(it=>it.classList.remove('bl_wh'))
     bt.classList.add('bl_wh')
 }
+
+
+
+const DrawUtils = {
+    setColorsAndWidth : (fg=CURRENT_LINE_COLOR,bg=CURRENT_FILL_COLOR,width=CURRENT_MOUSE_SIZE) =>{
+        ctx.strokeStyle = fg
+        ctx.fillStyle=bg
+        ctx.lineWidth = width
+    },
+    drawLineStart : (x2, y2, isFreeHand=true) =>{
+        x2 = x2 - CV_OFFSET_X
+        y2 = y2 - CV_OFFSET_Y
+
+        if(isFreeHand){
+            ctx.lineCap = "round"
+            ctx.lineJoin = "round"
+        }
+        else {
+            ctx.lineCap = "square"
+            ctx.lineJoin = "square"
+            let currDeviationX = Math.abs(x2-LAST_DRAWN_X)
+            let currDeviationY = Math.abs(y2-LAST_DRAWN_Y)
+            let maxDeviation =  CURRENT_MOUSE_SIZE < 5 ? (CURRENT_MOUSE_SIZE + 5) : CURRENT_MOUSE_SIZE
+            x2 =  currDeviationX> maxDeviation ?  x2 : LAST_DRAWN_X
+            y2 = currDeviationY > maxDeviation ? y2 : LAST_DRAWN_Y
+        }
+        console.log(`final x = ${x2} | y = ${y2}`)
+        ctx.lineTo(x2,y2)
+        ctx.stroke()
+        console.log(ctx.strokeStyle)
+        console.log(ctx.fillStyle)
+
+        //ctx.beginPath()
+        // ctx.fill()
+        // ctx.closePath()
+
+        LAST_DRAWN_X = x2
+        LAST_DRAWN_Y =y2
+    },
+    drawLineEnd : () =>{
+        ctx.stroke()
+        ctx.beginPath()
+    },
+    drawSquareStart : (x2,y2) =>{
+        x2 = x2 - CV_OFFSET_X
+        y2 = y2 - CV_OFFSET_Y
+        ctx.lineCap = "square"
+        ctx.lineJoin = "square"
+
+
+        let width = (LAST_DRAWN_X-x2)
+        let height = (LAST_DRAWN_Y-y2)
+        console.log(`x,y,wid,hei= (${x2} | ${y2} | ${width} | ${height} )`)
+        ctx.strokeRect(x2,y2,width,height)
+        ctx.fillRect(x2,y2,width,height)
+
+    },
+    drawSquareEnd : () =>{
+        LAST_DRAWN_X = undefined
+        LAST_DRAWN_Y =undefined
+    },
+
+    drawCircle : (x2,y2) =>{
+        ctx.lineCap = "round"
+        ctx.lineJoin = "round"
+
+        if(lastCirclePointsUp[0]){
+            console.log(lastCirclePointsUp)
+            DrawUtils.setColorsAndWidth(CURRENT_FILL_COLOR)
+            ctx.beginPath()
+            let [a,b,c,d,e,f] = lastCirclePointsUp
+            let [g,h,i,j,k,l] = lastCirclePointsDown
+            ctx.bezierCurveTo(a,b,c,d,e,f)
+            ctx.bezierCurveTo(g,h,i,j,k,l)
+            ctx.closePath()
+            ctx.stroke()
+            ctx.fill()
+            DrawUtils.setColorsAndWidth()
+        }
+        ctx.beginPath()
+        let lastYAndCurrentYAverage =  (y2 + LAST_DRAWN_Y) / 2
+        ctx.moveTo(LAST_DRAWN_X, lastYAndCurrentYAverage)
+
+
+
+        ctx.bezierCurveTo(LAST_DRAWN_X, LAST_DRAWN_Y, x2, LAST_DRAWN_Y, x2,  lastYAndCurrentYAverage)
+        ctx.bezierCurveTo(x2, y2, LAST_DRAWN_X, y2, LAST_DRAWN_X, lastYAndCurrentYAverage)
+        ctx.closePath()
+        ctx.stroke()
+        ctx.fill()
+
+        lastCirclePointsUp = [LAST_DRAWN_X, LAST_DRAWN_Y, x2, LAST_DRAWN_Y, x2,  lastYAndCurrentYAverage]
+        lastCirclePointsDown = [x2, y2, LAST_DRAWN_X, y2, LAST_DRAWN_X, lastYAndCurrentYAverage]
+
+    },
+    drawCircleEnd : () =>{
+        lastCirclePointsUp = []
+        lastCirclePointsDown = []
+
+    }
+
+}
+
+
+const CanvasUtils = {
+    mouseBeginningToMove : (e) =>{
+        LAST_DRAWN_X = e.clientX - CV_OFFSET_X
+        LAST_DRAWN_Y =e.clientY -CV_OFFSET_Y
+
+        switch (CURRENT_SELECTED){
+            case btLine.id :{
+
+                DrawUtils.setColorsAndWidth()
+                DrawUtils.drawLineStart(e.clientX,e.clientY,false)
+                break
+            }
+            case btFreeHand.id :{
+                DrawUtils.setColorsAndWidth()
+                DrawUtils.drawLineStart(e.clientX,e.clientY,true)
+                break
+            }
+            case btErazer.id: {
+                DrawUtils.setColorsAndWidth(CURRENT_FILL_COLOR)
+                DrawUtils.drawLineStart(e.clientX,e.clientY,true)
+                break
+            }
+            case  btSquare.id : {
+                DrawUtils.setColorsAndWidth()
+                DrawUtils.drawSquareStart(e.clientX,e.clientY)
+                break
+            }
+            case btCircle.id :{
+                DrawUtils.setColorsAndWidth()
+                DrawUtils.drawCircle(e.clientX,e.clientY)
+                break
+            }
+
+        }
+    },
+    mouseMoving : (e) =>{
+        switch (CURRENT_SELECTED){
+            case btLine.id :{
+                DrawUtils.drawLineStart(e.clientX,e.clientY,false)
+                break
+            }
+            case btFreeHand.id :{
+                DrawUtils.drawLineStart(e.clientX,e.clientY,true)
+                break
+            }
+            case btErazer.id: {
+                DrawUtils.drawLineStart(e.clientX,e.clientY,true)
+                break
+            }
+            case  btSquare.id : {
+                DrawUtils.drawSquareStart(e.clientX,e.clientY)
+                break
+            }
+            case btCircle.id :{
+                DrawUtils.drawCircle(e.clientX,e.clientY)
+                break
+            }
+
+        }
+    },
+    mouseUnpressedAfterMoving : (e) =>{
+        switch (CURRENT_SELECTED){
+            case btLine.id :
+            case btFreeHand.id :
+            case btErazer.id: {
+                DrawUtils.drawLineEnd()
+                break
+            }
+            case  btSquare.id :{
+                DrawUtils.drawSquareEnd()
+                break
+            }
+            case btCircle.id : {
+                DrawUtils.drawCircleEnd()
+                break
+            }
+        }
+    }
+}
+
 
 window.addEventListener('resize', (e) => {
     CV_OFFSET_X = cvMain.offsetLeft
@@ -60,65 +243,20 @@ btClear.addEventListener('click',(e)=>{
     cvMain.height = secCanvas.getBoundingClientRect().bottom - CV_OFFSET_Y
 })
 
+
+
+
 cvMain.addEventListener('mousedown',(e)=>{
     IS_DRAWING = true
-    DRAWING_START_X = e.clientX
-    DRAWING_START_Y = e.clientY
+    CanvasUtils.mouseBeginningToMove(e)
 })
 cvMain.addEventListener('mouseup',(e)=>{
     IS_DRAWING =false
-    ctx.stroke()
-    ctx.beginPath()
+    CanvasUtils.mouseUnpressedAfterMoving(e)
 })
 cvMain.addEventListener('mousemove',(e)=>{
-    ctx.fillStyle = CURRENT_FILL_COLOR
-    ctx.strokeStyle=CURRENT_LINE_COLOR
-    ctx.lineWidth = CURRENT_MOUSE_SIZE
-    ctx.lineCap = "round"
-    ctx.lineJoin = "round"
-    console.log(`LAST_DRAWN_X=${LAST_DRAWN_Y} | LAST_DRAWN_Y=${LAST_DRAWN_Y} |  clientX = ${e.clientX} | CV_OFFSET_X=${CV_OFFSET_X} | clientY=${e.clientY} | CV_OFFSET_Y=${CV_OFFSET_Y} `)
     if(IS_DRAWING){
-        switch (CURRENT_SELECTED){
-            case btLine.id :
-            case btFreeHand.id :
-            case btErazer.id: {
-                if(CURRENT_SELECTED === btErazer.id){
-                    ctx.strokeStyle = CURRENT_FILL_COLOR
-                    MAX_ST_DRAW_DEVIATION = 0
-                }
-                if(CURRENT_SELECTED === btFreeHand.id){
-                    MAX_ST_DRAW_DEVIATION = 0
-                }
-                if(CURRENT_SELECTED === btLine.id){
-                    MAX_ST_DRAW_DEVIATION = CURRENT_MOUSE_SIZE < 5 ? (CURRENT_MOUSE_SIZE + 5) : CURRENT_MOUSE_SIZE
-                }
-                let newX = e.clientX-CV_OFFSET_X
-                let newY = e.clientY-CV_OFFSET_Y
-                let finalX = (Math.abs(newX-LAST_DRAWN_X)<MAX_ST_DRAW_DEVIATION) ? LAST_DRAWN_X : newX
-                let finalY = (Math.abs(newY-LAST_DRAWN_Y)<MAX_ST_DRAW_DEVIATION) ? LAST_DRAWN_Y : newY
-                ctx.lineTo(finalX,finalY)
-                ctx.stroke()
-                LAST_DRAWN_X = finalX
-                LAST_DRAWN_Y = finalY
-                break
-            }
-            case  btCircle.id : {
-                break
-            }
-            case  btSquare.id :{
-
-                let newX = e.clientX-CV_OFFSET_X
-                let newY = e.clientY-CV_OFFSET_Y
-                let finalX = (Math.abs(newX-LAST_DRAWN_X)<MAX_ST_DRAW_DEVIATION) ? LAST_DRAWN_X : newX
-                let finalY = (Math.abs(newY-LAST_DRAWN_Y)<MAX_ST_DRAW_DEVIATION) ? LAST_DRAWN_Y : newY
-                ctx.fillRect(LAST_DRAWN_X,LAST_DRAWN_Y,finalX,finalY)
-                LAST_DRAWN_X = finalX
-                LAST_DRAWN_Y = finalY
-                break
-            }
-        }
-
-
+        CanvasUtils.mouseMoving(e)
     }
 })
 
