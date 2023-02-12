@@ -1,0 +1,2713 @@
+[
+  {
+    "title": "ACCEPT_HANDOVER",
+    "addedIn": "28",
+    "constantName": "android.permission.ACCEPT_HANDOVER",
+    "level": [
+      "dangerous"
+    ],
+    "info": [
+      "Allows a calling app to continue a call which was started in another app.An example is a video calling app that wants to continue a voice call on the user's mobile network.",
+      " When the handover of a call from one app to another takes place, there are two devices which are involved in the handover; the initiating and receiving devices.The initiating device is where the request to handover the call was started, and the receiving device is where the handover request is confirmed by the other party.",
+      " This permission protects access to the TelecomManager.acceptHandover(Uri, int, PhoneAccountHandle) which the receiving side of the handover uses to accept a handover. "
+    ]
+  },
+  {
+    "title": "ACCESS_BACKGROUND_LOCATION",
+    "addedIn": "29",
+    "constantName": "android.permission.ACCESS_BACKGROUND_LOCATION",
+    "level": [
+      "dangerous "
+    ],
+    "info": [
+      "Allows an app to access location in the background. If you're requesting this permission, you must also request either ACCESS_COARSE_LOCATION or ACCESS_FINE_LOCATION. Requesting this permission by itself doesn't give you location access. ",
+      " This is a hard restricted permission which cannot be held by an app until the installer on record allowlists the permission. For more details see PackageInstaller.SessionParams.setWhitelistedRestrictedPermissions(Set)."
+    ]
+  },
+  {
+    "title": "ACCESS_BLOBS_ACROSS_USERS",
+    "addedIn": "31",
+    "constantName": "android.permission.ACCESS_BLOBS_ACROSS_USERS",
+    "level": [],
+    "info": [
+      "Allows an application to access data blobs across users."
+    ]
+  },
+  {
+    "title": "ACCESS_CHECKIN_PROPERTIES",
+    "addedIn": "1",
+    "constantName": "android.permission.ACCESS_CHECKIN_PROPERTIES",
+    "level": [],
+    "info": [
+      "Allows read/write access to the \"properties\" table in the checkin database, to change values that get uploaded. ",
+      "Not for use by third-party applications."
+    ]
+  },
+  {
+    "title": "ACCESS_COARSE_LOCATION",
+    "addedIn": "1",
+    "constantName": "android.permission.ACCESS_COARSE_LOCATION",
+    "level": [
+      "dangerous"
+    ],
+    "info": [
+      "Allows an app to access approximate location. Alternatively, you might want ACCESS_FINE_LOCATION. "
+    ]
+  },
+  {
+    "title": "ACCESS_FINE_LOCATION",
+    "addedIn": "1",
+    "constantName": "android.permission.ACCESS_FINE_LOCATION",
+    "level": [
+      "dangerous"
+    ],
+    "info": [
+      "Allows an app to access precise location. Alternatively, you might want ACCESS_COARSE_LOCATION. "
+    ]
+  },
+  {
+    "title": "ACCESS_LOCATION_EXTRA_COMMANDS",
+    "addedIn": "1",
+    "constantName": "android.permission.ACCESS_LOCATION_EXTRA_COMMANDS",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "Allows an application to access extra location provider commands. "
+    ]
+  },
+  {
+    "title": "ACCESS_MEDIA_LOCATION",
+    "addedIn": "29",
+    "constantName": "android.permission.ACCESS_MEDIA_LOCATION",
+    "level": [
+      "dangerous"
+    ],
+    "info": [
+      "Allows an application to access any geographic locations persisted in the user's shared collection. "
+    ]
+  },
+  {
+    "title": "ACCESS_NETWORK_STATE",
+    "addedIn": "1",
+    "constantName": "android.permission.ACCESS_NETWORK_STATE",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "Allows applications to access information about networks. "
+    ]
+  },
+  {
+    "title": "ACCESS_NOTIFICATION_POLICY",
+    "addedIn": "23",
+    "constantName": "android.permission.ACCESS_NOTIFICATION_POLICY",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "Marker permission for applications that wish to access notification policy. This permission is not supported on managed profiles. "
+    ]
+  },
+  {
+    "title": "ACCESS_WIFI_STATE",
+    "addedIn": "1",
+    "constantName": "android.permission.ACCESS_WIFI_STATE",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "Allows applications to access information about Wi-Fi networks. "
+    ]
+  },
+  {
+    "title": "ACCOUNT_MANAGER",
+    "addedIn": "5",
+    "constantName": "android.permission.ACCOUNT_MANAGER",
+    "level": [],
+    "info": [
+      "Allows applications to call into AccountAuthenticators. ",
+      "Not for use by third-party applications."
+    ]
+  },
+  {
+    "title": "ACTIVITY_RECOGNITION",
+    "addedIn": "29",
+    "constantName": "android.permission.ACTIVITY_RECOGNITION",
+    "level": [
+      "dangerous"
+    ],
+    "info": [
+      "Allows an application to recognize physical activity. "
+    ]
+  },
+  {
+    "title": "ADD_VOICEMAIL",
+    "addedIn": "14",
+    "constantName": "com.android.voicemail.permission.ADD_VOICEMAIL",
+    "level": [
+      "dangerous"
+    ],
+    "info": [
+      "Allows an application to add voicemails into the system. "
+    ]
+  },
+  {
+    "title": "ANSWER_PHONE_CALLS",
+    "addedIn": "26",
+    "constantName": "android.permission.ANSWER_PHONE_CALLS",
+    "level": [
+      "dangerous"
+    ],
+    "info": [
+      "Allows the app to answer an incoming phone call. "
+    ]
+  },
+  {
+    "title": "BATTERY_STATS",
+    "addedIn": "1",
+    "constantName": "android.permission.BATTERY_STATS",
+    "level": [
+      "signature",
+      "privileged",
+      "development"
+    ],
+    "info": [
+      "Allows an application to collect battery statistics "
+    ]
+  },
+  {
+    "title": "BIND_ACCESSIBILITY_SERVICE",
+    "addedIn": "16",
+    "constantName": "android.permission.BIND_ACCESSIBILITY_SERVICE",
+    "level": [
+      "signature"
+    ],
+    "info": [
+      "Must be required by an AccessibilityService, to ensure that only the system can bind to it. "
+    ]
+  },
+  {
+    "title": "BIND_APPWIDGET",
+    "addedIn": "3",
+    "constantName": "android.permission.BIND_APPWIDGET",
+    "level": [],
+    "info": [
+      "Allows an application to tell the AppWidget service which application can access AppWidget's data.The normal user flow is that a user picks an AppWidget to go into a particular host, thereby giving that host application access to the private data from the AppWidget app. An application that has this permission should honor that contract. ",
+      "Not for use by third-party applications."
+    ]
+  },
+  {
+    "title": "BIND_AUTOFILL_SERVICE",
+    "addedIn": "26",
+    "constantName": "android.permission.BIND_AUTOFILL_SERVICE",
+    "level": [
+      "signature"
+    ],
+    "info": [
+      "Must be required by a AutofillService, to ensure that only the system can bind to it. "
+    ]
+  },
+  {
+    "title": "BIND_CALL_REDIRECTION_SERVICE",
+    "addedIn": "29",
+    "constantName": "android.permission.BIND_CALL_REDIRECTION_SERVICE",
+    "level": [
+      "signature",
+      "privileged"
+    ],
+    "info": [
+      "Must be required by a CallRedirectionService, to ensure that only the system can bind to it. "
+    ]
+  },
+  {
+    "title": "BIND_CARRIER_MESSAGING_CLIENT_SERVICE",
+    "addedIn": "29",
+    "constantName": "android.permission.BIND_CARRIER_MESSAGING_CLIENT_SERVICE",
+    "level": [
+      "signature"
+    ],
+    "info": [
+      "A subclass of CarrierMessagingClientService must be protected with this permission. "
+    ]
+  },
+  {
+    "title": "BIND_CARRIER_MESSAGING_SERVICE",
+    "addedIn": "22",
+    "constantName": "android.permission.BIND_CARRIER_MESSAGING_SERVICE",
+    "level": [],
+    "info": [
+      "This constant was deprecatedin API level 23.Use BIND_CARRIER_SERVICES instead"
+    ]
+  },
+  {
+    "title": "BIND_CARRIER_SERVICES",
+    "addedIn": "23",
+    "constantName": "android.permission.BIND_CARRIER_SERVICES",
+    "level": [
+      "signature",
+      "privileged"
+    ],
+    "info": [
+      "The system process that is allowed to bind to services in carrier apps will have this permission. Carrier apps should use this permission to protect their services that only the system is allowed to bind to. "
+    ]
+  },
+  {
+    "title": "BIND_CHOOSER_TARGET_SERVICE",
+    "addedIn": "23",
+    "constantName": "android.permission.BIND_CHOOSER_TARGET_SERVICE",
+    "level": [
+      "signature"
+    ],
+    "info": [
+      "This constant was deprecatedin API level 30.For publishing direct share targets, please follow the instructions in https://developer.android.com/training/sharing/receive.html#providing-direct-share-targets instead.",
+      "Must be required by a ChooserTargetService, to ensure that only the system can bind to it. "
+    ]
+  },
+  {
+    "title": "BIND_COMPANION_DEVICE_SERVICE",
+    "addedIn": "31",
+    "constantName": "android.permission.BIND_COMPANION_DEVICE_SERVICE",
+    "level": [],
+    "info": [
+      "Must be required by any CompanionDeviceServices to ensure that only the system can bind to it."
+    ]
+  },
+  {
+    "title": "BIND_CONDITION_PROVIDER_SERVICE",
+    "addedIn": "24",
+    "constantName": "android.permission.BIND_CONDITION_PROVIDER_SERVICE",
+    "level": [
+      "signature"
+    ],
+    "info": [
+      "Must be required by a ConditionProviderService, to ensure that only the system can bind to it. "
+    ]
+  },
+  {
+    "title": "BIND_CONTROLS",
+    "addedIn": "30",
+    "constantName": "android.permission.BIND_CONTROLS",
+    "level": [],
+    "info": [
+      "Allows SystemUI to request third party controls. ",
+      "Should only be requested by the System and required by ControlsProviderService declarations."
+    ]
+  },
+  {
+    "title": "BIND_CREDENTIAL_PROVIDER_SERVICE",
+    "addedIn": "UpsideDownCake",
+    "constantName": "android.permission.BIND_CREDENTIAL_PROVIDER_SERVICE",
+    "level": [
+      "signature"
+    ],
+    "info": [
+      "Must be required by a CredentialProviderService to ensure that only the system can bind to it. "
+    ]
+  },
+  {
+    "title": "BIND_DEVICE_ADMIN",
+    "addedIn": "8",
+    "constantName": "android.permission.BIND_DEVICE_ADMIN",
+    "level": [
+      "signature"
+    ],
+    "info": [
+      "Must be required by device administration receiver, to ensure that only the system can interact with it. "
+    ]
+  },
+  {
+    "title": "BIND_DREAM_SERVICE",
+    "addedIn": "21",
+    "constantName": "android.permission.BIND_DREAM_SERVICE",
+    "level": [
+      "signature"
+    ],
+    "info": [
+      "Must be required by an DreamService, to ensure that only the system can bind to it. "
+    ]
+  },
+  {
+    "title": "BIND_INCALL_SERVICE",
+    "addedIn": "23",
+    "constantName": "android.permission.BIND_INCALL_SERVICE",
+    "level": [
+      "signature",
+      "privileged"
+    ],
+    "info": [
+      "Must be required by a InCallService, to ensure that only the system can bind to it. "
+    ]
+  },
+  {
+    "title": "BIND_INPUT_METHOD",
+    "addedIn": "3",
+    "constantName": "android.permission.BIND_INPUT_METHOD",
+    "level": [
+      "signature"
+    ],
+    "info": [
+      "Must be required by an InputMethodService, to ensure that only the system can bind to it. "
+    ]
+  },
+  {
+    "title": "BIND_MIDI_DEVICE_SERVICE",
+    "addedIn": "23",
+    "constantName": "android.permission.BIND_MIDI_DEVICE_SERVICE",
+    "level": [
+      "signature"
+    ],
+    "info": [
+      "Must be required by an MidiDeviceService, to ensure that only the system can bind to it. "
+    ]
+  },
+  {
+    "title": "BIND_NFC_SERVICE",
+    "addedIn": "19",
+    "constantName": "android.permission.BIND_NFC_SERVICE",
+    "level": [
+      "signature"
+    ],
+    "info": [
+      "Must be required by a HostApduService or OffHostApduService to ensure that only the system can bind to it. "
+    ]
+  },
+  {
+    "title": "BIND_NOTIFICATION_LISTENER_SERVICE",
+    "addedIn": "18",
+    "constantName": "android.permission.BIND_NOTIFICATION_LISTENER_SERVICE",
+    "level": [
+      "signature"
+    ],
+    "info": [
+      "Must be required by an NotificationListenerService, to ensure that only the system can bind to it. "
+    ]
+  },
+  {
+    "title": "BIND_PRINT_SERVICE",
+    "addedIn": "19",
+    "constantName": "android.permission.BIND_PRINT_SERVICE",
+    "level": [
+      "signature"
+    ],
+    "info": [
+      "Must be required by a PrintService, to ensure that only the system can bind to it. "
+    ]
+  },
+  {
+    "title": "BIND_QUICK_ACCESS_WALLET_SERVICE",
+    "addedIn": "30",
+    "constantName": "android.permission.BIND_QUICK_ACCESS_WALLET_SERVICE",
+    "level": [
+      "signature"
+    ],
+    "info": [
+      "Must be required by a QuickAccessWalletService to ensure that only the system can bind to it. "
+    ]
+  },
+  {
+    "title": "BIND_QUICK_SETTINGS_TILE",
+    "addedIn": "24",
+    "constantName": "android.permission.BIND_QUICK_SETTINGS_TILE",
+    "level": [],
+    "info": [
+      "Allows an application to bind to third party quick settings tiles. ",
+      "Should only be requested by the System, should be required by TileService declarations."
+    ]
+  },
+  {
+    "title": "BIND_REMOTEVIEWS",
+    "addedIn": "11",
+    "constantName": "android.permission.BIND_REMOTEVIEWS",
+    "level": [
+      "signature",
+      "privileged"
+    ],
+    "info": [
+      "Must be required by a RemoteViewsService, to ensure that only the system can bind to it. "
+    ]
+  },
+  {
+    "title": "BIND_SCREENING_SERVICE",
+    "addedIn": "24",
+    "constantName": "android.permission.BIND_SCREENING_SERVICE",
+    "level": [
+      "signature",
+      "privileged"
+    ],
+    "info": [
+      "Must be required by a CallScreeningService, to ensure that only the system can bind to it. "
+    ]
+  },
+  {
+    "title": "BIND_TELECOM_CONNECTION_SERVICE",
+    "addedIn": "23",
+    "constantName": "android.permission.BIND_TELECOM_CONNECTION_SERVICE",
+    "level": [
+      "signature",
+      "privileged"
+    ],
+    "info": [
+      "Must be required by a ConnectionService, to ensure that only the system can bind to it. "
+    ]
+  },
+  {
+    "title": "BIND_TEXT_SERVICE",
+    "addedIn": "14",
+    "constantName": "android.permission.BIND_TEXT_SERVICE",
+    "level": [
+      "signature"
+    ],
+    "info": [
+      "Must be required by a TextService (e.g. SpellCheckerService) to ensure that only the system can bind to it. "
+    ]
+  },
+  {
+    "title": "BIND_TV_INPUT",
+    "addedIn": "21",
+    "constantName": "android.permission.BIND_TV_INPUT",
+    "level": [
+      "signature",
+      "privileged"
+    ],
+    "info": [
+      "Must be required by a TvInputService to ensure that only the system can bind to it. "
+    ]
+  },
+  {
+    "title": "BIND_TV_INTERACTIVE_APP",
+    "addedIn": "33",
+    "constantName": "android.permission.BIND_TV_INTERACTIVE_APP",
+    "level": [
+      "signature",
+      "privileged"
+    ],
+    "info": [
+      "Must be required by a TvInteractiveAppService to ensure that only the system can bind to it. "
+    ]
+  },
+  {
+    "title": "BIND_VISUAL_VOICEMAIL_SERVICE",
+    "addedIn": "26",
+    "constantName": "android.permission.BIND_VISUAL_VOICEMAIL_SERVICE",
+    "level": [
+      "signature",
+      "privileged"
+    ],
+    "info": [
+      "Must be required by a link VisualVoicemailService to ensure that only the system can bind to it. "
+    ]
+  },
+  {
+    "title": "BIND_VOICE_INTERACTION",
+    "addedIn": "21",
+    "constantName": "android.permission.BIND_VOICE_INTERACTION",
+    "level": [
+      "signature"
+    ],
+    "info": [
+      "Must be required by a VoiceInteractionService, to ensure that only the system can bind to it. "
+    ]
+  },
+  {
+    "title": "BIND_VPN_SERVICE",
+    "addedIn": "14",
+    "constantName": "android.permission.BIND_VPN_SERVICE",
+    "level": [
+      "signature"
+    ],
+    "info": [
+      "Must be required by a VpnService, to ensure that only the system can bind to it. "
+    ]
+  },
+  {
+    "title": "BIND_VR_LISTENER_SERVICE",
+    "addedIn": "24",
+    "constantName": "android.permission.BIND_VR_LISTENER_SERVICE",
+    "level": [
+      "signature"
+    ],
+    "info": [
+      "Must be required by an VrListenerService, to ensure that only the system can bind to it. "
+    ]
+  },
+  {
+    "title": "BIND_WALLPAPER",
+    "addedIn": "8",
+    "constantName": "android.permission.BIND_WALLPAPER",
+    "level": [
+      "signature",
+      "privileged"
+    ],
+    "info": [
+      "Must be required by a WallpaperService, to ensure that only the system can bind to it. "
+    ]
+  },
+  {
+    "title": "BLUETOOTH",
+    "addedIn": "1",
+    "constantName": "android.permission.BLUETOOTH",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "Allows applications to connect to paired bluetooth devices. "
+    ]
+  },
+  {
+    "title": "BLUETOOTH_ADMIN",
+    "addedIn": "1",
+    "constantName": "android.permission.BLUETOOTH_ADMIN",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "Allows applications to discover and pair bluetooth devices. "
+    ]
+  },
+  {
+    "title": "BLUETOOTH_ADVERTISE",
+    "addedIn": "31",
+    "constantName": "android.permission.BLUETOOTH_ADVERTISE",
+    "level": [
+      "dangerous"
+    ],
+    "info": [
+      "Required to be able to advertise to nearby Bluetooth devices. "
+    ]
+  },
+  {
+    "title": "BLUETOOTH_CONNECT",
+    "addedIn": "31",
+    "constantName": "android.permission.BLUETOOTH_CONNECT",
+    "level": [
+      "dangerous"
+    ],
+    "info": [
+      "Required to be able to connect to paired Bluetooth devices. "
+    ]
+  },
+  {
+    "title": "BLUETOOTH_PRIVILEGED",
+    "addedIn": "19",
+    "constantName": "android.permission.BLUETOOTH_PRIVILEGED",
+    "level": [],
+    "info": [
+      "Allows applications to pair bluetooth devices without user interaction, and to allow or disallow phonebook access or message access. ",
+      "Not for use by third-party applications."
+    ]
+  },
+  {
+    "title": "BLUETOOTH_SCAN",
+    "addedIn": "31",
+    "constantName": "android.permission.BLUETOOTH_SCAN",
+    "level": [
+      "dangerous"
+    ],
+    "info": [
+      "Required to be able to discover and pair nearby Bluetooth devices. "
+    ]
+  },
+  {
+    "title": "BODY_SENSORS",
+    "addedIn": "20",
+    "constantName": "android.permission.BODY_SENSORS",
+    "level": [
+      "dangerous"
+    ],
+    "info": [
+      "Allows an application to access data from sensors that the user uses to measure what is happening inside their body, such as heart rate. "
+    ]
+  },
+  {
+    "title": "BODY_SENSORS_BACKGROUND",
+    "addedIn": "33",
+    "constantName": "android.permission.BODY_SENSORS_BACKGROUND",
+    "level": [
+      "dangerous "
+    ],
+    "info": [
+      "Allows an application to access data from sensors that the user uses to measure what is happening inside their body, such as heart rate. If you're requesting this permission, you must also request BODY_SENSORS. Requesting this permission by itself doesn't give you Body sensors access. ",
+      " This is a hard restricted permission which cannot be held by an app until the installer on record allowlists the permission. For more details see PackageInstaller.SessionParams.setWhitelistedRestrictedPermissions(Set)."
+    ]
+  },
+  {
+    "title": "BROADCAST_PACKAGE_REMOVED",
+    "addedIn": "1",
+    "constantName": "android.permission.BROADCAST_PACKAGE_REMOVED",
+    "level": [],
+    "info": [
+      "Allows an application to broadcast a notification that an application package has been removed. ",
+      "Not for use by third-party applications."
+    ]
+  },
+  {
+    "title": "BROADCAST_SMS",
+    "addedIn": "2",
+    "constantName": "android.permission.BROADCAST_SMS",
+    "level": [],
+    "info": [
+      "Allows an application to broadcast an SMS receipt notification. ",
+      "Not for use by third-party applications."
+    ]
+  },
+  {
+    "title": "BROADCAST_STICKY",
+    "addedIn": "1",
+    "constantName": "android.permission.BROADCAST_STICKY",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "Allows an application to broadcast sticky intents.These are broadcasts whose data is held by the system after being finished, so that clients can quickly retrieve that data without having to wait for the next broadcast. "
+    ]
+  },
+  {
+    "title": "BROADCAST_WAP_PUSH",
+    "addedIn": "2",
+    "constantName": "android.permission.BROADCAST_WAP_PUSH",
+    "level": [],
+    "info": [
+      "Allows an application to broadcast a WAP PUSH receipt notification. ",
+      "Not for use by third-party applications."
+    ]
+  },
+  {
+    "title": "CALL_COMPANION_APP",
+    "addedIn": "29",
+    "constantName": "android.permission.CALL_COMPANION_APP",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "Allows an app which implements the InCallService API to be eligible to be enabled as a calling companion app. This means that the Telecom framework will bind to the app's InCallService implementation when there are calls active. The app can use the InCallService API to view information about calls on the system and control these calls. "
+    ]
+  },
+  {
+    "title": "CALL_PHONE",
+    "addedIn": "1",
+    "constantName": "android.permission.CALL_PHONE",
+    "level": [
+      "dangerous"
+    ],
+    "info": [
+      "Allows an application to initiate a phone call without going through the Dialer user interface for the user to confirm the call. "
+    ]
+  },
+  {
+    "title": "CALL_PRIVILEGED",
+    "addedIn": "1",
+    "constantName": "android.permission.CALL_PRIVILEGED",
+    "level": [],
+    "info": [
+      "Allows an application to call any phone number, including emergency numbers, without going through the Dialer user interface for the user to confirm the call being placed. ",
+      "Not for use by third-party applications."
+    ]
+  },
+  {
+    "title": "CAMERA",
+    "addedIn": "1",
+    "constantName": "android.permission.CAMERA",
+    "level": [
+      "dangerous"
+    ],
+    "info": [
+      "Required to be able to access the camera device. ",
+      "This will automatically enforce theuses-feature manifest element for all camera features. If you do not require all camera features or can properly operate if a camera is not available, then you must modify your manifest as appropriate in order to install on devices that don't support all camera features."
+    ]
+  },
+  {
+    "title": "CAPTURE_AUDIO_OUTPUT",
+    "addedIn": "19",
+    "constantName": "android.permission.CAPTURE_AUDIO_OUTPUT",
+    "level": [],
+    "info": [
+      "Allows an application to capture audio output. Use the CAPTURE_MEDIA_OUTPUT permission if only the USAGE_UNKNOWN), USAGE_MEDIA) or USAGE_GAME) usages are intended to be captured. ",
+      "Not for use by third-party applications."
+    ]
+  },
+  {
+    "title": "CHANGE_COMPONENT_ENABLED_STATE",
+    "addedIn": "1",
+    "constantName": "android.permission.CHANGE_COMPONENT_ENABLED_STATE",
+    "level": [],
+    "info": [
+      "Allows an application to change whether an application component (other than its own) is enabled or not. ",
+      "Not for use by third-party applications."
+    ]
+  },
+  {
+    "title": "CHANGE_CONFIGURATION",
+    "addedIn": "1",
+    "constantName": "android.permission.CHANGE_CONFIGURATION",
+    "level": [
+      "signature",
+      "privileged",
+      "development"
+    ],
+    "info": [
+      "Allows an application to modify the current configuration, such as locale. "
+    ]
+  },
+  {
+    "title": "CHANGE_NETWORK_STATE",
+    "addedIn": "1",
+    "constantName": "android.permission.CHANGE_NETWORK_STATE",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "Allows applications to change network connectivity state. "
+    ]
+  },
+  {
+    "title": "CHANGE_WIFI_MULTICAST_STATE",
+    "addedIn": "4",
+    "constantName": "android.permission.CHANGE_WIFI_MULTICAST_STATE",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "Allows applications to enter Wi-Fi Multicast mode. "
+    ]
+  },
+  {
+    "title": "CHANGE_WIFI_STATE",
+    "addedIn": "1",
+    "constantName": "android.permission.CHANGE_WIFI_STATE",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "Allows applications to change Wi-Fi connectivity state. "
+    ]
+  },
+  {
+    "title": "CLEAR_APP_CACHE",
+    "addedIn": "1",
+    "constantName": "android.permission.CLEAR_APP_CACHE",
+    "level": [
+      "signature",
+      "privileged"
+    ],
+    "info": [
+      "Allows an application to clear the caches of all installed applications on the device. "
+    ]
+  },
+  {
+    "title": "CONFIGURE_WIFI_DISPLAY",
+    "addedIn": "UpsideDownCake",
+    "constantName": "android.permission.CONFIGURE_WIFI_DISPLAY",
+    "level": [],
+    "info": [
+      "Allows an application to configure and connect to Wifi displays"
+    ]
+  },
+  {
+    "title": "CONTROL_LOCATION_UPDATES",
+    "addedIn": "1",
+    "constantName": "android.permission.CONTROL_LOCATION_UPDATES",
+    "level": [],
+    "info": [
+      "Allows enabling/disabling location update notifications from the radio. ",
+      "Not for use by third-party applications."
+    ]
+  },
+  {
+    "title": "DELETE_CACHE_FILES",
+    "addedIn": "1",
+    "constantName": "android.permission.DELETE_CACHE_FILES",
+    "level": [
+      "signature",
+      "privileged"
+    ],
+    "info": [
+      "Old permission for deleting an app's cache files, no longer used, but signals for us to quietly ignore calls instead of throwing an exception. "
+    ]
+  },
+  {
+    "title": "DELETE_PACKAGES",
+    "addedIn": "1",
+    "constantName": "android.permission.DELETE_PACKAGES",
+    "level": [],
+    "info": [
+      "Allows an application to delete packages. ",
+      "Not for use by third-party applications. ",
+      "Starting in Build.VERSION_CODES.N, user confirmation is requested when the application deleting the package is not the same application that installed the package."
+    ]
+  },
+  {
+    "title": "DELIVER_COMPANION_MESSAGES",
+    "addedIn": "33",
+    "constantName": "android.permission.DELIVER_COMPANION_MESSAGES",
+    "level": [],
+    "info": [
+      "Allows an application to deliver companion messages to system"
+    ]
+  },
+  {
+    "title": "DETECT_SCREEN_CAPTURE",
+    "addedIn": "UpsideDownCake",
+    "constantName": "android.permission.DETECT_SCREEN_CAPTURE",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "Allows an application to get notified when a screen capture of its windows is attempted. "
+    ]
+  },
+  {
+    "title": "DIAGNOSTIC",
+    "addedIn": "1",
+    "constantName": "android.permission.DIAGNOSTIC",
+    "level": [],
+    "info": [
+      "Allows applications to RW to diagnostic resources. ",
+      "Not for use by third-party applications."
+    ]
+  },
+  {
+    "title": "DISABLE_KEYGUARD",
+    "addedIn": "1",
+    "constantName": "android.permission.DISABLE_KEYGUARD",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "Allows applications to disable the keyguard if it is not secure. "
+    ]
+  },
+  {
+    "title": "DUMP",
+    "addedIn": "1",
+    "constantName": "android.permission.DUMP",
+    "level": [],
+    "info": [
+      "Allows an application to retrieve state dump information from system services. ",
+      "Not for use by third-party applications."
+    ]
+  },
+  {
+    "title": "ENFORCE_UPDATE_OWNERSHIP",
+    "addedIn": "UpsideDownCake",
+    "constantName": "android.permission.ENFORCE_UPDATE_OWNERSHIP",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "Allows an application to indicate via PackageInstaller.SessionParams.setRequestUpdateOwnership(boolean) that it has the intention of becoming the update owner. "
+    ]
+  },
+  {
+    "title": "EXPAND_STATUS_BAR",
+    "addedIn": "1",
+    "constantName": "android.permission.EXPAND_STATUS_BAR",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "Allows an application to expand or collapse the status bar. "
+    ]
+  },
+  {
+    "title": "FACTORY_TEST",
+    "addedIn": "1",
+    "constantName": "android.permission.FACTORY_TEST",
+    "level": [],
+    "info": [
+      "Run as a manufacturer test application, running as the root user. Only available when the device is running in manufacturer test mode. ",
+      "Not for use by third-party applications."
+    ]
+  },
+  {
+    "title": "FOREGROUND_SERVICE",
+    "addedIn": "28",
+    "constantName": "android.permission.FOREGROUND_SERVICE",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "Allows a regular application to use Service.startForeground. "
+    ]
+  },
+  {
+    "title": "FOREGROUND_SERVICE_CAMERA",
+    "addedIn": "UpsideDownCake",
+    "constantName": "android.permission.FOREGROUND_SERVICE_CAMERA",
+    "level": [
+      "normal",
+      "instant"
+    ],
+    "info": [
+      "Allows a regular application to use Service.startForeground with the type \"camera\". "
+    ]
+  },
+  {
+    "title": "FOREGROUND_SERVICE_CONNECTED_DEVICE",
+    "addedIn": "UpsideDownCake",
+    "constantName": "android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE",
+    "level": [
+      "normal",
+      "instant"
+    ],
+    "info": [
+      "Allows a regular application to use Service.startForeground with the type \"connectedDevice\". "
+    ]
+  },
+  {
+    "title": "FOREGROUND_SERVICE_DATA_SYNC",
+    "addedIn": "UpsideDownCake",
+    "constantName": "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
+    "level": [
+      "normal",
+      "instant"
+    ],
+    "info": [
+      "Allows a regular application to use Service.startForeground with the type \"dataSync\". "
+    ]
+  },
+  {
+    "title": "FOREGROUND_SERVICE_FILE_MANAGEMENT",
+    "addedIn": "UpsideDownCake",
+    "constantName": "android.permission.FOREGROUND_SERVICE_FILE_MANAGEMENT",
+    "level": [
+      "normal",
+      "instant"
+    ],
+    "info": [
+      "Allows a regular application to use Service.startForeground with the type \"fileManagement\". "
+    ]
+  },
+  {
+    "title": "FOREGROUND_SERVICE_HEALTH",
+    "addedIn": "UpsideDownCake",
+    "constantName": "android.permission.FOREGROUND_SERVICE_HEALTH",
+    "level": [
+      "normal",
+      "instant"
+    ],
+    "info": [
+      "Allows a regular application to use Service.startForeground with the type \"health\". "
+    ]
+  },
+  {
+    "title": "FOREGROUND_SERVICE_LOCATION",
+    "addedIn": "UpsideDownCake",
+    "constantName": "android.permission.FOREGROUND_SERVICE_LOCATION",
+    "level": [
+      "normal",
+      "instant"
+    ],
+    "info": [
+      "Allows a regular application to use Service.startForeground with the type \"location\". "
+    ]
+  },
+  {
+    "title": "FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+    "addedIn": "UpsideDownCake",
+    "constantName": "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+    "level": [
+      "normal",
+      "instant"
+    ],
+    "info": [
+      "Allows a regular application to use Service.startForeground with the type \"mediaPlayback\". "
+    ]
+  },
+  {
+    "title": "FOREGROUND_SERVICE_MEDIA_PROJECTION",
+    "addedIn": "UpsideDownCake",
+    "constantName": "android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION",
+    "level": [
+      "normal",
+      "instant"
+    ],
+    "info": [
+      "Allows a regular application to use Service.startForeground with the type \"mediaProjection\". "
+    ]
+  },
+  {
+    "title": "FOREGROUND_SERVICE_MICROPHONE",
+    "addedIn": "UpsideDownCake",
+    "constantName": "android.permission.FOREGROUND_SERVICE_MICROPHONE",
+    "level": [
+      "normal",
+      "instant"
+    ],
+    "info": [
+      "Allows a regular application to use Service.startForeground with the type \"microphone\". "
+    ]
+  },
+  {
+    "title": "FOREGROUND_SERVICE_PHONE_CALL",
+    "addedIn": "UpsideDownCake",
+    "constantName": "android.permission.FOREGROUND_SERVICE_PHONE_CALL",
+    "level": [
+      "normal",
+      "instant"
+    ],
+    "info": [
+      "Allows a regular application to use Service.startForeground with the type \"phoneCall\". "
+    ]
+  },
+  {
+    "title": "FOREGROUND_SERVICE_REMOTE_MESSAGING",
+    "addedIn": "UpsideDownCake",
+    "constantName": "android.permission.FOREGROUND_SERVICE_REMOTE_MESSAGING",
+    "level": [
+      "normal",
+      "instant"
+    ],
+    "info": [
+      "Allows a regular application to use Service.startForeground with the type \"remoteMessaging\". "
+    ]
+  },
+  {
+    "title": "FOREGROUND_SERVICE_SPECIAL_USE",
+    "addedIn": "UpsideDownCake",
+    "constantName": "android.permission.FOREGROUND_SERVICE_SPECIAL_USE",
+    "level": [
+      "normal",
+      "appop",
+      "instant"
+    ],
+    "info": [
+      "Allows a regular application to use Service.startForeground with the type \"specialUse\". "
+    ]
+  },
+  {
+    "title": "FOREGROUND_SERVICE_SYSTEM_EXEMPTED",
+    "addedIn": "UpsideDownCake",
+    "constantName": "android.permission.FOREGROUND_SERVICE_SYSTEM_EXEMPTED",
+    "level": [
+      "normal",
+      "instant"
+    ],
+    "info": [
+      "Allows a regular application to use Service.startForeground with the type \"systemExempted\". Apps are allowed to use this type only in the use cases listed in ServiceInfo.FOREGROUND_SERVICE_TYPE_SYSTEM_EXEMPTED. "
+    ]
+  },
+  {
+    "title": "GET_ACCOUNTS",
+    "addedIn": "1",
+    "constantName": "android.permission.GET_ACCOUNTS",
+    "level": [
+      "dangerous"
+    ],
+    "info": [
+      "Allows access to the list of accounts in the Accounts Service. ",
+      "Note: Beginning with Android 6.0 (API level 23), if an app shares the signature of the authenticator that manages an account, it does not need \"GET_ACCOUNTS\" permission to read information about that account. On Android 5.1 and lower, all apps need \"GET_ACCOUNTS\" permission to read information about any account."
+    ]
+  },
+  {
+    "title": "GET_ACCOUNTS_PRIVILEGED",
+    "addedIn": "23",
+    "constantName": "android.permission.GET_ACCOUNTS_PRIVILEGED",
+    "level": [
+      "signature",
+      "privileged"
+    ],
+    "info": [
+      "Allows access to the list of accounts in the Accounts Service. "
+    ]
+  },
+  {
+    "title": "GET_PACKAGE_SIZE",
+    "addedIn": "1",
+    "constantName": "android.permission.GET_PACKAGE_SIZE",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "Allows an application to find out the space used by any package. "
+    ]
+  },
+  {
+    "title": "GET_TASKS",
+    "addedIn": "1",
+    "constantName": "android.permission.GET_TASKS",
+    "level": [],
+    "info": [
+      "This constant was deprecatedin API level 21.No longer enforced."
+    ]
+  },
+  {
+    "title": "GLOBAL_SEARCH",
+    "addedIn": "4",
+    "constantName": "android.permission.GLOBAL_SEARCH",
+    "level": [
+      "signature",
+      "privileged"
+    ],
+    "info": [
+      "This permission can be used on content providers to allow the global search system to access their data.Typically it used when the provider has some permissions protecting it (which global search would not be expected to hold), and added as a read-only permission to the path in the provider where global search queries are performed.This permission can not be held by regular applications; it is used by applications to protect themselves from everyone else besides global search. "
+    ]
+  },
+  {
+    "title": "HIDE_OVERLAY_WINDOWS",
+    "addedIn": "31",
+    "constantName": "android.permission.HIDE_OVERLAY_WINDOWS",
+    "level": [],
+    "info": [
+      "Allows an app to prevent non-system-overlay windows from being drawn on top of it"
+    ]
+  },
+  {
+    "title": "HIGH_SAMPLING_RATE_SENSORS",
+    "addedIn": "31",
+    "constantName": "android.permission.HIGH_SAMPLING_RATE_SENSORS",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "Allows an app to access sensor data with a sampling rate greater than 200 Hz. "
+    ]
+  },
+  {
+    "title": "INSTALL_LOCATION_PROVIDER",
+    "addedIn": "4",
+    "constantName": "android.permission.INSTALL_LOCATION_PROVIDER",
+    "level": [],
+    "info": [
+      "Allows an application to install a location provider into the Location Manager. ",
+      "Not for use by third-party applications."
+    ]
+  },
+  {
+    "title": "INSTALL_PACKAGES",
+    "addedIn": "1",
+    "constantName": "android.permission.INSTALL_PACKAGES",
+    "level": [],
+    "info": [
+      "Allows an application to install packages. ",
+      "Not for use by third-party applications."
+    ]
+  },
+  {
+    "title": "INSTALL_SHORTCUT",
+    "addedIn": "19",
+    "constantName": "com.android.launcher.permission.INSTALL_SHORTCUT",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "Allows an application to install a shortcut in Launcher. ",
+      "In Android O (API level 26) and higher, the INSTALL_SHORTCUT broadcast no longer has any effect on your app because it's a private, implicit broadcast. Instead, you should create an app shortcut by using the requestPinShortcut() method from the ShortcutManager class. "
+    ]
+  },
+  {
+    "title": "INSTANT_APP_FOREGROUND_SERVICE",
+    "addedIn": "26",
+    "constantName": "android.permission.INSTANT_APP_FOREGROUND_SERVICE",
+    "level": [
+      "signature",
+      "development",
+      "instant",
+      "appop"
+    ],
+    "info": [
+      "Allows an instant app to create foreground services. "
+    ]
+  },
+  {
+    "title": "INTERACT_ACROSS_PROFILES",
+    "addedIn": "30",
+    "constantName": "android.permission.INTERACT_ACROSS_PROFILES",
+    "level": [],
+    "info": [
+      "Allows interaction across profiles in the same profile group."
+    ]
+  },
+  {
+    "title": "INTERNET",
+    "addedIn": "1",
+    "constantName": "android.permission.INTERNET",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "Allows applications to open network sockets. "
+    ]
+  },
+  {
+    "title": "KILL_BACKGROUND_PROCESSES",
+    "addedIn": "8",
+    "constantName": "android.permission.KILL_BACKGROUND_PROCESSES",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "Allows an application to call ActivityManager.killBackgroundProcesses(String). ",
+      "As of Android version Build.VERSION_CODES.UPSIDE_DOWN_CAKE, the ActivityManager.killBackgroundProcesses(String) is no longer available to third party applications. For backwards compatibility, the background processes of the caller's own package will still be killed when calling this API. If the caller has the system permission KILL_ALL_BACKGROUND_PROCESSES, other processes will be killed too. "
+    ]
+  },
+  {
+    "title": "LAUNCH_MULTI_PANE_SETTINGS_DEEP_LINK",
+    "addedIn": "32",
+    "constantName": "android.permission.LAUNCH_MULTI_PANE_SETTINGS_DEEP_LINK",
+    "level": [],
+    "info": [
+      "An application needs this permission for Settings.ACTION_SETTINGS_EMBED_DEEP_LINK_ACTIVITY to show its Activity embedded in Settings app."
+    ]
+  },
+  {
+    "title": "LOADER_USAGE_STATS",
+    "addedIn": "30",
+    "constantName": "android.permission.LOADER_USAGE_STATS",
+    "level": [
+      "signature",
+      "privileged",
+      "appop "
+    ],
+    "info": [
+      "Allows a data loader to read a package's access logs. The access logs contain the set of pages referenced over time. ",
+      "Declaring the permission implies intention to use the API and the user of the device can grant permission through the Settings application. ",
+      "A data loader has to be the one which provides data to install an app. ",
+      "A data loader has to have both permission:LOADER_USAGE_STATS AND appop:LOADER_USAGE_STATS allowed to be able to access the read logs."
+    ]
+  },
+  {
+    "title": "LOCATION_HARDWARE",
+    "addedIn": "18",
+    "constantName": "android.permission.LOCATION_HARDWARE",
+    "level": [],
+    "info": [
+      "Allows an application to use location features in hardware, such as the geofencing api. ",
+      "Not for use by third-party applications."
+    ]
+  },
+  {
+    "title": "MANAGE_DEVICE_LOCK_STATE",
+    "addedIn": "UpsideDownCake",
+    "constantName": "android.permission.MANAGE_DEVICE_LOCK_STATE",
+    "level": [
+      "internal",
+      "role "
+    ],
+    "info": [
+      "Allows financed device kiosk apps to perform actions on the Device Lock service ",
+      "Intended for use by the FINANCED_DEVICE_KIOSK role only."
+    ]
+  },
+  {
+    "title": "MANAGE_DEVICE_POLICY_ACROSS_USERS",
+    "addedIn": "UpsideDownCake",
+    "constantName": "android.permission.MANAGE_DEVICE_POLICY_ACROSS_USERS",
+    "level": [],
+    "info": [
+      "Allows an application to set device policies outside the current user that are required for securing device ownership without accessing user data. ",
+      "Holding this permission allows the use of other held MANAGE_DEVICE_POLICY_* permissions across all users on the device provided they do not grant access to user data."
+    ]
+  },
+  {
+    "title": "MANAGE_DEVICE_POLICY_ACROSS_USERS_FULL",
+    "addedIn": "UpsideDownCake",
+    "constantName": "android.permission.MANAGE_DEVICE_POLICY_ACROSS_USERS_FULL",
+    "level": [],
+    "info": [
+      "Allows an application to set device policies outside the current user. ",
+      "Fuller form of MANAGE_DEVICE_POLICY_ACROSS_USERS that removes the restriction on accessing user data. ",
+      "Holding this permission allows the use of any other held MANAGE_DEVICE_POLICY_* permissions across all users on the device."
+    ]
+  },
+  {
+    "title": "MANAGE_DEVICE_POLICY_ACROSS_USERS_SECURITY_CRITICAL",
+    "addedIn": "UpsideDownCake",
+    "constantName": "android.permission.MANAGE_DEVICE_POLICY_ACROSS_USERS_SECURITY_CRITICAL",
+    "level": [],
+    "info": [
+      "Allows an application to set device policies outside the current user that are critical for securing data within the current user. ",
+      "Holding this permission allows the use of other held MANAGE_DEVICE_POLICY_* permissions across all users on the device provided they are required for securing data within the current user."
+    ]
+  },
+  {
+    "title": "MANAGE_DEVICE_POLICY_APPS_CONTROL",
+    "addedIn": "UpsideDownCake",
+    "constantName": "android.permission.MANAGE_DEVICE_POLICY_APPS_CONTROL",
+    "level": [],
+    "info": [
+      "Allows an application to manage policy regarding modifying applications. ",
+      "Manifest.permission#MANAGE_DEVICE_POLICY_ACROSS_USERS_FULL is required to call APIs protected by this permission on users different to the calling user."
+    ]
+  },
+  {
+    "title": "MANAGE_DEVICE_POLICY_APP_RESTRICTIONS",
+    "addedIn": "UpsideDownCake",
+    "constantName": "android.permission.MANAGE_DEVICE_POLICY_APP_RESTRICTIONS",
+    "level": [],
+    "info": [
+      "Allows an application to manage application restrictions. ",
+      "Manifest.permission#MANAGE_DEVICE_POLICY_ACROSS_USERS_FULL is required to call APIs protected by this permission on users different to the calling user."
+    ]
+  },
+  {
+    "title": "MANAGE_DEVICE_POLICY_BACKUP_SERVICE",
+    "addedIn": "UpsideDownCake",
+    "constantName": "android.permission.MANAGE_DEVICE_POLICY_BACKUP_SERVICE",
+    "level": [],
+    "info": [
+      "Allows an application to manage backup service policy. ",
+      "Manifest.permission#MANAGE_DEVICE_POLICY_ACROSS_USERS_FULL is required to call APIs protected by this permission on users different to the calling user."
+    ]
+  },
+  {
+    "title": "MANAGE_DEVICE_POLICY_CALLS",
+    "addedIn": "UpsideDownCake",
+    "constantName": "android.permission.MANAGE_DEVICE_POLICY_CALLS",
+    "level": [],
+    "info": [
+      "Allows an application to manage calling policy. ",
+      "Manifest.permission#MANAGE_DEVICE_POLICY_ACROSS_USERS_FULL is required to call APIs protected by this permission on users different to the calling user."
+    ]
+  },
+  {
+    "title": "MANAGE_DEVICE_POLICY_DEBUGGING_FEATURES",
+    "addedIn": "UpsideDownCake",
+    "constantName": "android.permission.MANAGE_DEVICE_POLICY_DEBUGGING_FEATURES",
+    "level": [],
+    "info": [
+      "Allows an application to manage debugging features policy. ",
+      "Manifest.permission#MANAGE_DEVICE_POLICY_ACROSS_USERS_FULL is required to call APIs protected by this permission on users different to the calling user."
+    ]
+  },
+  {
+    "title": "MANAGE_DEVICE_POLICY_INSTALL_UNKNOWN_SOURCES",
+    "addedIn": "UpsideDownCake",
+    "constantName": "android.permission.MANAGE_DEVICE_POLICY_INSTALL_UNKNOWN_SOURCES",
+    "level": [],
+    "info": [
+      "Allows an application to manage installing from unknown sources policy. ",
+      "MANAGE_SECURITY_CRITICAL_DEVICE_POLICY_ACROSS_USERS is required to call APIs protected by this permission on users different to the calling user."
+    ]
+  },
+  {
+    "title": "MANAGE_DEVICE_POLICY_LOCK_TASK",
+    "addedIn": "UpsideDownCake",
+    "constantName": "android.permission.MANAGE_DEVICE_POLICY_LOCK_TASK",
+    "level": [],
+    "info": [
+      "Allows an application to manage lock task policy. ",
+      "Manifest.permission#MANAGE_DEVICE_POLICY_ACROSS_USERS_FULL is required to call APIs protected by this permission on users different to the calling user."
+    ]
+  },
+  {
+    "title": "MANAGE_DEVICE_POLICY_MODIFY_USERS",
+    "addedIn": "UpsideDownCake",
+    "constantName": "android.permission.MANAGE_DEVICE_POLICY_MODIFY_USERS",
+    "level": [],
+    "info": [
+      "Allows an application to manage policy preventing users from modifying users. ",
+      "Manifest.permission#MANAGE_DEVICE_POLICY_ACROSS_USERS_FULL is required to call APIs protected by this permission on users different to the calling user"
+    ]
+  },
+  {
+    "title": "MANAGE_DEVICE_POLICY_ORGANIZATION_IDENTITY",
+    "addedIn": "UpsideDownCake",
+    "constantName": "android.permission.MANAGE_DEVICE_POLICY_ORGANIZATION_IDENTITY",
+    "level": [],
+    "info": [
+      "Allows an application to manage the identity of the managing organization. ",
+      "Manifest.permission#MANAGE_DEVICE_POLICY_ACROSS_USERS_FULL is required to call APIs protected by this permission on users different to the calling user."
+    ]
+  },
+  {
+    "title": "MANAGE_DEVICE_POLICY_RUNTIME_PERMISSIONS",
+    "addedIn": "UpsideDownCake",
+    "constantName": "android.permission.MANAGE_DEVICE_POLICY_RUNTIME_PERMISSIONS",
+    "level": [],
+    "info": [
+      "Allows an application to set the grant state of runtime permissions on packages. ",
+      "Manifest.permission#MANAGE_DEVICE_POLICY_ACROSS_USERS_FULL is required to call APIs protected by this permission on users different to the calling user."
+    ]
+  },
+  {
+    "title": "MANAGE_DEVICE_POLICY_SAFE_BOOT",
+    "addedIn": "UpsideDownCake",
+    "constantName": "android.permission.MANAGE_DEVICE_POLICY_SAFE_BOOT",
+    "level": [],
+    "info": [
+      "Allows an application to manage safe boot policy. ",
+      "Manifest.permission#MANAGE_DEVICE_POLICY_ACROSS_USERS_FULL is required to call APIs protected by this permission on users different to the calling user."
+    ]
+  },
+  {
+    "title": "MANAGE_DEVICE_POLICY_SUPPORT_MESSAGE",
+    "addedIn": "UpsideDownCake",
+    "constantName": "android.permission.MANAGE_DEVICE_POLICY_SUPPORT_MESSAGE",
+    "level": [],
+    "info": [
+      "Allows an application to set support messages for when a user action is affected by an active policy. ",
+      "Manifest.permission#MANAGE_DEVICE_POLICY_ACROSS_USERS_FULL is required to call APIs protected by this permission on users different to the calling user."
+    ]
+  },
+  {
+    "title": "MANAGE_DEVICE_POLICY_TIME",
+    "addedIn": "UpsideDownCake",
+    "constantName": "android.permission.MANAGE_DEVICE_POLICY_TIME",
+    "level": [],
+    "info": [
+      "Allows an application to manage device policy relating to time. ",
+      "Manifest.permission#MANAGE_DEVICE_POLICY_ACROSS_USERS_FULL is required to call APIs protected by this permission on users different to the calling user."
+    ]
+  },
+  {
+    "title": "MANAGE_DOCUMENTS",
+    "addedIn": "19",
+    "constantName": "android.permission.MANAGE_DOCUMENTS",
+    "level": [],
+    "info": [
+      "Allows an application to manage access to documents, usually as part of a document picker. ",
+      "This permission should only be requested by the platform document management app.This permission cannot be granted to third-party apps."
+    ]
+  },
+  {
+    "title": "MANAGE_EXTERNAL_STORAGE",
+    "addedIn": "30",
+    "constantName": "android.permission.MANAGE_EXTERNAL_STORAGE",
+    "level": [
+      "signature",
+      "appop",
+      "preinstalled"
+    ],
+    "info": [
+      "Allows an application a broad access to external storage in scoped storage. Intended to be used by few apps that need to manage files on behalf of the users. "
+    ]
+  },
+  {
+    "title": "MANAGE_MEDIA",
+    "addedIn": "31",
+    "constantName": "android.permission.MANAGE_MEDIA",
+    "level": [
+      "signature",
+      "appop",
+      "preinstalled"
+    ],
+    "info": [
+      "Allows an application to modify and delete media files on this device or any connected storage device without user confirmation. Applications must already be granted the READ_EXTERNAL_STORAGE or MANAGE_EXTERNAL_STORAGE} permissions for this permission to take effect. ",
+      "Even if applications are granted this permission, if applications want to modify or delete media files, they also must get the access by calling MediaStore.createWriteRequest(ContentResolver, Collection), MediaStore.createDeleteRequest(ContentResolver, Collection), or MediaStore.createTrashRequest(ContentResolver, Collection, boolean). ",
+      "This permission doesn't give read or write access directly. It only prevents the user confirmation dialog for these requests. ",
+      "If applications are not granted ACCESS_MEDIA_LOCATION, the system also pops up the user confirmation dialog for the write request. "
+    ]
+  },
+  {
+    "title": "MANAGE_ONGOING_CALLS",
+    "addedIn": "31",
+    "constantName": "android.permission.MANAGE_ONGOING_CALLS",
+    "level": [
+      "signature",
+      "appop"
+    ],
+    "info": [
+      "Allows to query ongoing call details and manage ongoing calls "
+    ]
+  },
+  {
+    "title": "MANAGE_OWN_CALLS",
+    "addedIn": "26",
+    "constantName": "android.permission.MANAGE_OWN_CALLS",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "Allows a calling application which manages its own calls through the self-managed ConnectionService APIs.See PhoneAccount.CAPABILITY_SELF_MANAGED for more information on the self-managed ConnectionService APIs. "
+    ]
+  },
+  {
+    "title": "MANAGE_WIFI_INTERFACES",
+    "addedIn": "33",
+    "constantName": "android.permission.MANAGE_WIFI_INTERFACES",
+    "level": [],
+    "info": [
+      "Allows applications to get notified when a Wi-Fi interface request cannot be satisfied without tearing down one or more other interfaces, and provide a decision whether to approve the request or reject it. ",
+      "Not for use by third-party applications."
+    ]
+  },
+  {
+    "title": "MANAGE_WIFI_NETWORK_SELECTION",
+    "addedIn": "33",
+    "constantName": "android.permission.MANAGE_WIFI_NETWORK_SELECTION",
+    "level": [],
+    "info": [
+      "This permission is used to let OEMs grant their trusted app access to a subset of privileged wifi APIs to improve wifi performance. Allows applications to manage Wi-Fi network selection related features such as enable or disable global auto-join, modify connectivity scan intervals, and approve Wi-Fi Direct connections. ",
+      "Not for use by third-party applications."
+    ]
+  },
+  {
+    "title": "MASTER_CLEAR",
+    "addedIn": "1",
+    "constantName": "android.permission.MASTER_CLEAR",
+    "level": [],
+    "info": [
+      "Not for use by third-party applications."
+    ]
+  },
+  {
+    "title": "MEDIA_CONTENT_CONTROL",
+    "addedIn": "19",
+    "constantName": "android.permission.MEDIA_CONTENT_CONTROL",
+    "level": [],
+    "info": [
+      "Allows an application to know what content is playing and control its playback. ",
+      "Not for use by third-party applications due to privacy of media consumption"
+    ]
+  },
+  {
+    "title": "MODIFY_AUDIO_SETTINGS",
+    "addedIn": "1",
+    "constantName": "android.permission.MODIFY_AUDIO_SETTINGS",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "Allows an application to modify global audio settings. "
+    ]
+  },
+  {
+    "title": "MODIFY_PHONE_STATE",
+    "addedIn": "1",
+    "constantName": "android.permission.MODIFY_PHONE_STATE",
+    "level": [],
+    "info": [
+      "Allows modification of the telephony state - power on, mmi, etc. Does not include placing calls. ",
+      "Not for use by third-party applications."
+    ]
+  },
+  {
+    "title": "MOUNT_FORMAT_FILESYSTEMS",
+    "addedIn": "3",
+    "constantName": "android.permission.MOUNT_FORMAT_FILESYSTEMS",
+    "level": [],
+    "info": [
+      "Allows formatting file systems for removable storage. ",
+      "Not for use by third-party applications."
+    ]
+  },
+  {
+    "title": "MOUNT_UNMOUNT_FILESYSTEMS",
+    "addedIn": "1",
+    "constantName": "android.permission.MOUNT_UNMOUNT_FILESYSTEMS",
+    "level": [],
+    "info": [
+      "Allows mounting and unmounting file systems for removable storage. ",
+      "Not for use by third-party applications."
+    ]
+  },
+  {
+    "title": "NEARBY_WIFI_DEVICES",
+    "addedIn": "33",
+    "constantName": "android.permission.NEARBY_WIFI_DEVICES",
+    "level": [
+      "dangerous"
+    ],
+    "info": [
+      "Required to be able to advertise and connect to nearby devices via Wi-Fi. "
+    ]
+  },
+  {
+    "title": "NFC",
+    "addedIn": "9",
+    "constantName": "android.permission.NFC",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "Allows applications to perform I/O operations over NFC. "
+    ]
+  },
+  {
+    "title": "NFC_PREFERRED_PAYMENT_INFO",
+    "addedIn": "30",
+    "constantName": "android.permission.NFC_PREFERRED_PAYMENT_INFO",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "Allows applications to receive NFC preferred payment service information. "
+    ]
+  },
+  {
+    "title": "NFC_TRANSACTION_EVENT",
+    "addedIn": "28",
+    "constantName": "android.permission.NFC_TRANSACTION_EVENT",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "Allows applications to receive NFC transaction events. "
+    ]
+  },
+  {
+    "title": "OVERRIDE_WIFI_CONFIG",
+    "addedIn": "33",
+    "constantName": "android.permission.OVERRIDE_WIFI_CONFIG",
+    "level": [],
+    "info": [
+      "Allows an application to modify any wifi configuration, even if created by another application. Once reconfigured the original creator cannot make any further modifications. ",
+      "Not for use by third-party applications."
+    ]
+  },
+  {
+    "title": "PACKAGE_USAGE_STATS",
+    "addedIn": "23",
+    "constantName": "android.permission.PACKAGE_USAGE_STATS",
+    "level": [
+      "signature",
+      "privileged",
+      "development",
+      "appop",
+      "retailDemo"
+    ],
+    "info": [
+      "Allows an application to collect component usage statistics ",
+      "Declaring the permission implies intention to use the API and the user of the device can grant permission through the Settings application. "
+    ]
+  },
+  {
+    "title": "PERSISTENT_ACTIVITY",
+    "addedIn": "1",
+    "constantName": "android.permission.PERSISTENT_ACTIVITY",
+    "level": [],
+    "info": [
+      "This constant was deprecatedin API level 15.This functionality will be removed in the future; please do not use. Allow an application to make its activities persistent."
+    ]
+  },
+  {
+    "title": "POST_NOTIFICATIONS",
+    "addedIn": "33",
+    "constantName": "android.permission.POST_NOTIFICATIONS",
+    "level": [
+      "dangerous"
+    ],
+    "info": [
+      "Allows an app to post notifications "
+    ]
+  },
+  {
+    "title": "PROCESS_OUTGOING_CALLS",
+    "addedIn": "1",
+    "constantName": "android.permission.PROCESS_OUTGOING_CALLS",
+    "level": [
+      "dangerous "
+    ],
+    "info": [
+      "This constant was deprecatedin API level 29.Applications should use CallRedirectionService instead of the Intent.ACTION_NEW_OUTGOING_CALL broadcast.",
+      "Allows an application to see the number being dialed during an outgoing call with the option to redirect the call to a different number or abort the call altogether. ",
+      " This is a hard restricted permission which cannot be held by an app until the installer on record allowlists the permission. For more details see PackageInstaller.SessionParams.setWhitelistedRestrictedPermissions(Set)."
+    ]
+  },
+  {
+    "title": "QUERY_ALL_PACKAGES",
+    "addedIn": "30",
+    "constantName": "android.permission.QUERY_ALL_PACKAGES",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "Allows query of any normal app on the device, regardless of manifest declarations. "
+    ]
+  },
+  {
+    "title": "READ_ASSISTANT_APP_SEARCH_DATA",
+    "addedIn": "33",
+    "constantName": "android.permission.READ_ASSISTANT_APP_SEARCH_DATA",
+    "level": [],
+    "info": [
+      "Allows an application to query over global data in AppSearch that's visible to the ASSISTANT role."
+    ]
+  },
+  {
+    "title": "READ_BASIC_PHONE_STATE",
+    "addedIn": "33",
+    "constantName": "android.permission.READ_BASIC_PHONE_STATE",
+    "level": [],
+    "info": [
+      "Allows read only access to phone state with a non dangerous permission, including the information like cellular network type, software version."
+    ]
+  },
+  {
+    "title": "READ_CALENDAR",
+    "addedIn": "1",
+    "constantName": "android.permission.READ_CALENDAR",
+    "level": [
+      "dangerous"
+    ],
+    "info": [
+      "Allows an application to read the user's calendar data. "
+    ]
+  },
+  {
+    "title": "READ_CALL_LOG",
+    "addedIn": "16",
+    "constantName": "android.permission.READ_CALL_LOG",
+    "level": [
+      "dangerous "
+    ],
+    "info": [
+      "Allows an application to read the user's call log. ",
+      "Note: If your app uses the READ_CONTACTS permission and both your minSdkVersion and targetSdkVersion values are set to 15 or lower, the system implicitly grants your app this permission. If you don't need this permission, be sure your targetSdkVersion is 16 or higher.",
+      " This is a hard restricted permission which cannot be held by an app until the installer on record allowlists the permission. For more details see PackageInstaller.SessionParams.setWhitelistedRestrictedPermissions(Set)."
+    ]
+  },
+  {
+    "title": "READ_CONTACTS",
+    "addedIn": "1",
+    "constantName": "android.permission.READ_CONTACTS",
+    "level": [
+      "dangerous"
+    ],
+    "info": [
+      "Allows an application to read the user's contacts data. "
+    ]
+  },
+  {
+    "title": "READ_EXTERNAL_STORAGE",
+    "addedIn": "16",
+    "constantName": "android.permission.READ_EXTERNAL_STORAGE",
+    "level": [
+      "dangerous"
+    ],
+    "info": [
+      "Allows an application to read from external storage. ",
+      "Note: Starting in API level 33, this permission has no effect. If your app accesses other apps' media files, request one or more of these permissions instead: READ_MEDIA_IMAGES, READ_MEDIA_VIDEO, READ_MEDIA_AUDIO. Learn more about the storage permissions that are associated with media files.",
+      "This permission is enforced starting in API level 19.Before API level 19, this permission is not enforced and all apps still have access to read from external storage. You can test your app with the permission enforced by enabling Protect USB storage under Developer options in the Settings app on a device running Android 4.1 or higher.",
+      "Also starting in API level 19, this permission is not required to read or write files in your application-specific directories returned by Context.getExternalFilesDir(String) and Context.getExternalCacheDir().",
+      "Starting in API level 29, apps don't need to request this permission to access files in their app-specific directory on external storage, or their own files in the MediaStore. Apps shouldn't request this permission unless they need to access other apps' files in the MediaStore. Read more about these changes in the scoped storage section of the developer documentation.",
+      "If both your minSdkVersion and targetSdkVersion values are set to 3 or lower, the system implicitly grants your app this permission. If you don't need this permission, be sure your targetSdkVersion is 4 or higher.",
+      " This is a soft restricted permission which cannot be held by an app it its full form until the installer on record allowlists the permission. Specifically, if the permission is allowlisted the holder app can access external storage and the visual and aural media collections while if the permission is not allowlisted the holder app can only access to the visual and aural medial collections. Also the permission is immutably restricted meaning that the allowlist state can be specified only at install time and cannot change until the app is installed. For more details see PackageInstaller.SessionParams.setWhitelistedRestrictedPermissions(Set). "
+    ]
+  },
+  {
+    "title": "READ_HOME_APP_SEARCH_DATA",
+    "addedIn": "33",
+    "constantName": "android.permission.READ_HOME_APP_SEARCH_DATA",
+    "level": [],
+    "info": [
+      "Allows an application to query over global data in AppSearch that's visible to the HOME role."
+    ]
+  },
+  {
+    "title": "READ_INPUT_STATE",
+    "addedIn": "1",
+    "constantName": "android.permission.READ_INPUT_STATE",
+    "level": [],
+    "info": [
+      "This constant was deprecatedin API level 16.The API that used this permission has been removed.",
+      "Allows an application to retrieve the current state of keys and switches. ",
+      "Not for use by third-party applications."
+    ]
+  },
+  {
+    "title": "READ_LOGS",
+    "addedIn": "1",
+    "constantName": "android.permission.READ_LOGS",
+    "level": [],
+    "info": [
+      "Allows an application to read the low-level system log files. ",
+      "Not for use by third-party applications, because Log entries can contain the user's private information."
+    ]
+  },
+  {
+    "title": "READ_MEDIA_AUDIO",
+    "addedIn": "33",
+    "constantName": "android.permission.READ_MEDIA_AUDIO",
+    "level": [
+      "dangerous"
+    ],
+    "info": [
+      "Allows an application to read audio files from external storage. ",
+      "This permission is enforced starting in API level Build.VERSION_CODES.TIRAMISU. An app which targets Build.VERSION_CODES.TIRAMISU or higher and needs to read audio files from external storage must hold this permission; READ_EXTERNAL_STORAGE is not required. For apps with a targetSdkVersion of Build.VERSION_CODES.S_V2 or lower, the READ_EXTERNAL_STORAGE permission is required, instead, to read audio files. "
+    ]
+  },
+  {
+    "title": "READ_MEDIA_IMAGES",
+    "addedIn": "33",
+    "constantName": "android.permission.READ_MEDIA_IMAGES",
+    "level": [
+      "dangerous"
+    ],
+    "info": [
+      "Allows an application to read image files from external storage. ",
+      "This permission is enforced starting in API level Build.VERSION_CODES.TIRAMISU. An app which targets Build.VERSION_CODES.TIRAMISU or higher and needs to read image files from external storage must hold this permission; READ_EXTERNAL_STORAGE is not required. For apps with a targetSdkVersion of Build.VERSION_CODES.S_V2 or lower, the READ_EXTERNAL_STORAGE permission is required, instead, to read image files. "
+    ]
+  },
+  {
+    "title": "READ_MEDIA_VIDEO",
+    "addedIn": "33",
+    "constantName": "android.permission.READ_MEDIA_VIDEO",
+    "level": [
+      "dangerous"
+    ],
+    "info": [
+      "Allows an application to read video files from external storage. ",
+      "This permission is enforced starting in API level Build.VERSION_CODES.TIRAMISU. An app which targets Build.VERSION_CODES.TIRAMISU or higher and needs to read video files from external storage must hold this permission; READ_EXTERNAL_STORAGE is not required. For apps with a targetSdkVersion of Build.VERSION_CODES.S_V2 or lower, the READ_EXTERNAL_STORAGE permission is required, instead, to read video files. "
+    ]
+  },
+  {
+    "title": "READ_MEDIA_VISUAL_USER_SELECTED",
+    "addedIn": "UpsideDownCake",
+    "constantName": "android.permission.READ_MEDIA_VISUAL_USER_SELECTED",
+    "level": [
+      "dangerous"
+    ],
+    "info": []
+  },
+  {
+    "title": "READ_NEARBY_STREAMING_POLICY",
+    "addedIn": "33",
+    "constantName": "android.permission.READ_NEARBY_STREAMING_POLICY",
+    "level": [],
+    "info": [
+      "Allows an application to read nearby streaming policy. The policy controls whether to allow the device to stream its notifications and apps to nearby devices. Applications that are not the device owner will need this permission to call DevicePolicyManager.getNearbyNotificationStreamingPolicy() or DevicePolicyManager.getNearbyAppStreamingPolicy()."
+    ]
+  },
+  {
+    "title": "READ_PHONE_NUMBERS",
+    "addedIn": "26",
+    "constantName": "android.permission.READ_PHONE_NUMBERS",
+    "level": [
+      "dangerous"
+    ],
+    "info": [
+      "Allows read access to the device's phone number(s). This is a subset of the capabilities granted by READ_PHONE_STATE but is exposed to instant applications. "
+    ]
+  },
+  {
+    "title": "READ_PHONE_STATE",
+    "addedIn": "1",
+    "constantName": "android.permission.READ_PHONE_STATE",
+    "level": [
+      "dangerous"
+    ],
+    "info": [
+      "Allows read only access to phone state, including the current cellular network information, the status of any ongoing calls, and a list of any PhoneAccounts registered on the device. ",
+      "Note: If both your minSdkVersion and targetSdkVersion values are set to 3 or lower, the system implicitly grants your app this permission. If you don't need this permission, be sure your targetSdkVersion is 4 or higher. "
+    ]
+  },
+  {
+    "title": "READ_PRECISE_PHONE_STATE",
+    "addedIn": "30",
+    "constantName": "android.permission.READ_PRECISE_PHONE_STATE",
+    "level": [],
+    "info": [
+      "Allows read only access to precise phone state. Allows reading of detailed information about phone state for special-use applications such as dialers, carrier applications, or ims applications."
+    ]
+  },
+  {
+    "title": "READ_SMS",
+    "addedIn": "1",
+    "constantName": "android.permission.READ_SMS",
+    "level": [
+      "dangerous "
+    ],
+    "info": [
+      "Allows an application to read SMS messages. ",
+      " This is a hard restricted permission which cannot be held by an app until the installer on record allowlists the permission. For more details see PackageInstaller.SessionParams.setWhitelistedRestrictedPermissions(Set)."
+    ]
+  },
+  {
+    "title": "READ_SYNC_SETTINGS",
+    "addedIn": "1",
+    "constantName": "android.permission.READ_SYNC_SETTINGS",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "Allows applications to read the sync settings. "
+    ]
+  },
+  {
+    "title": "READ_SYNC_STATS",
+    "addedIn": "1",
+    "constantName": "android.permission.READ_SYNC_STATS",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "Allows applications to read the sync stats. "
+    ]
+  },
+  {
+    "title": "READ_VOICEMAIL",
+    "addedIn": "21",
+    "constantName": "com.android.voicemail.permission.READ_VOICEMAIL",
+    "level": [
+      "signature",
+      "privileged",
+      "role"
+    ],
+    "info": [
+      "Allows an application to read voicemails in the system. "
+    ]
+  },
+  {
+    "title": "REBOOT",
+    "addedIn": "1",
+    "constantName": "android.permission.REBOOT",
+    "level": [],
+    "info": [
+      "Required to be able to reboot the device. ",
+      "Not for use by third-party applications."
+    ]
+  },
+  {
+    "title": "RECEIVE_BOOT_COMPLETED",
+    "addedIn": "1",
+    "constantName": "android.permission.RECEIVE_BOOT_COMPLETED",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "Allows an application to receive the Intent.ACTION_BOOT_COMPLETED that is broadcast after the system finishes booting.If you don't request this permission, you will not receive the broadcast at that time.Though holding this permission does not have any security implications, it can have a negative impact on the user experience by increasing the amount of time it takes the system to start and allowing applications to have themselves running without the user being aware of them.As such, you must explicitly declare your use of this facility to make that visible to the user. "
+    ]
+  },
+  {
+    "title": "RECEIVE_MMS",
+    "addedIn": "1",
+    "constantName": "android.permission.RECEIVE_MMS",
+    "level": [
+      "dangerous "
+    ],
+    "info": [
+      "Allows an application to monitor incoming MMS messages. ",
+      " This is a hard restricted permission which cannot be held by an app until the installer on record allowlists the permission. For more details see PackageInstaller.SessionParams.setWhitelistedRestrictedPermissions(Set)."
+    ]
+  },
+  {
+    "title": "RECEIVE_SMS",
+    "addedIn": "1",
+    "constantName": "android.permission.RECEIVE_SMS",
+    "level": [
+      "dangerous "
+    ],
+    "info": [
+      "Allows an application to receive SMS messages. ",
+      " This is a hard restricted permission which cannot be held by an app until the installer on record allowlists the permission. For more details see PackageInstaller.SessionParams.setWhitelistedRestrictedPermissions(Set)."
+    ]
+  },
+  {
+    "title": "RECEIVE_WAP_PUSH",
+    "addedIn": "1",
+    "constantName": "android.permission.RECEIVE_WAP_PUSH",
+    "level": [
+      "dangerous "
+    ],
+    "info": [
+      "Allows an application to receive WAP push messages. ",
+      " This is a hard restricted permission which cannot be held by an app until the installer on record allowlists the permission. For more details see PackageInstaller.SessionParams.setWhitelistedRestrictedPermissions(Set)."
+    ]
+  },
+  {
+    "title": "RECORD_AUDIO",
+    "addedIn": "1",
+    "constantName": "android.permission.RECORD_AUDIO",
+    "level": [
+      "dangerous"
+    ],
+    "info": [
+      "Allows an application to record audio. "
+    ]
+  },
+  {
+    "title": "REORDER_TASKS",
+    "addedIn": "1",
+    "constantName": "android.permission.REORDER_TASKS",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "Allows an application to change the Z-order of tasks. "
+    ]
+  },
+  {
+    "title": "REQUEST_COMPANION_PROFILE_APP_STREAMING",
+    "addedIn": "33",
+    "constantName": "android.permission.REQUEST_COMPANION_PROFILE_APP_STREAMING",
+    "level": [],
+    "info": [
+      "Allows application to request to be associated with a virtual display capable of streaming Android applications (AssociationRequest.DEVICE_PROFILE_APP_STREAMING) by CompanionDeviceManager. ",
+      "Not for use by third-party applications."
+    ]
+  },
+  {
+    "title": "REQUEST_COMPANION_PROFILE_AUTOMOTIVE_PROJECTION",
+    "addedIn": "33",
+    "constantName": "android.permission.REQUEST_COMPANION_PROFILE_AUTOMOTIVE_PROJECTION",
+    "level": [],
+    "info": [
+      "Allows application to request to be associated with a vehicle head unit capable of automotive projection (AssociationRequest.DEVICE_PROFILE_AUTOMOTIVE_PROJECTION) by CompanionDeviceManager. ",
+      "Not for use by third-party applications."
+    ]
+  },
+  {
+    "title": "REQUEST_COMPANION_PROFILE_COMPUTER",
+    "addedIn": "33",
+    "constantName": "android.permission.REQUEST_COMPANION_PROFILE_COMPUTER",
+    "level": [],
+    "info": [
+      "Allows application to request to be associated with a computer to share functionality and/or data with other devices, such as notifications, photos and media (AssociationRequest.DEVICE_PROFILE_COMPUTER) by CompanionDeviceManager. ",
+      "Not for use by third-party applications."
+    ]
+  },
+  {
+    "title": "REQUEST_COMPANION_PROFILE_GLASSES",
+    "addedIn": "UpsideDownCake",
+    "constantName": "android.permission.REQUEST_COMPANION_PROFILE_GLASSES",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "Allows app to request to be associated with a device via CompanionDeviceManager as \"glasses\" "
+    ]
+  },
+  {
+    "title": "REQUEST_COMPANION_PROFILE_NEARBY_DEVICE_STREAMING",
+    "addedIn": "UpsideDownCake",
+    "constantName": "android.permission.REQUEST_COMPANION_PROFILE_NEARBY_DEVICE_STREAMING",
+    "level": [],
+    "info": [
+      "Allows application to request to stream content from an Android host to a nearby device (AssociationRequest.DEVICE_PROFILE_NEARBY_DEVICE_STREAMING) by CompanionDeviceManager. ",
+      "Not for use by third-party applications."
+    ]
+  },
+  {
+    "title": "REQUEST_COMPANION_PROFILE_WATCH",
+    "addedIn": "31",
+    "constantName": "android.permission.REQUEST_COMPANION_PROFILE_WATCH",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "Allows app to request to be associated with a device via CompanionDeviceManager as a \"watch\" "
+    ]
+  },
+  {
+    "title": "REQUEST_COMPANION_RUN_IN_BACKGROUND",
+    "addedIn": "26",
+    "constantName": "android.permission.REQUEST_COMPANION_RUN_IN_BACKGROUND",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "Allows a companion app to run in the background. This permission implies REQUEST_COMPANION_START_FOREGROUND_SERVICES_FROM_BACKGROUND, and allows to start a foreground service from the background. If an app does not have to run in the background, but only needs to start a foreground service from the background, consider using REQUEST_COMPANION_START_FOREGROUND_SERVICES_FROM_BACKGROUND, which is less powerful. "
+    ]
+  },
+  {
+    "title": "REQUEST_COMPANION_SELF_MANAGED",
+    "addedIn": "33",
+    "constantName": "android.permission.REQUEST_COMPANION_SELF_MANAGED",
+    "level": [],
+    "info": [
+      "Allows an application to create a \"self-managed\" association."
+    ]
+  },
+  {
+    "title": "REQUEST_COMPANION_START_FOREGROUND_SERVICES_FROM_BACKGROUND",
+    "addedIn": "31",
+    "constantName": "android.permission.REQUEST_COMPANION_START_FOREGROUND_SERVICES_FROM_BACKGROUND",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "Allows a companion app to start a foreground service from the background.",
+      "See also:"
+    ]
+  },
+  {
+    "title": "REQUEST_COMPANION_USE_DATA_IN_BACKGROUND",
+    "addedIn": "26",
+    "constantName": "android.permission.REQUEST_COMPANION_USE_DATA_IN_BACKGROUND",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "Allows a companion app to use data in the background. "
+    ]
+  },
+  {
+    "title": "REQUEST_DELETE_PACKAGES",
+    "addedIn": "26",
+    "constantName": "android.permission.REQUEST_DELETE_PACKAGES",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "Allows an application to request deleting packages. Apps targeting APIs Build.VERSION_CODES.P or greater must hold this permission in order to use Intent.ACTION_UNINSTALL_PACKAGE or PackageInstaller.uninstall(VersionedPackage, IntentSender). "
+    ]
+  },
+  {
+    "title": "REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+    "addedIn": "23",
+    "constantName": "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "Permission an application must hold in order to use Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS. "
+    ]
+  },
+  {
+    "title": "REQUEST_INSTALL_PACKAGES",
+    "addedIn": "23",
+    "constantName": "android.permission.REQUEST_INSTALL_PACKAGES",
+    "level": [
+      "signature"
+    ],
+    "info": [
+      "Allows an application to request installing packages. Apps targeting APIs greater than 25 must hold this permission in order to use Intent.ACTION_INSTALL_PACKAGE. "
+    ]
+  },
+  {
+    "title": "REQUEST_OBSERVE_COMPANION_DEVICE_PRESENCE",
+    "addedIn": "31",
+    "constantName": "android.permission.REQUEST_OBSERVE_COMPANION_DEVICE_PRESENCE",
+    "level": [],
+    "info": [
+      "Allows an application to subscribe to notifications about the presence status change of their associated companion device"
+    ]
+  },
+  {
+    "title": "REQUEST_PASSWORD_COMPLEXITY",
+    "addedIn": "29",
+    "constantName": "android.permission.REQUEST_PASSWORD_COMPLEXITY",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "Allows an application to request the screen lock complexity and prompt users to update the screen lock to a certain complexity level. "
+    ]
+  },
+  {
+    "title": "RESTART_PACKAGES",
+    "addedIn": "1",
+    "constantName": "android.permission.RESTART_PACKAGES",
+    "level": [],
+    "info": [
+      "This constant was deprecatedin API level 15.The ActivityManager.restartPackage(String) API is no longer supported."
+    ]
+  },
+  {
+    "title": "RUN_LONG_JOBS",
+    "addedIn": "UpsideDownCake",
+    "constantName": "android.permission.RUN_LONG_JOBS",
+    "level": [
+      "appop"
+    ],
+    "info": [
+      "Allows applications to use the long running jobs APIs. ",
+      "This is a special access permission that can be revoked by the system or the user. ",
+      "Apps need to target API Build.VERSION_CODES.UPSIDE_DOWN_CAKE or above to be able to request this permission. "
+    ]
+  },
+  {
+    "title": "SCHEDULE_EXACT_ALARM",
+    "addedIn": "31",
+    "constantName": "android.permission.SCHEDULE_EXACT_ALARM",
+    "level": [
+      "appop"
+    ],
+    "info": [
+      "Allows applications to use exact alarm APIs. ",
+      "This is a special access permission that can be revoked by the system or the user. It should only be used to enable user-facing features that require exact alarms. For more details, please go through the associated developer docs. ",
+      "Apps need to target API Build.VERSION_CODES.S or above to be able to request this permission. Note that apps targeting lower API levels do not need this permission to use exact alarm APIs. ",
+      "Apps that hold this permission and target API Build.VERSION_CODES.TIRAMISU and below always stay in the WORKING_SET or lower standby bucket. ",
+      "If your app relies on exact alarms for core functionality, it can instead request USE_EXACT_ALARM once it targets API Build.VERSION_CODES.TIRAMISU. All apps using exact alarms for secondary features (which should still be user facing) should continue using this permission. "
+    ]
+  },
+  {
+    "title": "SEND_RESPOND_VIA_MESSAGE",
+    "addedIn": "18",
+    "constantName": "android.permission.SEND_RESPOND_VIA_MESSAGE",
+    "level": [],
+    "info": [
+      "Allows an application (Phone) to send a request to other applications to handle the respond-via-message action during incoming calls. ",
+      "Not for use by third-party applications."
+    ]
+  },
+  {
+    "title": "SEND_SMS",
+    "addedIn": "1",
+    "constantName": "android.permission.SEND_SMS",
+    "level": [
+      "dangerous "
+    ],
+    "info": [
+      "Allows an application to send SMS messages. ",
+      " This is a hard restricted permission which cannot be held by an app until the installer on record allowlists the permission. For more details see PackageInstaller.SessionParams.setWhitelistedRestrictedPermissions(Set)."
+    ]
+  },
+  {
+    "title": "SET_ALARM",
+    "addedIn": "9",
+    "constantName": "com.android.alarm.permission.SET_ALARM",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "Allows an application to broadcast an Intent to set an alarm for the user. "
+    ]
+  },
+  {
+    "title": "SET_ALWAYS_FINISH",
+    "addedIn": "1",
+    "constantName": "android.permission.SET_ALWAYS_FINISH",
+    "level": [],
+    "info": [
+      "Allows an application to control whether activities are immediately finished when put in the background. ",
+      "Not for use by third-party applications."
+    ]
+  },
+  {
+    "title": "SET_ANIMATION_SCALE",
+    "addedIn": "1",
+    "constantName": "android.permission.SET_ANIMATION_SCALE",
+    "level": [],
+    "info": [
+      "Modify the global animation scaling factor. ",
+      "Not for use by third-party applications."
+    ]
+  },
+  {
+    "title": "SET_DEBUG_APP",
+    "addedIn": "1",
+    "constantName": "android.permission.SET_DEBUG_APP",
+    "level": [],
+    "info": [
+      "Configure an application for debugging. ",
+      "Not for use by third-party applications."
+    ]
+  },
+  {
+    "title": "SET_PREFERRED_APPLICATIONS",
+    "addedIn": "1",
+    "constantName": "android.permission.SET_PREFERRED_APPLICATIONS",
+    "level": [],
+    "info": [
+      "This constant was deprecatedin API level 15.No longer useful, see PackageManager.addPackageToPreferred(String) for details."
+    ]
+  },
+  {
+    "title": "SET_PROCESS_LIMIT",
+    "addedIn": "1",
+    "constantName": "android.permission.SET_PROCESS_LIMIT",
+    "level": [],
+    "info": [
+      "Allows an application to set the maximum number of (not needed) application processes that can be running. ",
+      "Not for use by third-party applications."
+    ]
+  },
+  {
+    "title": "SET_TIME",
+    "addedIn": "8",
+    "constantName": "android.permission.SET_TIME",
+    "level": [],
+    "info": [
+      "Allows applications to set the system time directly. ",
+      "Not for use by third-party applications."
+    ]
+  },
+  {
+    "title": "SET_TIME_ZONE",
+    "addedIn": "1",
+    "constantName": "android.permission.SET_TIME_ZONE",
+    "level": [],
+    "info": [
+      "Allows applications to set the system time zone directly. ",
+      "Not for use by third-party applications."
+    ]
+  },
+  {
+    "title": "SET_WALLPAPER",
+    "addedIn": "1",
+    "constantName": "android.permission.SET_WALLPAPER",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "Allows applications to set the wallpaper. "
+    ]
+  },
+  {
+    "title": "SET_WALLPAPER_HINTS",
+    "addedIn": "1",
+    "constantName": "android.permission.SET_WALLPAPER_HINTS",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "Allows applications to set the wallpaper hints. "
+    ]
+  },
+  {
+    "title": "SIGNAL_PERSISTENT_PROCESSES",
+    "addedIn": "1",
+    "constantName": "android.permission.SIGNAL_PERSISTENT_PROCESSES",
+    "level": [],
+    "info": [
+      "Allow an application to request that a signal be sent to all persistent processes. ",
+      "Not for use by third-party applications."
+    ]
+  },
+  {
+    "title": "SMS_FINANCIAL_TRANSACTIONS",
+    "addedIn": "29",
+    "constantName": "android.permission.SMS_FINANCIAL_TRANSACTIONS",
+    "level": [],
+    "info": [
+      "This constant was deprecatedin API level 31.The API that used this permission is no longer functional.",
+      "Allows financial apps to read filtered sms messages. Protection level: signature|appop"
+    ]
+  },
+  {
+    "title": "START_FOREGROUND_SERVICES_FROM_BACKGROUND",
+    "addedIn": "31",
+    "constantName": "android.permission.START_FOREGROUND_SERVICES_FROM_BACKGROUND",
+    "level": [],
+    "info": [
+      "Allows an application to start foreground services from the background at any time. This permission is not for use by third-party applications, with the only exception being if the app is the default SMS app. Otherwise, it's only usable by privileged apps, app verifier app, and apps with any of the EMERGENCY or SYSTEM GALLERY roles."
+    ]
+  },
+  {
+    "title": "START_VIEW_APP_FEATURES",
+    "addedIn": "33",
+    "constantName": "android.permission.START_VIEW_APP_FEATURES",
+    "level": [
+      "signature",
+      "installer"
+    ],
+    "info": [
+      "Allows the holder to start the screen with a list of app features. "
+    ]
+  },
+  {
+    "title": "START_VIEW_PERMISSION_USAGE",
+    "addedIn": "29",
+    "constantName": "android.permission.START_VIEW_PERMISSION_USAGE",
+    "level": [
+      "signature",
+      "installer"
+    ],
+    "info": [
+      "Allows the holder to start the permission usage screen for an app. "
+    ]
+  },
+  {
+    "title": "STATUS_BAR",
+    "addedIn": "1",
+    "constantName": "android.permission.STATUS_BAR",
+    "level": [],
+    "info": [
+      "Allows an application to open, close, or disable the status bar and its icons. ",
+      "Not for use by third-party applications."
+    ]
+  },
+  {
+    "title": "SUBSCRIBE_TO_KEYGUARD_LOCKED_STATE",
+    "addedIn": "33",
+    "constantName": "android.permission.SUBSCRIBE_TO_KEYGUARD_LOCKED_STATE",
+    "level": [
+      "internal",
+      "role "
+    ],
+    "info": [
+      "Allows an application to subscribe to keyguard locked (i.e., showing) state. ",
+      "Intended for use by ROLE_ASSISTANT only."
+    ]
+  },
+  {
+    "title": "SYSTEM_ALERT_WINDOW",
+    "addedIn": "1",
+    "constantName": "android.permission.SYSTEM_ALERT_WINDOW",
+    "level": [
+      "signature",
+      "setup",
+      "appop",
+      "installer",
+      "pre23",
+      "development"
+    ],
+    "info": [
+      "Allows an app to create windows using the type WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY, shown on top of all other apps.Very few apps should use this permission; these windows are intended for system-level interaction with the user. ",
+      "Note: If the app targets API level 23 or higher, the app user must explicitly grant this permission to the app through a permission management screen. The app requests the user's approval by sending an intent with action Settings.ACTION_MANAGE_OVERLAY_PERMISSION. The app can check whether it has this authorization by calling Settings.canDrawOverlays(). "
+    ]
+  },
+  {
+    "title": "TRANSMIT_IR",
+    "addedIn": "19",
+    "constantName": "android.permission.TRANSMIT_IR",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "Allows using the device's IR transmitter, if available. "
+    ]
+  },
+  {
+    "title": "TURN_SCREEN_ON",
+    "addedIn": "UpsideDownCake",
+    "constantName": "android.permission.TURN_SCREEN_ON",
+    "level": [],
+    "info": [
+      "Allows an app to turn on the screen on, e.g. with PowerManager.ACQUIRE_CAUSES_WAKEUP. ",
+      "Intended to only be used by home automation apps."
+    ]
+  },
+  {
+    "title": "UNINSTALL_SHORTCUT",
+    "addedIn": "19",
+    "constantName": "com.android.launcher.permission.UNINSTALL_SHORTCUT",
+    "level": [],
+    "info": [
+      "Don't use this permission in your app.This permission is no longer supported."
+    ]
+  },
+  {
+    "title": "UPDATE_DEVICE_STATS",
+    "addedIn": "3",
+    "constantName": "android.permission.UPDATE_DEVICE_STATS",
+    "level": [],
+    "info": [
+      "Allows an application to update device statistics. ",
+      "Not for use by third-party applications."
+    ]
+  },
+  {
+    "title": "UPDATE_PACKAGES_WITHOUT_USER_ACTION",
+    "addedIn": "31",
+    "constantName": "android.permission.UPDATE_PACKAGES_WITHOUT_USER_ACTION",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "Allows an application to indicate via PackageInstaller.SessionParams.setRequireUserAction(int) that user action should not be required for an app update. "
+    ]
+  },
+  {
+    "title": "USE_BIOMETRIC",
+    "addedIn": "28",
+    "constantName": "android.permission.USE_BIOMETRIC",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "Allows an app to use device supported biometric modalities. "
+    ]
+  },
+  {
+    "title": "USE_EXACT_ALARM",
+    "addedIn": "33",
+    "constantName": "android.permission.USE_EXACT_ALARM",
+    "level": [],
+    "info": [
+      "Allows apps to use exact alarms just like with SCHEDULE_EXACT_ALARM but without needing to request this permission from the user. ",
+      " This is only intended for use by apps that rely on exact alarms for their core functionality. You should continue using SCHEDULE_EXACT_ALARM if your app needs exact alarms for a secondary feature that users may or may not use within your app. ",
+      " Keep in mind that this is a powerful permission and app stores may enforce policies to audit and review the use of this permission. Such audits may involve removal from the app store if the app is found to be misusing this permission. ",
+      " Apps need to target API Build.VERSION_CODES.TIRAMISU or above to be able to request this permission. Note that only one of USE_EXACT_ALARM or SCHEDULE_EXACT_ALARM should be requested on a device. If your app is already using SCHEDULE_EXACT_ALARM on older SDKs but needs USE_EXACT_ALARM on SDK 33 and above, then SCHEDULE_EXACT_ALARM should be declared with a max-sdk attribute, like: ",
+      "Apps that hold this permission, always stay in the WORKING_SET or lower standby bucket."
+    ]
+  },
+  {
+    "title": "USE_FINGERPRINT",
+    "addedIn": "23",
+    "constantName": "android.permission.USE_FINGERPRINT",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "This constant was deprecatedin API level 28.Applications should request USE_BIOMETRIC instead",
+      "Allows an app to use fingerprint hardware. "
+    ]
+  },
+  {
+    "title": "USE_FULL_SCREEN_INTENT",
+    "addedIn": "29",
+    "constantName": "android.permission.USE_FULL_SCREEN_INTENT",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "Required for apps targeting Build.VERSION_CODES.Q that want to use notification full screen intents. "
+    ]
+  },
+  {
+    "title": "USE_ICC_AUTH_WITH_DEVICE_IDENTIFIER",
+    "addedIn": "31",
+    "constantName": "android.permission.USE_ICC_AUTH_WITH_DEVICE_IDENTIFIER",
+    "level": [
+      "signature",
+      "appop"
+    ],
+    "info": [
+      "Allows to read device identifiers and use ICC based authentication like EAP-AKA. Often required in authentication to access the carrier's server and manage services of the subscriber. "
+    ]
+  },
+  {
+    "title": "USE_SIP",
+    "addedIn": "9",
+    "constantName": "android.permission.USE_SIP",
+    "level": [
+      "dangerous"
+    ],
+    "info": [
+      "Allows an application to use SIP service. "
+    ]
+  },
+  {
+    "title": "UWB_RANGING",
+    "addedIn": "31",
+    "constantName": "android.permission.UWB_RANGING",
+    "level": [
+      "dangerous"
+    ],
+    "info": [
+      "Required to be able to range to devices using ultra-wideband. "
+    ]
+  },
+  {
+    "title": "VIBRATE",
+    "addedIn": "1",
+    "constantName": "android.permission.VIBRATE",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "Allows access to the vibrator. "
+    ]
+  },
+  {
+    "title": "WAKE_LOCK",
+    "addedIn": "1",
+    "constantName": "android.permission.WAKE_LOCK",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "Allows using PowerManager WakeLocks to keep processor from sleeping or screen from dimming. "
+    ]
+  },
+  {
+    "title": "WRITE_APN_SETTINGS",
+    "addedIn": "1",
+    "constantName": "android.permission.WRITE_APN_SETTINGS",
+    "level": [],
+    "info": [
+      "Allows applications to write the apn settings and read sensitive fields of an existing apn settings like user and password. ",
+      "Not for use by third-party applications."
+    ]
+  },
+  {
+    "title": "WRITE_CALENDAR",
+    "addedIn": "1",
+    "constantName": "android.permission.WRITE_CALENDAR",
+    "level": [
+      "dangerous"
+    ],
+    "info": [
+      "Allows an application to write the user's calendar data. "
+    ]
+  },
+  {
+    "title": "WRITE_CALL_LOG",
+    "addedIn": "16",
+    "constantName": "android.permission.WRITE_CALL_LOG",
+    "level": [
+      "dangerous "
+    ],
+    "info": [
+      "Allows an application to write (but not read) the user's call log data. ",
+      "Note: If your app uses the WRITE_CONTACTS permission and both your minSdkVersion and targetSdkVersion values are set to 15 or lower, the system implicitly grants your app this permission. If you don't need this permission, be sure your targetSdkVersion is 16 or higher.",
+      " This is a hard restricted permission which cannot be held by an app until the installer on record allowlists the permission. For more details see PackageInstaller.SessionParams.setWhitelistedRestrictedPermissions(Set)."
+    ]
+  },
+  {
+    "title": "WRITE_CONTACTS",
+    "addedIn": "1",
+    "constantName": "android.permission.WRITE_CONTACTS",
+    "level": [
+      "dangerous"
+    ],
+    "info": [
+      "Allows an application to write the user's contacts data. "
+    ]
+  },
+  {
+    "title": "WRITE_EXTERNAL_STORAGE",
+    "addedIn": "4",
+    "constantName": "android.permission.WRITE_EXTERNAL_STORAGE",
+    "level": [
+      "dangerous"
+    ],
+    "info": [
+      "Allows an application to write to external storage. ",
+      "Note: If your app targets Build.VERSION_CODES.R or higher, this permission has no effect. ",
+      "If your app is on a device that runs API level 19 or higher, you don't need to declare this permission to read and write files in your application-specific directories returned by Context.getExternalFilesDir(String) and Context.getExternalCacheDir(). ",
+      "Learn more about how to modify media files that your app doesn't own, and how to modify non-media files that your app doesn't own. ",
+      "If your app is a file manager and needs broad access to external storage files, then the system must place your app on an allowlist so that you can successfully request the MANAGE_EXTERNAL_STORAGE permission. Learn more about the appropriate use cases for minSdkVersion and targetSdkVersion values are set to 3 or lower, the system implicitly grants your app this permission. If you don't need this permission, be sure your targetSdkVersion is 4 or higher. "
+    ]
+  },
+  {
+    "title": "WRITE_GSERVICES",
+    "addedIn": "1",
+    "constantName": "android.permission.WRITE_GSERVICES",
+    "level": [],
+    "info": [
+      "Allows an application to modify the Google service map. ",
+      "Not for use by third-party applications."
+    ]
+  },
+  {
+    "title": "WRITE_SECURE_SETTINGS",
+    "addedIn": "3",
+    "constantName": "android.permission.WRITE_SECURE_SETTINGS",
+    "level": [],
+    "info": [
+      "Allows an application to read or write the secure system settings. ",
+      "Not for use by third-party applications."
+    ]
+  },
+  {
+    "title": "WRITE_SETTINGS",
+    "addedIn": "1",
+    "constantName": "android.permission.WRITE_SETTINGS",
+    "level": [
+      "signature",
+      "preinstalled",
+      "appop",
+      "pre23"
+    ],
+    "info": [
+      "Allows an application to read or write the system settings. ",
+      "Note: If the app targets API level 23 or higher, the app user must explicitly grant this permission to the app through a permission management screen. The app requests the user's approval by sending an intent with action Settings.ACTION_MANAGE_WRITE_SETTINGS. The app can check whether it has this authorization by calling Settings.System.canWrite(). "
+    ]
+  },
+  {
+    "title": "WRITE_SYNC_SETTINGS",
+    "addedIn": "1",
+    "constantName": "android.permission.WRITE_SYNC_SETTINGS",
+    "level": [
+      "normal"
+    ],
+    "info": [
+      "Allows applications to write the sync settings. "
+    ]
+  },
+  {
+    "title": "WRITE_VOICEMAIL",
+    "addedIn": "21",
+    "constantName": "com.android.voicemail.permission.WRITE_VOICEMAIL",
+    "level": [
+      "signature",
+      "privileged",
+      "role"
+    ],
+    "info": [
+      "Allows an application to modify and remove existing voicemails in the system. "
+    ]
+  },
+  {
+    "title": "permission",
+    "addedIn": "not available",
+    "constantName": "",
+    "level": [],
+    "info": []
+  }
+]

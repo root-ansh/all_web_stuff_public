@@ -1,0 +1,17 @@
+{
+  "name": "scrape_anything",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "scrap-android": "node ScrapAndroidPermissionsPage.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^19.6.3"
+  }
+}
